@@ -1,0 +1,29 @@
+{
+  "name": "webapp-Vue",
+  "version": "1.0.0",
+  "description": "基于 Vue.js框架部署的单页面web应用程序。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "html-loader": "^0.3.0",
+    "webpack": "^1.12.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "dependencies": {
+    "html-loader": "^0.3.0",
+    "gulp": "^3.9.0",
+    "webpack": "^1.12.3",
+    "gulp-util": "^3.0.7",
+    "gulp-connect": "^2.2.0"
+  }
+}
