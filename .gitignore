@@ -1,4 +1,7 @@
 
+.DS_Store
+.map
+
 /bower_components
 /build
 /node_modules

@@ -1,6 +1,7 @@
 
 var Vue = require("vue");
 var VueRouter = require("vue-router");
+var VueResource = require("vue-resource");
 
 var configRouter = require('./component/router-config.js');
 

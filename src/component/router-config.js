@@ -6,6 +6,9 @@ module.exports = function configRouter(Vue, router){
 		// root
 		"/": { component: Vue.extend({ template: require("./own/index.html") }) },
 
+		// test
+		"/test/:userId": { component: Vue.extend({ template: require("./test.html") }) },
+
 		// own
 		"/own": { 
 			component: Vue.extend({ template: "<router-view></router-view>" }),
@@ -69,4 +72,8 @@ module.exports = function configRouter(Vue, router){
 	  // }
 	});*/
 
+	// router.afterEach(function (transition) {
+	//   console.log('成功浏览到: ' + transition.to.path)
+	// })
+	
 };

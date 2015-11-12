@@ -9,10 +9,13 @@
 
 ## usage
 
-通过构建任务 `gulp connect` 开启本地服务
+	bower install
 
-构建任务： `gulp webpack:build` 和 `gulp webpack:build-dev`
+	npm install
+	npm run build
+	# go to http://localhost
 
-## specification
+## vue plugin
 
-### encoding specification
+- [vue-router](https://github.com/vuejs/vue-router) Vue.js 官方路由。与 Vue.js 内核深度整合，让构建单页应用易如反掌。
+- [vue-resource](https://github.com/vuejs/vue-resource) 通过 XMLHttpRequest 或 JSONP 发起请求并处理响应。

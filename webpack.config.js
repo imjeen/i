@@ -1,14 +1,9 @@
-
 var webpack = require('webpack');
-var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
-// var Uglify = require("webpack/lib/optimize/UglifyJsPlugin");
 
 module.exports = {
-    // cache: true,
-    context: __dirname, // default: process.cwd()
     entry:{
     	userMain: "./src/main.js",
-        vendor: ['vue']
+        vendor: ['vue','vue-router','vue-resource']
     },
     output: {
         path: "./build",
@@ -19,31 +14,45 @@ module.exports = {
         loaders: [
             /*{ test: /\.css$/, loader: "style!css" },
             // Extract css files
-            {
-                test: /\.css$/,
-                loader: "style-loader!css-loader" 
-            },*/
+            { test: /\.css$/, loader: "style-loader!css-loader"  },*/
+            { test: /\.vue$/, loader: "vue-loader" },
             { test: /\.html$/, loader: "html-loader" }
 
         ]
     },
     // Use the plugin to specify the resulting filename (and add needed behavior to the compiler)
     plugins: [
-        // new webpack.ProvidePlugin({
-        //     jQuery: "jquery",
-        //     $: "jquery"
-        // }),
         new webpack.optimize.CommonsChunkPlugin('common.js'),
-        // new webpack.optimize.Uglify()
     ],
     resolve: {
         // 省略 .js 后缀
         extensions: ['', '.js'],
-        // for resolve, e.g: require('vue')
         alias:{
             'vue':          __dirname + "/bower_components/vue/dist/vue.js",
             'vue-router':   __dirname + "/bower_components/vue-router/dist/vue-router.js",
+            'vue-resource': __dirname + "/bower_components/vue-resource/dist/vue-resource.js",
         }
-
+    },
+    babel: {
+        presets: ['es2015', 'stage-0'],
+        plugins: ['transform-runtime']
     }
 };
+
+if(process.env.NODE_ENV === 'production'){
+    module.exports.plugins && module.exports.plugins.push(
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: '"production"'
+          }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false
+          }
+        }),
+        new webpack.optimize.OccurenceOrderPlugin()
+    );
+}else{
+    module.exports.devtool = '#source-map';
+}
