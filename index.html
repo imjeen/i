@@ -2,33 +2,35 @@
 <html lang="zh-cn">
 <head>
 	<meta charset="UTF-8">
-	<title>我的家</title>
+	<title>{{nowYear}}我的家</title>
+	<style>[v-cloak]{ display: none; }</style>
 </head>
-<body id="userApp">
+<body v-cloak>
 	<header>
 		<h1>我的家</h1>
+		<p>当前正在访问的路径： {{$route.path}} </p>
 	</header>
-	<a v-link="{path: '/own'}">测试-> 首页</a>
+	<!-- <p><a v-link="{path: '/test'}">测试页</a></p> -->
 	<nav>
 		<ul>
-			<li><a href="#">首页</a></li>
+			<li><a v-link="{path: '/'}">我的首页</a></li>
 			<li><a href="#/more">更多->not found</a></li>
 		</ul>
 	</nav>
+	
 	<article>
 		<main class="jumbotron-main">
-			<div id="mainView">
 				<router-view>Loading...</router-view>
-			</div>
 		</main>
 		<aside>
 			<p>咨询热线： 000 000 0000</p>
-			<p><span>退出</span><span>Top</span></p>
+			<p><span>退出</span><span><a>top</a></span></p>
 		</aside>
 	</article>
 	<footer>
-		<p>Copyright 2015 我的家 版权所有</p>
+		<p>Copyright {{nowYear}} 我的家 版权所有</p>
 	</footer>
+	
 	<script src="./build/common.js"></script>
 	<script src="./build/userMain.js"></script>
 </body>

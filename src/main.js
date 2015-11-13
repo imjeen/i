@@ -21,9 +21,15 @@ var router = new VueRouter({
 
 configRouter(Vue, router);
 
-var userApp = Vue.extend({});
+var userApp = Vue.extend({
+	data: function(){
+		return {
+			nowYear: new Date().getFullYear()
+		}
+	}
+});
 // start router
-router.start(userApp,"#userApp");
+router.start(userApp,"html");
 
 // just for debugging
 window.router = router

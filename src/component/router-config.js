@@ -4,40 +4,40 @@ module.exports = function configRouter(Vue, router){
 	// normal
 	router.map({
 		// root
-		"/": { component: Vue.extend({ template: require("./own/index.html") }) },
+		"/": { component: require("./own/index.vue") },
 
 		// test
-		"/test/:userId": { component: Vue.extend({ template: require("./test.html") }) },
+		// "/test": { component: require("./test.vue") }, 
 
 		// own
 		"/own": { 
-			component: Vue.extend({ template: "<router-view></router-view>" }),
+			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
-				"/": { component: Vue.extend({ template: require("./own/index.html") }) },
-				"/info": { component: Vue.extend({ template: require("./own/info.html") }) },
-				"/ecard": { component: Vue.extend({ template: require("./own/ecard.html") }) },
-				"/activity": { component: Vue.extend({ template: require("./own/activity.html") }) },
-				"/coupon": { component: Vue.extend({ template: require("./own/coupon.html") }) },
-				"/reservation": { component: Vue.extend({ template: require("./own/reservation.html") }) },
+				"/": { component: require("./own/index.vue") },
+				"/info": { component: require("./own/info.vue") },
+				"/ecard": { component: require("./own/ecard.vue") },
+				"/activity": { component: require("./own/activity.vue") },
+				"/coupon": { component: require("./own/coupon.vue") },
+				"/reservation": { component: require("./own/reservation.vue") },
 			}
 		},
 
 		// order
 		"/order": {
-			component: Vue.extend({ template: "<router-view></router-view>" }),
+			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
-					"/": {component: Vue.extend({ template: require("./own/index.html") }) },
-					"/list": { component: Vue.extend({ template: require("./order/list.html") }) },
-					"/cart": { component: Vue.extend({ template: require("./order/cart.html") }) },
-					"/refund": { component: Vue.extend({ template: require("./order/refund.html") }) },
+					"/": {component: require("./own/index.vue") },
+					"/list": { component: require("./order/list.vue") },
+					"/cart": { component: require("./order/cart.vue") },
+					"/refund": { component: require("./order/refund.vue") },
 					"/wait": {
-						component: Vue.extend({ template: "<router-view></router-view>" }),
+						component:  Vue.extend({template: "<router-view></router-view>"}),
 						subRoutes: {
-							"/": { component: Vue.extend({ template: require("./order/waitPay.html") }) },
-							"/evaluate": { component: Vue.extend({ template: require("./order/evaluate.html") }) },
-							"/delivery": { component: Vue.extend({ template: require("./order/waitDelivery.html") }) },
-							"/pay": { component: Vue.extend({ template: require("./order/waitPay.html") }) },
-							"/receive": { component: Vue.extend({ template: require("./order/waitReceive.html") }) },
+							"/": { component: require("./order/waitPay.vue") },
+							"/evaluate": { component: require("./order/evaluate.vue") },
+							"/delivery": { component: require("./order/waitDelivery.vue") },
+							"/pay": { component: require("./order/waitPay.vue") },
+							"/receive": { component: require("./order/waitReceive.vue") },
 						}
 					},
 					
@@ -46,18 +46,19 @@ module.exports = function configRouter(Vue, router){
 
 		// track
 		"track": {
-			component: Vue.extend({ template: "<router-view></router-view>" }),
+			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
-				"/": { component: Vue.extend({ template: require("./track/trackList.html") }) },
-				"/list": { component: Vue.extend({ template: require("./track/trackList.html") }) },
-				// "/*": { component: Vue.extend({ template: require("./track/trackList.html")}) },
+				"/": { component: require("./track/trackList.vue") },
+				"/list": { component: require("./track/trackList.vue") },
+				// "/*": { component: require("./track/trackList.vue") },
 			}
 		},
 
 		// not found
-		"*": { component: Vue.extend({ template: require("./not-found.html")}) },
+		"*": { component: require("./404.vue") },
 
 	});
+
 
 	// redirect
   /*router.redirect({
