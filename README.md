@@ -9,11 +9,15 @@
 
 ## usage
 
-	bower install
+```
+	bower install # install bower package for first
+	npm install # install npm package for first
+	npm run build # build for dev
 
-	npm install
-	npm run build
-	# go to http://localhost
+	NODE_ENV=production npm run build # build for product/release
+	npm run server # go to the URL: http://localhost
+	npm run watch # extra watch files
+```
 
 ## vue plugin
 

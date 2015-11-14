@@ -4,16 +4,16 @@ module.exports = function configRouter(Vue, router){
 	// normal
 	router.map({
 		// root
-		"/": { component: require("./own/index.vue") },
+		"/": { component: require("./homeView.vue") },
 
 		// test
-		// "/test": { component: require("./test.vue") }, 
+		"/test": { component: require("./test.vue") }, 
 
 		// own
 		"/own": { 
 			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
-				"/": { component: require("./own/index.vue") },
+				"/": { component: require("./homeView.vue") },
 				"/info": { component: require("./own/info.vue") },
 				"/ecard": { component: require("./own/ecard.vue") },
 				"/activity": { component: require("./own/activity.vue") },
@@ -26,7 +26,7 @@ module.exports = function configRouter(Vue, router){
 		"/order": {
 			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
-					"/": {component: require("./own/index.vue") },
+					"/": {component: require("./homeView.vue") },
 					"/list": { component: require("./order/list.vue") },
 					"/cart": { component: require("./order/cart.vue") },
 					"/refund": { component: require("./order/refund.vue") },

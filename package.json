@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server --inline --port 80 --hot --quiet",
+    "server": "webpack-dev-server --inline --port 80 --hot --quiet",
     "build": "webpack --progress --hide-modules"
   },
   "author": "",

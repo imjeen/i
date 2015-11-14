@@ -16,7 +16,7 @@ Vue.use(VueRouter);
 
 var router = new VueRouter({
 	history: false,
-	saveScrollPosition: true
+	// saveScrollPosition: true, // just for history: true
 });
 
 configRouter(Vue, router);
