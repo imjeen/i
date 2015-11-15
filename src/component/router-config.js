@@ -14,11 +14,11 @@ module.exports = function configRouter(Vue, router){
 			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
 				"/": { component: require("./homeView.vue") },
-				"/info": { component: require("./own/info.vue") },
-				"/ecard": { component: require("./own/ecard.vue") },
-				"/activity": { component: require("./own/activity.vue") },
-				"/coupon": { component: require("./own/coupon.vue") },
-				"/reservation": { component: require("./own/reservation.vue") },
+				"/info": { component: require("./own/infoView.vue") },
+				"/ecard": { component: require("./own/ecardView.vue") },
+				"/activity": { component: require("./own/activityView.vue") },
+				"/coupon": { component: require("./own/couponView.vue") },
+				"/reservation": { component: require("./own/reservationView.vue") },
 			}
 		},
 
@@ -27,17 +27,23 @@ module.exports = function configRouter(Vue, router){
 			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
 					"/": {component: require("./homeView.vue") },
-					"/list": { component: require("./order/list.vue") },
-					"/cart": { component: require("./order/cart.vue") },
-					"/refund": { component: require("./order/refund.vue") },
+					"/list": { 
+						component: Vue.extend({template: "<router-view></router-view>"}),
+						subRoutes: {
+							"/": { component: require("./order/listView.vue"), },
+							"/:item/detail": { component: require("./order/listItemDetailView.vue") }
+						}
+					},
+					"/cart": { component: require("./order/cartView.vue") },
+					"/refund": { component: require("./order/refundView.vue") },
 					"/wait": {
 						component:  Vue.extend({template: "<router-view></router-view>"}),
 						subRoutes: {
-							"/": { component: require("./order/waitPay.vue") },
-							"/evaluate": { component: require("./order/evaluate.vue") },
-							"/delivery": { component: require("./order/waitDelivery.vue") },
-							"/pay": { component: require("./order/waitPay.vue") },
-							"/receive": { component: require("./order/waitReceive.vue") },
+							"/": { component: require("./order/waitPayView.vue") },
+							"/evaluate": { component: require("./order/evaluateView.vue") },
+							"/delivery": { component: require("./order/waitDeliveryView.vue") },
+							"/pay": { component: require("./order/waitPayView.vue") },
+							"/receive": { component: require("./order/waitReceiveView.vue") },
 						}
 					},
 					
@@ -48,14 +54,14 @@ module.exports = function configRouter(Vue, router){
 		"track": {
 			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
-				"/": { component: require("./track/trackList.vue") },
-				"/list": { component: require("./track/trackList.vue") },
-				// "/*": { component: require("./track/trackList.vue") },
+				"/": { component: require("./track/trackListView.vue") },
+				"/list": { component: require("./track/trackListView.vue") },
+				// "/*": { component: require("./track/trackListView.vue") },
 			}
 		},
 
 		// not found
-		"*": { component: require("./404.vue") },
+		"*": { component: require("./404View.vue") },
 
 	});
 

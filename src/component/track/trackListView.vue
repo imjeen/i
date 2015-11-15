@@ -5,12 +5,12 @@
 </template>
 
 <script>
-var mydata = 0;
-	module.exports = {
-		data: function(){
+	let mydata = 0;
+	export default {
+		data(){
 			return {
 				trackNumber: ++mydata
 			}
 		}
-	};
+	}
 </script>

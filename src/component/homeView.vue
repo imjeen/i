@@ -15,17 +15,17 @@
 
 	<section>
 		<ul>
-			<li><a v-link="{path: '/order/wait/pay'}" href="#">待支付</a></li>
+			<li><a v-link="{path: '/order/wait/pay'}" href="#">待支付<span>(<em v-text="waitOrderNum"></em>)</span></a></li>
 			<li><a v-link="{path: '/order/wait/delivery'}" href="#">待发货</a></li>
 			<li><a v-link="{path: '/order/wait/receive'}" href="#">待收货</a></li>
 			<li><a v-link="{path: '/order/wait/evaluate'}" href="#">待评价</a></li>
 			<li><a v-link="{path: '/order/refund'}" href="#">退款/售后</a></li>
 		</ul>
-		<p><a v-link="{path: '/order/list'}" href="#">我的订单</a></p>
+		<p><a v-link="{path: '/order/list'}" href="#">我的订单<span>(<em v-text="orderNum"></em>)</span></a></p>
 	</section>
 
 	<section>
-		<p><a v-link="{path: '/order/cart'}" href="#">购物车</a></p>
+		<p><a v-link="{path: '/order/cart'}" href="#">购物车<span>(<em v-text="cartNum"></em>)</span></a></p>
 	</section>
 
 	<section>
@@ -34,3 +34,21 @@
 		<p><a v-link="{path: '/own/coupon'}" href="#">我的优惠券/红包</a></p>
 	</section>
 </template>
+
+<script>
+	export default {
+		data(){
+			return {
+				orderNum: 100,
+				cartNum: 100,
+				waitOrderNum: 100
+			}
+		},
+		route: {
+			data(transition){
+				this.$root.rootTitle = "";
+				transition.next(this.$data);
+			}
+		}
+	}
+</script>

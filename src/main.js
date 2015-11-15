@@ -5,6 +5,12 @@ var VueResource = require("vue-resource");
 
 var configRouter = require('./component/router-config.js');
 
+// import Vue from "Vue"
+// import VueRouter from "vue-router"
+// import VueResource from "vue-resource"
+
+// import configRouter from "./component/router-config.js"
+
 // just for debug
 Vue.config.debug = true;
 
@@ -24,6 +30,7 @@ configRouter(Vue, router);
 var userApp = Vue.extend({
 	data: function(){
 		return {
+			rootTitle: '',
 			nowYear: new Date().getFullYear()
 		}
 	}

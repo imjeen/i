@@ -12,3 +12,17 @@
 		</ul>
 	</section>
 </template>
+
+<script>
+	export default {
+		data(){
+			return { }
+		},
+		route:{
+			data(transition){
+				this.$root.rootTitle = "我的个人中心";
+				transition.next(this.$data);
+			}
+		}
+	}
+</script>
