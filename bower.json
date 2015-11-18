@@ -14,7 +14,7 @@
     "./bower_components"
   ],
   "dependencies": {
-    "vue": "~1.0.7",
+    "vue": "~1.0.8",
     "vue-router": "~0.7.5",
     "vue-resource": "~0.1.17"
   }

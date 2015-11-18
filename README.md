@@ -10,13 +10,13 @@
 ## usage
 
 ```
-	bower install # install bower package for first
-	npm install # install npm package for first
-	npm run build # build for dev
+	$ bower install # install bower package for first
+	$ npm install # install npm package for first
+	$ npm run build # build for dev
 
-	NODE_ENV=production npm run build # build for product/release
-	npm run server # go to the URL: http://localhost
-	npm run watch # extra watch files
+	$ NODE_ENV=production npm run build # build for product/release
+	$ npm run server # go to the URL: http://localhost
+	$ npm run watch # extra watch files
 ```
 
 ## vue plugin
