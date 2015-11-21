@@ -1,0 +1,34 @@
+
+.header{
+	background-color: rgba(246,246,246,1);
+	position: relative;
+	line-height: .50rem;
+
+	.header__title{
+		margin: 0;
+		height: .50rem;
+    line-height: .50rem;
+		&.header__title--center{
+			text-align: center;
+			padding-left: .40rem;
+			padding-right: .40rem;
+		}
+	}
+
+	.header__link{
+		display: inline-block;
+		width: .40rem;
+		height: .50rem;
+		&.header__link--left{
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		&.header__link--right{
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+}

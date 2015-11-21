@@ -2,23 +2,30 @@
 <html lang="zh-cn">
 <head>
 	<meta charset="UTF-8">
-	<title>{{ rootTitle ? rootTitle + ' - ' : ""}}我的家</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<title v-text="rootTitle">我的家</title>
 	<style>[v-cloak]{ display: none; }</style>
 </head>
 <body v-cloak>
-	<header>
-		<h1>我的家</h1>
-		<p>当前正在访问的路径： {{$route.path}} </p>
+	<header class="header cl">
+		<h1 class="header__title header__title--center ellipsis--oneline" v-if="rootTitle" v-text="rootTitle">我的家</h1>
+		<h1 class="header__title header__title--center ellipsis--oneline" v-else>我的家</h1>
+		<a class="header__link header__link--left" href="javascrip:void(0);"><!-- back --></a>
+		<a class="header__link header__link--right" href="javascrip:void(0);"><!-- menu --></a>
+		<nav>
+			<ul>
+				<li><a v-link="{path: '/'}">我的首页</a></li>
+				<li><a href="#/more">更多->not found</a></li>
+			</ul>
+		</nav>
 	</header>
+
+	<p>当前正在访问的路径： {{$route.path}} </p>
+
 	<p><a v-link="{path: '/test'}">测试页</a></p>
-	<nav>
-		<ul>
-			<li><a v-link="{path: '/'}">我的首页</a></li>
-			<li><a href="#/more">更多->not found</a></li>
-		</ul>
-	</nav>
 	
-	<article>
+	
+	<article class="article">
 		<main class="jumbotron-main">
 				<router-view>Loading...</router-view>
 		</main>
@@ -27,8 +34,8 @@
 			<p><span>退出</span><span><a>top</a></span></p>
 		</aside>
 	</article>
-	<footer>
-		<p>Copyright {{nowYear}} 我的家 版权所有</p>
+	<footer class="footer">
+		<p class="footer__copyright">Copyright {{nowYear}} 我的家 版权所有</p>
 	</footer>
 	
 	<script src="./build/common.js"></script>

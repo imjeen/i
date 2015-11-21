@@ -6,24 +6,34 @@
 
 <template>
 	<div class="test">
-	  <h3>user profile</h3>
+	  <h3>user profile: name {{store.user.name}}</h3>
 	  <h4>test: {{test.a}}</h4>
 	  <input type="text" v-model="test.a">
 	  <p>Current count: {{test.count}}</p>
 	</div>
 </template>
+
 <script>
-	module.exports = {
-		data: function(){
+	"use strict";
+	import store from "../store/index";
+	let mytest = [];
+	export default {
+		data(){
 			return {
 				test: {
 					a: "it is a test!",
-					count: 0
+					count: 0,
+				},
+				store: {
+					user: store.fetch().user
 				}
 			}
 		},
+		ready(){
+			this.$data.store = store.fetch();
+		},
 		route: {
-			data: function(transition){
+			data(transition){
 
 				var myData = this.$data;
 
@@ -33,22 +43,22 @@
 				
 				transition.next(myData);
 			},
-			canReuse: function(transition){
+			canReuse(transition){
 				// console.log('canReuse');
 			},
-			canActivate: function(transition){
+			canActivate(transition){
 				// console.log('canActivate');
 				transition.next();
 			},
-			canDeactivate: function(transition){
+			canDeactivate(transition){
 				// console.log('canDeactivate');
 				transition.next();
 			},
-			activate: function(transition){
+			activate(transition){
 				// console.log('activate');
 				transition.next();
 			},
-			deactivate: function(transition){
+			deactivate(transition){
 				// console.log('deactivate');
 				transition.next();
 			}

@@ -1,3 +1,7 @@
+"use strict";
+
+// just for style
+require("../static/sass/main.scss");
 
 var Vue = require("vue");
 var VueRouter = require("vue-router");

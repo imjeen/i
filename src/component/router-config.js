@@ -1,4 +1,8 @@
 
+var store = require('../store/index');
+
+// import store from "../store/index";
+
 module.exports = function configRouter(Vue, router){
 
 	// normal
@@ -56,7 +60,7 @@ module.exports = function configRouter(Vue, router){
 			subRoutes: {
 				"/": { component: require("./track/trackListView.vue") },
 				"/list": { component: require("./track/trackListView.vue") },
-				// "/*": { component: require("./track/trackListView.vue") },
+				// "/*": { component: require("./404View.vue") },
 			}
 		},
 
@@ -70,9 +74,15 @@ module.exports = function configRouter(Vue, router){
   /*router.redirect({
     '/': '/own'
   });*/
-
-	/*router.beforeEach(function (transition) {
+/*
+	router.beforeEach(function (transition) {
 		console.log("route before");
+		if(store.fetch().user.islogin !== true){
+			router.go("/login");
+			transition.abort();
+		}else{
+			transition.next();
+		}
 	  // if (transition.to.auth) {
 	  //   // 对用户身份进行验证...
 	  //   // console.log('ok')

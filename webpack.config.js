@@ -12,11 +12,11 @@ module.exports = {
     },
     module: {
         loaders: [
-            /*{ test: /\.css$/, loader: "style!css" },
+            { test: /\.css$/, loaders: ["style","css??sourceMap"] },
             // Extract css files
-            { test: /\.css$/, loader: "style-loader!css-loader"  },*/
+            { test: /\.scss$/, loaders: ["style","css??sourceMap","sass??sourceMap"]  },
             { test: /\.vue$/, loader: "vue-loader" },
-            { test: /\.html$/, loader: "html-loader" }
+            // { test: /\.html$/, loader: "html-loader" },
 
         ]
     },

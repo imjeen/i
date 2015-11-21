@@ -16,6 +16,7 @@
   "dependencies": {
     "vue": "~1.0.8",
     "vue-router": "~0.7.5",
-    "vue-resource": "~0.1.17"
+    "vue-resource": "~0.1.17",
+    "normalize-css": "~3.0.3"
   }
 }

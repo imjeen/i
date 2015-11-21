@@ -1,0 +1,14 @@
+
+/*base style*/
+@import "../../bower_components/normalize-css/normalize.css";
+
+/*base style*/
+@import "base/custom";
+
+/* util */
+@import "util/ellipsis";
+
+/* partial */
+@import "partial/header";
+@import "partial/article";
+@import "partial/footer";
