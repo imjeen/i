@@ -2,3 +2,30 @@
 .article{
 	background-color: #efefef;
 }
+
+.i-touchme{
+	max-width: 80%;
+	text-align: center;
+	margin: 0.10rem auto;
+	background-color: #fff;
+	border-radius: 0.03rem;
+	.i-touchme__link{
+		display: block;
+		padding: 0.06rem 0.12rem;
+		color: #666;
+		text-decoration: none;
+	}
+}
+
+.i-reg{
+	background-color: #fff;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 0.05rem 0;
+	.i-reg__link{ 
+		color: #666;
+		text-decoration: none;
+	}
+	.i-reg__link--left{ float: left;}
+	.i-reg__link--right{ float: right;}
+}

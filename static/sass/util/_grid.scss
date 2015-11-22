@@ -1,0 +1,40 @@
+/* GRID */
+
+.i-grid{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*flex-flow: row wrap; */
+	margin: 0 auto;
+	align-items: stretch;
+
+	&.i-grid--no-spacing{
+		padding: 0;
+	}
+}
+
+.i-cell{ box-sizing: border-box; }
+
+.i-cell--top{ align-self: flex-start; }
+
+.i-cell--middle{ align-self: center; }
+
+.i-cell--bottom{ align-self: flex-end; }
+
+.i-cell--stretch{ align-self: stretch; }
+
+
+
+@for $i from 1 through (12 - 1){
+
+	.i-cell--#{$i}-col{
+
+		width: calc( #{($i / 12) * 100 + "%"} - 0px );
+
+		.i-grid--no-spacing > & {
+			width: #{($i / 12) * 100 + "%"};
+		}
+
+	}
+	
+}
