@@ -6,6 +6,7 @@ html{
 }
 
 body{
+	background-color: #efefef;
 	font-size: .14rem;
 	min-height: 100%;
 }
@@ -37,26 +38,32 @@ ul,li{
 	overflow: hidden;
 }
 
-html{ font-size: (10 / 16) * 1000%; }
+// variable
+$base-font-size-radio: ((10 / 16) * 1000%) / 360;
+
+html{ font-size: $base-font-size-radio * 360; }
 
 @media screen and (min-width:480px) and (max-width:639px) {
-	html{ font-size: (15 / 16) * 1000%; }
+	html{ font-size: $base-font-size-radio * 640; }
 }
 @media screen and (min-width:640px) and (max-width:719px) {
-	html{ font-size: (20 / 16) * 1000%; }
+	html{ font-size: $base-font-size-radio * 720; }
 }
 @media screen and (min-width:720px) and (max-width:749px) {
-	html{ font-size: (22.5 / 16 ) * 1000%; }
+	html{ font-size: $base-font-size-radio * 750; }
 }
 @media screen and (min-width:750px) and (max-width:799px) {
-	html{ font-size: (23.5 / 16 ) * 1000%; }
+	html{ font-size: $base-font-size-radio * 800; }
 }
 @media screen and (min-width:800px) and (max-width:959px) {
-	html{ font-size: (25 / 16) * 1000%; }
+	html{ font-size: $base-font-size-radio * 960; }
 }
-@media screen and (min-width:960px) and (max-width:1079px) {
-	html{ font-size: (30 / 16) * 1000%; }
+@media screen and (min-width:960px){
+	html{ font-size: $base-font-size-radio * 1080; }
 }
-@media screen and (min-width:1080px) {
-	html{ font-size: (32 / 16 ) * 1000%; }
+
+
+.i-container{ 
+	margin: auto;
+	max-width: 1080px;
 }

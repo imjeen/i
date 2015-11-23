@@ -3,17 +3,11 @@
 // just for style
 require("../static/sass/main.scss");
 
-var Vue = require("vue");
-var VueRouter = require("vue-router");
-var VueResource = require("vue-resource");
+import Vue from "vue"
+import VueRouter from "vue-router"
+import VueResource from "vue-resource"
 
-var configRouter = require('./component/router-config.js');
-
-// import Vue from "Vue"
-// import VueRouter from "vue-router"
-// import VueResource from "vue-resource"
-
-// import configRouter from "./component/router-config.js"
+import configRouter from "./component/router-config.js"
 
 // just for debug
 Vue.config.debug = true;

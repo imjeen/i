@@ -12,11 +12,18 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loaders: ["style","css??sourceMap"] },
-            // Extract css files
-            { test: /\.scss$/, loaders: ["style","css??sourceMap","sass??sourceMap"]  },
-            { test: /\.vue$/, loader: "vue-loader" },
             // { test: /\.html$/, loader: "html-loader" },
+            { test: /\.vue$/, loader: "vue-loader" },
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel',
+                query: {
+                    cacheDirectory: true,
+                    plugins: ['transform-runtime'],
+                    presets: ['es2015']
+                }
+            },
 
         ]
     },
@@ -32,14 +39,11 @@ module.exports = {
             'vue-router':   __dirname + "/bower_components/vue-router/dist/vue-router.js",
             'vue-resource': __dirname + "/bower_components/vue-resource/dist/vue-resource.js",
         }
-    },
-    babel: {
-        presets: ['es2015'],
-        plugins: ['transform-runtime']
     }
 };
 
 if(process.env.NODE_ENV === 'production'){
+
     module.exports.plugins && module.exports.plugins.push(
         new webpack.DefinePlugin({
           'process.env': {
@@ -53,6 +57,20 @@ if(process.env.NODE_ENV === 'production'){
         }),
         new webpack.optimize.OccurenceOrderPlugin()
     );
+
+    // for style
+    module.exports.module.loaders && module.exports.module.loaders.push(
+        { test: /\.css$/, loaders: ["style","css"] },
+        { test: /\.scss$/, loaders: ["style","css","sass"]  }
+    );
+
 }else{
+
     module.exports.devtool = '#source-map';
+    
+    module.exports.module.loaders && module.exports.module.loaders.push(
+        { test: /\.css$/, loaders: ["style","css?sourceMap"] },
+        { test: /\.scss$/, loaders: ["style","css?sourceMap","sass?sourceMap"]  }
+    );
+
 }

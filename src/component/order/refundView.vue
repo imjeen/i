@@ -1,7 +1,7 @@
 
 <template>
 	<div v-if="refundOrder.length === 0"> nothing to refund</div>
-	<div v-else=>
+	<div v-else>
 		<section>
 			<h2>order refund</h2>
 		</section>
