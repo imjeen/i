@@ -1,6 +1,11 @@
 
+@import "variables";
+
+/*font-awesome*/
+@import "#{$bower-path}font-awesome/scss/font-awesome";
+
 /*base style*/
-@import "../../bower_components/normalize-css/normalize.css";
+@import "#{$bower-path}normalize-css/normalize.css";
 
 /*base style*/
 @import "base/custom";

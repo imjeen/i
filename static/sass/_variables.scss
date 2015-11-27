@@ -1,0 +1,16 @@
+// Variables
+// --------------------------
+
+$bower-path: "../../bower_components/";
+
+//==========================
+// font awesome
+
+$fa-font-path:        "#{$bower-path}font-awesome/fonts";
+$fa-font-size-base:   14px;
+$fa-line-height-base: 1;
+$fa-css-prefix:       fa;
+$fa-version:          "4.5.0";
+$fa-border-color:     #eee;
+$fa-inverse:          #fff;
+$fa-li-width:         (30em / 14);

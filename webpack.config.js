@@ -1,19 +1,28 @@
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry:{
     	userMain: "./src/main.js",
         vendor: ['vue','vue-router','vue-resource']
     },
+
     output: {
-        path: "./build",
+        publicPath: "./build/",
+        path: "./build/",
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
     },
+
     module: {
         loaders: [
-            // { test: /\.html$/, loader: "html-loader" },
+            /* #font */
+            { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+            { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
+            /* #vue */
             { test: /\.vue$/, loader: "vue-loader" },
+            /* #js */
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
@@ -27,10 +36,16 @@ module.exports = {
 
         ]
     },
-    // Use the plugin to specify the resulting filename (and add needed behavior to the compiler)
+
     plugins: [
+        new ExtractTextPlugin("[name].css",{ allChunks: true }),
         new webpack.optimize.CommonsChunkPlugin('common.js'),
+        new HtmlWebpackPlugin({
+          filename: '../index.html',
+          template: './src/index.html'
+        })
     ],
+
     resolve: {
         // 省略 .js 后缀
         extensions: ['', '.js'],
@@ -40,6 +55,7 @@ module.exports = {
             'vue-resource': __dirname + "/bower_components/vue-resource/dist/vue-resource.js",
         }
     }
+
 };
 
 if(process.env.NODE_ENV === 'production'){
@@ -60,8 +76,8 @@ if(process.env.NODE_ENV === 'production'){
 
     // for style
     module.exports.module.loaders && module.exports.module.loaders.push(
-        { test: /\.css$/, loaders: ["style","css"] },
-        { test: /\.scss$/, loaders: ["style","css","sass"]  }
+        { test: /\.css$/, loader: ExtractTextPlugin.extract("style","css") },
+        { test: /\.scss$/, loader: ExtractTextPlugin.extract("style","css","sass")  }
     );
 
 }else{
@@ -69,8 +85,8 @@ if(process.env.NODE_ENV === 'production'){
     module.exports.devtool = '#source-map';
     
     module.exports.module.loaders && module.exports.module.loaders.push(
-        { test: /\.css$/, loaders: ["style","css?sourceMap"] },
-        { test: /\.scss$/, loaders: ["style","css?sourceMap","sass?sourceMap"]  }
+        { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
+        { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader","css-loader!sass-loader")  }
     );
 
 }
