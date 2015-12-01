@@ -12,6 +12,7 @@ body{
 }
 
 h1,h2,h3,h4,h5,
+dl,dt,dd,
 p{
 	margin: 0;
 }
@@ -66,4 +67,17 @@ html{ font-size: $base-font-size-radio * 360; }
 .i-container{ 
 	margin: auto;
 	max-width: 1080px;
+}
+
+.height-inherit{
+	height: inherit;
+}
+
+.table-center-wrap{
+	display: table;
+	table-layout: fixed;
+	.table-center{
+		display: table-cell;
+		vertical-align: middle;
+	}
 }

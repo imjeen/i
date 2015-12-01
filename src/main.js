@@ -6,7 +6,6 @@ require("../static/sass/main.scss");
 import Vue from "vue"
 import VueRouter from "vue-router"
 import VueResource from "vue-resource"
-
 import configRouter from "./component/router-config.js"
 
 // just for debug
@@ -14,6 +13,7 @@ Vue.config.debug = true;
 
 // -----------------------------------
 // router
+
 
 // install router
 Vue.use(VueRouter);
@@ -33,10 +33,9 @@ var userApp = Vue.extend({
 		}
 	}
 });
+
 // start router
 router.start(userApp,"html");
 
 // just for debugging
 window.router = router
-
-
