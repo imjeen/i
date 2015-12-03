@@ -16,7 +16,7 @@
 				<a class="home-link home-link--block home-link--center" v-link="{path: '/own/ecard'}">电子会员卡</a>
 			</li>
 			<li class="i-cell i-cell--middle i-cell--6-col">
-				<a class="home-link home-link--block home-link--center" v-link="{path: '/track/list'}">我的足迹</a>
+				<a class="home-link home-link--block home-link--center" v-link="{path: '/record/list'}">我的足迹</a>
 			</li>
 		</ul>
 

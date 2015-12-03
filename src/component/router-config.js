@@ -55,11 +55,11 @@ module.exports = function configRouter(Vue, router){
 			},
 
 		// track
-		"track": {
+		"record": {
 			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
-				"/": { component: require("./track/trackListView.vue") },
-				"/list": { component: require("./track/trackListView.vue") },
+				"/": { component: require("./record/recordListView.vue") },
+				"/list": { component: require("./record/recordListView.vue") },
 				// "/*": { component: require("./404View.vue") },
 			}
 		},
