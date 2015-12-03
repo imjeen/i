@@ -58,8 +58,8 @@ module.exports = function configRouter(Vue, router){
 		"record": {
 			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
-				"/": { component: require("./record/recordListView.vue") },
-				"/list": { component: require("./record/recordListView.vue") },
+				"/": { component: require("./record/listView.vue") },
+				"/list": { component: require("./record/listView.vue") },
 				// "/*": { component: require("./404View.vue") },
 			}
 		},

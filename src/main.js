@@ -11,12 +11,9 @@ import configRouter from "./component/router-config.js"
 // just for debug
 Vue.config.debug = true;
 
-// -----------------------------------
-// router
-
-
-// install router
+// install plugin
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
 var router = new VueRouter({
 	history: false,
