@@ -9,8 +9,8 @@ module.exports = {
     },
 
     output: {
-        publicPath: "./build/",
-        path: "./build/",
+        publicPath: "/build/",
+        path: __dirname + "/build/",
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
     },
