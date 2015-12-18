@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.btn-wrap{
+	margin: 0.12rem 0;
+	padding: 0 0.12rem;
+}
+
+.btn[type="button"],
+.btn[role="button"]{
+	display: inline-block;
+  padding: 0.06rem 0.16rem;
+  margin-bottom: 0;
+  font-size: 0.16rem;
+  font-weight: normal;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  // -ms-touch-action: manipulation;
+  // touch-action: manipulation;
+  cursor: pointer;
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 0.04rem;
+  box-sizing: border-box;
+  &.btn-block{
+  	display: block;
+  	width: 100%;
+  }
+  &.btn-danger{
+  	color: #fff;
+  	background-color: #D00;
+  	border-color: #D00;
+  }
+	&.btn-simple{
+		color: #D00;
+		background-color: #fff;
+		border-color: #D00;
+	}
+
+}

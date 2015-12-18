@@ -23,6 +23,25 @@ module.exports = function configRouter(Vue, router){
 				"/activity": { component: require("./own/activityView.vue") },
 				"/coupon": { component: require("./own/couponView.vue") },
 				"/reservation": { component: require("./own/reservationView.vue") },
+				"/tailor": { component: require("./own/customize/indexView.vue") },
+				"/address": { component: require("./own/address/indexView.vue") },
+
+				"/edit": {
+					component: Vue.extend({template: "<router-view></router-view>"}),
+					subRoutes: {
+						"/house": { component: require("./own/customize/editHouseView.vue") },
+						"/decoration": { component: require("./own/customize/editDecorationView.vue") },
+						"/password": { 
+							component: require("./own/password/editPasswordTemplate.vue"),
+							subRoutes: {
+								"/step1": { component: require("./own/password/editPasswordStep1View.vue") },
+								"/step2": { component: require("./own/password/editPasswordStep2View.vue") },
+								"/step3": { component: require("./own/password/editPasswordStep3View.vue") },
+							}
+						}
+					},
+				}
+
 			}
 		},
 

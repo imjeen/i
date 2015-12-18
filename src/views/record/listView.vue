@@ -16,7 +16,7 @@
 
 			<li class="record-item">
 				<div class="i-grid i-grid--no-spacing">
-					<div class="i-cell i-cell--4-col"><img src="/static/image/200x200.png" alt="" width="100%"></div>
+					<div class="i-cell i-cell--4-col"><img src="/static/images/200x200.png" alt="" width="100%"></div>
 					<div class="i-cell i-cell--8-col">
 						<h2 class="ellipsis--twoline"><a href="#">【奥普浴霸】多功能风暖集成吊顶QDP5020A（新）| 全国包邮（偏远除外）</a></h2>
 						<p>$00.00</p>
@@ -46,7 +46,7 @@
 						name: "name #1",
 						price: 110,
 						link: "path/to/link",
-						imagePath: "/static/image/200x200.png",
+						imagePath: "/static/images/200x200.png",
 						state: "",
 						timeline: 1,
 					},
@@ -55,7 +55,7 @@
 						name: "name #2",
 						price: 110,
 						link: "path/to/link",
-						imagePath: "/static/image/200x200.png",
+						imagePath: "/static/images/200x200.png",
 						state: "",
 						timeline: 0,
 					},

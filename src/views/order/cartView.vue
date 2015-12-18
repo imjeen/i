@@ -6,7 +6,7 @@
 
 			<dd class="cart-item cart-list__item i-grid i-grid--no-spacing">
 				<div class="cart-item__checkbox i-cell i-cell--1-col i-cell--middle"><label><input type="checkbox"></label></div>
-				<figure class="cart-item__figure i-cell i-cell--5-col"><a href=""><img src="/static/image/200x200.png" width="100%" alt=""></a></figure>
+				<figure class="cart-item__figure i-cell i-cell--5-col"><a href=""><img src="/static/images/200x200.png" width="100%" alt=""></a></figure>
 				<div class="cart-item__caption i-cell i-cell--6-col">
 					<h3 class="ellipsis--twoline"><a href="#">【西门子】远景雅白五孔十只装|开关/断路器品牌聚惠，订单完成再返22元，限量100套【本产品不参加满减优惠】</a></h3>
 					<p>

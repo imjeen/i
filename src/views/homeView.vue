@@ -1,14 +1,10 @@
-
+<!-- 
 <template>
 	<section class="home-section home-divider--bottom">
 		<div class="home-banner">
 			<h2 class="home-banner__title">欢迎到我家</h2>
 			<p class="home-group"><a class="home-group__button" href="#">登录/注册</a></p>
 			<p><a href="#/own/info">个人中心</a></p>
-			<!-- <figure>
-				<img alt="">
-				<figcaption><h3>usename</h3></figcaption>
-			</figure> -->
 		</div>
 		
 		<ul class="i-grid i-grid--no-spacing">
@@ -55,6 +51,145 @@
 		<p class="home-divider--top"><a class="home-link home-link--block" v-link="{path: '/own/coupon'}" href="#">我的优惠券/红包</a></p>
 	</section>
 </template>
+ -->
+
+ <template>
+
+ 	<section class="masthead-section normal-layer">
+		
+		<!-- login -->
+		<div class="masthead-login">
+			<figure class="masthead-figure"><img alt="" width="100%" /></figure>
+			<div class="masthead-caption">
+				<h3>name</h3>
+				<p>钱包余额 ￥100.00</p>
+				<p class="masthead-setting"><a href="#/own/info">账户设置<span>></span></a></p>
+			</div>
+		</div>
+		<!-- no login -->
+		<!-- <div class="masthead-nologin">
+			<h2 class="masthead-title">欢迎来到齐家</h2>
+			<p><a class="masthead-button" href="${loginUrl!}">登录/注册</a></p>
+		</div> -->
+	</section>
+
+	<section class="service-section normal-layer no-padding-layer">
+		<ul class="feature-list interaction-list">
+			<li class="feature-item">
+				<a  v-link="{path: '/order/list'}">
+					<p class="inner-bar">我的订单<span class="tip-right text-gray">查看全部订单<i class="right-dir-icon dir-icon"></i></span></p>
+				</a>
+			</li>
+		</ul>
+		<ul class="service-list cl">
+			<li>
+				<a v-link="{path: '/order/wait/pay'}"><span class="icon-area"><i class=""></i><em class="icon-tip">99</em></span>待支付</a>
+			</li>
+			<li>
+				<a  v-link="{path: '/order/wait/delivery'}"><span class="icon-area"><i class=""></i><em class="icon-tip">99</em></span>待发货</a>
+			</li>
+			<li>
+				<a v-link="{path: '/order/wait/receive'}"><span class="icon-area"><i class=""></i><em class="icon-tip">99</em></span>待收货</a>
+			</li>
+			<li>
+				<a v-link="{path: '/order/wait/evaluate'}"><span class="icon-area"><i class=""></i><em class="icon-tip">99</em></span>待评价</a>
+			</li>
+			<li>
+				<a v-link="{path: '/order/refund'}"><span class="icon-area"><i class=""></i><em class="icon-tip">99</em></span>退款/售后</a>
+			</li>
+		</ul>
+	</section>
+
+	<section class="advance-section normal-layer no-padding-layer">
+		<ul class="advance-list link-list clearfix">
+			<li>
+				<a class="advance-cell" v-link="{path: '/own/ecard'}">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">电子会员卡</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell" v-link="{path: '/order/cart'}">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">购物车</span>
+					<small class="advance-tip">(9件)</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell" v-link="{path: '/own/coupon'}">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">优惠券/红包</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell"href="#">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">代金券</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell" href="#">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">齐家钱包</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell" v-link="{path: '/own/activity'}">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">已报名活动</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell" v-link="{path: '/own/reservation'}">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">我的预约</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell"  v-link="{path: '/record/list'}">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">我的足迹</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell" href="#">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">我的问答</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell"v-link="{path: '/own/tailor'}">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">装修需求定制</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell" href="#">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">我的抽奖</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+			<li>
+				<a class="advance-cell" href="#">
+					<i class="advance-icon">&nabla;</i>
+					<span class="advance-text">更多</span>
+					<small class="advance-tip">&nbsp;</small>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+ </template>
 
 <script>
 	export default {

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.info-section{
+	.info-list{
+		.inner-bar{ padding: 0.10rem 0.12rem; }
+		.avatar-item{
+			line-height: 0.60rem;
+			.avatar-figure{
+				float: right;
+				font-size: 0;
+				height: 0.60rem;
+				width: 0.60rem;
+				background-image: url("/static/images/avatar.png");
+				background-size: contain;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+		}
+	}
+	
+}

@@ -24,8 +24,14 @@
 /* util */
 @import "util/grid";
 @import "util/ellipsis";
+@import "util/button";
+@import "util/icon";
 
 /* partial */
 @import "partial/header";
 @import "partial/article";
 @import "partial/footer";
+
+/* pages */
+@import "pages/home";
+@import "pages/info";
