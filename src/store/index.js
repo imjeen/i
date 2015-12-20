@@ -1,26 +1,19 @@
-"use strict";
-const key = "PLUSPLAN-VUE";
 
-if(!localStorage.getItem(key)){
-	let now = new Date();
-	let data = {
-		user: {
-			id: 0,
-			name: "####################bill",
-			islogin: true
-		}
-	};
-	localStorage.setItem(key,JSON.stringify(data));
+let data = {
+	year: new Date().getFullYear(),
+	htmlHead: {
+		title: "我的家"
+	}
 }
 
-const store = {};
-
-store.fetch =  function(){
-	return JSON.parse(localStorage.getItem(key));
+export default {
+	getData(){
+		return data;
+	},
+	// setHtmlHead(options){
+	// 	data.htmlHead = _.extend(data.htmlHead, options)
+	// },
+	setHtmlTitle(val){
+		data.htmlHead.title = !!val ? val : data.htmlHead.title
+	}
 }
-
-store.save = (val) => {
-	localStorage.setItem(key,val);
-}
-
-module.exports =  store;

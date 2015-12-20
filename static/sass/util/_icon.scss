@@ -48,17 +48,17 @@
 		vertical-align: middle;
 	}
 
-	// &.top-dir-icon:after{
-	// 	@include icon-direction("top",0.02rem, #d8d8d8);
-	// }
+	&.top-dir-icon:after{
+		@include icon-direction("top",0.02rem, #d8d8d8);
+	}
 	&.right-dir-icon:after{
 		@include icon-direction("right",0.02rem, #d8d8d8);
 	}
-	// &.bottom-dir-icon:after{
-	// 	@include icon-direction("bottom",0.02rem, #d8d8d8);
-	// }
-	// &.left-dir-icon:after{
-	// 	@include icon-direction("left",0.02rem, #d8d8d8);
-	// }
+	&.bottom-dir-icon:after{
+		@include icon-direction("bottom",0.02rem, #d8d8d8);
+	}
+	&.left-dir-icon:after{
+		@include icon-direction("left",0.02rem, #d8d8d8);
+	}
 
 }

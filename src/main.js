@@ -6,7 +6,8 @@ require("../static/sass/main.scss");
 import Vue from "vue"
 import VueRouter from "vue-router"
 import VueResource from "vue-resource"
-import configRouter from "./views/router-config.js"
+import configRouter from "./views/config"
+import store from "./store/"
 
 // just for debug
 Vue.config.debug = true;
@@ -23,11 +24,8 @@ var router = new VueRouter({
 configRouter(Vue, router);
 
 var userApp = Vue.extend({
-	data: function(){
-		return {
-			rootTitle: '',
-			nowYear: new Date().getFullYear()
-		}
+	data(){
+		return store.getData()
 	}
 });
 
