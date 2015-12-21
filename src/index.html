@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title v-if="!!htmlTitle === false">我的家</title>
-	<title v-else>{{htmlTitle}}</title>
+	<title v-if="!!htmlHead.title === false">我的家</title>
+	<title v-else>{{htmlHead.title}} - 我的家</title>
 
 	<!-- result style -->
 	{% for(var i=0; i < o.htmlWebpackPlugin.files.css.length; ++i){ %}
@@ -14,7 +14,12 @@
 </head>
 <body>
 
-	<header><h1 v-text=""></h1></header>
+	<header class="header i-grid">
+		<button class="i-cell i-cell--1-col plain" @click="goBack()"><i></i></button>
+		<h1 class="i-cell i-cell--10-col text-center" v-if="!!htmlHead.title === false">我的家</h1>
+		<h1 class="i-cell i-cell--10-col text-center" v-text="htmlHead.title"></h1>
+		<button class="i-cell i-cell--1-col plain"><i class="svg-icon"><svg viewBox="0 0 24 24"><path d="M3,18h18v-2H3V18z M3,13h18v-2H3V13z M3,6v2h18V6H3z"></path></svg></i></button>
+	</header>
 
 	<main class="jumbotron-main">
 	<router-view>Loading...</router-view>

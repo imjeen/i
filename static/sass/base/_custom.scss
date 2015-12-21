@@ -39,6 +39,8 @@ ul,ol,li{
 	overflow: hidden;
 }
 
+.text-center{ text-align: center; }
+
 // variable
 $base-font-size-radio: ((10 / 16) * 1000%) / 360;
 
@@ -62,7 +64,6 @@ html{ font-size: $base-font-size-radio * 360; }
 @media screen and (min-width:960px){
 	html{ font-size: $base-font-size-radio * 1080; }
 }
-
 
 .i-container{ 
 	margin: auto;

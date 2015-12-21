@@ -26,6 +26,11 @@ configRouter(Vue, router);
 var userApp = Vue.extend({
 	data(){
 		return store.getData()
+	},
+	methods: {
+		goBack(){
+			history.back()
+		}
 	}
 });
 

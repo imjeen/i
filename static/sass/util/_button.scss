@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+button.plain{
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 .btn-wrap{
 	margin: 0.12rem 0;
 	padding: 0 0.12rem;

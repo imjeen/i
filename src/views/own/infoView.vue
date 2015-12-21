@@ -65,13 +65,15 @@
 </template>
 
 <script>
+	import store from "../../store/"
 	export default {
 		data(){
 			return { }
 		},
 		route:{
 			data(transition){
-				this.$root.rootTitle = "我的个人中心";
+				// this.$root.rootTitle = "我的个人中心";
+				store.setHtmlTitle("设置");
 				transition.next(this.$data);
 			}
 		}

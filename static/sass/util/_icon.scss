@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+.svg-icon{
+	display: block;
+	height: 0.24rem;
+	width: 0.24rem;
+	margin: auto;
+}
+
+.svg-icon svg, 
+.svg-icon img {
+    display: block;
+    width: inherit;
+    height: inherit;
+}
+
 //------------------------------------
 // sprite icon
 // .sprite-icon{

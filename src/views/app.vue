@@ -8,7 +8,7 @@
 			<div class="masthead-caption">
 				<h3>name</h3>
 				<p>钱包余额 ￥100.00</p>
-				<p class="masthead-setting"><a href="#/own/info">账户设置<span>></span></a></p>
+				<p class="masthead-setting"><a href="#/own/">账户设置<span>></span></a></p>
 			</div>
 		</div>
 		<!-- no login -->
@@ -26,6 +26,7 @@
 	export default {
 		data(){
 			return {
+				isLogin: true,
 				user: {},
 				year: year
 			}
@@ -34,7 +35,7 @@
 			data(transition){
 				store.setHtmlTitle("个人中心");
 				// this.$root.htmlTitle = "个人中心"
-				// transition.next(this.$data);
+				transition.next(this.$data);
 			}
 		}
 	}
