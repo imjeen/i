@@ -6,7 +6,7 @@ require("../static/sass/main.scss");
 import Vue from "vue"
 import VueRouter from "vue-router"
 import VueResource from "vue-resource"
-import {configRouter} from "./views/config"
+import configRouter from "./views/config"
 import store from "./store/"
 
 // just for debug

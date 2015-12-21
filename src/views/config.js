@@ -1,6 +1,5 @@
 
-// module.exports =  function configRouter(Vue,router){
-export function configRouter(Vue, router){
+export default function(Vue, router){
 	router.map({
 		"/": {
 			// name: "home",
