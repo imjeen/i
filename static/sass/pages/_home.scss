@@ -135,30 +135,41 @@
 		li{
 			float: left;
 			width: 20%;
-			font-size: 0.13rem;
-			text-align: center;
-			a{
-				display: block;
-				padding: 0.05rem 0;
-				color: #666;
-			}
 		}
 	}
+	.service-cell{
+		padding: 0.05rem 0;
+		color: #666;
+		font-size: 0.13rem;
+		text-align: center;
+	}
+	.service-icon{
+		display: inline-block;
+		width: 0.30rem;
+		height: 0.30rem;
+	}
 	.icon-area{
-		display: block;
+		display: inline-block;
+		position: relative;
 		.icon-tip{
+			position: absolute;
+			top: 0;
+			right: 0;
 			font-size: 0.09rem;
 			line-height: 0.14rem;
 			display: inline-block;
 			width: 0.14rem;
 			height: 0.14rem;
 			border-radius: 50%;
+			background-color: rgba(255,255,255,0.8);
 			color: #ff3333;
 			border: 0.01rem solid #ff3333;
+			transform: translateY(-50%);
 		}
 	}
 
 }
+
 
 // --------------------------------
 // advance
@@ -179,6 +190,7 @@
 			&:nth-of-type(#{$columnNumber}n){
 				border-right: 0;
 			}
+			&:active{ background-color: #f0f0f0;}
 		}
 	}
 	.advance-cell{
@@ -187,7 +199,8 @@
 		padding-top: 0.10rem;
 		padding-bottom: 0.05rem;
 		.advance-icon{
-
+			font-size: 0.24rem;
+			display: inline-block;
 		}
 		.advance-text{
 			display: block;
@@ -201,10 +214,11 @@
 			display: block;
 			color: #999;
 			font-size: 0.10rem;
-			line-height: 1;
+			// line-height: 1;
 		}
 	}
 }
+
 
 //=============================================
 // --------------------------------

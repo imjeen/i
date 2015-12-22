@@ -28,13 +28,13 @@ ul,ol,li{
 	box-sizing: border-box;
 }
 
-.cl{ zoom: 1; }
-.cl:before,
-.cl:after{
+.cf{ zoom: 1; }
+.cf:before,
+.cf:after{
 	content: "";
 	display: table;
 }
-.cl:after{
+.cf:after{
 	clear: both;
 	overflow: hidden;
 }
