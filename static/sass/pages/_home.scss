@@ -32,7 +32,7 @@
 	}
 
 	.inner-bar{
-		padding: 0.06rem 0.12rem;
+		padding: 0.10rem 0.12rem;
 	}
 
 	@at-root{
@@ -130,15 +130,15 @@
 .service-section{
 	.service-list{
 		border-top: 1px solid #eee;
-		padding-left: 0.12rem;
-		padding-right: 0.12rem;
+		/*padding-left: 0.12rem;
+		padding-right: 0.12rem;*/
 		li{
 			float: left;
 			width: 20%;
 		}
 	}
 	.service-cell{
-		padding: 0.05rem 0;
+		padding: 0.08rem 0;
 		color: #666;
 		font-size: 0.13rem;
 		text-align: center;

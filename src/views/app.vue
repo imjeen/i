@@ -212,13 +212,11 @@
 
 <script>
 	import store from "../store"
-	let year = new Date().getFullYear();
 	export default {
 		data(){
 			return {
 				isLogin: true,
-				user: {},
-				year: year
+				user: {}
 			}
 		},
 		route: {

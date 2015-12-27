@@ -8,7 +8,7 @@
 				<p class="inner-bar">头像<span class="tip-right avatar-figure"><img  width="100%" alt=""></span></p>
 			</li>
 			<li class="feature-item no-interaction-item">
-				<p class="inner-bar">用户名<span class="tip-right text-gray text-gray">AAA<i class="right-dir-icon dir-icon"></i></span></p>
+				<p class="inner-bar">用户名<span class="tip-right text-gray text-gray">AAA<i>&nbsp;&nbsp;&nbsp;</i></span></p>
 			</li>
 			<li class="feature-item">
 				<a href="">
@@ -52,7 +52,7 @@
 			</li>
 			<li class="feature-item">
 				<a href="#">
-          <p class="inner-bar">手机验证<span class="tip-right text-gray">185****6865<i class="right-dir-icon dir-icon"></i></span><small class="tip-extra cl">绑定后可直接用手机号登录，也用于找回密码</small></p>
+          <p class="inner-bar">手机验证<span class="tip-right text-gray">185****6865<i class="right-dir-icon dir-icon"></i></span><small class="tip-extra cf">绑定后可直接用手机号登录，也用于找回密码</small></p>
         </a>
       </li>
 		</ul>
