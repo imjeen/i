@@ -101,16 +101,17 @@
 	}
 	.masthead-login{
 		position: relative;
-		padding-top: 0.26rem;
+		padding-top: 0.15rem;
 		.masthead-figure{
 			margin: 0;
 			float: left;
-			height: 0.60rem;
-			width: 0.60rem;
-			max-width: 0.82rem;
+			height: 1.00rem;
+			width: 1.00rem;
+			max-width: 1.00rem;
 			border-radius: 50%;
 			overflow: hidden;
 			background-image: url("/static/images/avatar.png");
+			background-repeat: no-repeat;
 			background-size: contain;
 			margin-right: 0.10rem;
 		}
@@ -119,7 +120,7 @@
 		}
 		.masthead-setting{
 			text-align: right;
-			margin-top: .12rem;
+			margin-top: 0.24rem;
 			color: #ffe0dc;
 		}
 	}
