@@ -11,19 +11,27 @@
 				<p class="inner-bar">用户名<span class="tip-right text-gray text-gray">AAA<i>&nbsp;&nbsp;&nbsp;</i></span></p>
 			</li>
 			<li class="feature-item">
-				<a href="">
-					<p class="inner-bar">昵称<span class="tip-right text-gray">AAA<i class="right-dir-icon dir-icon"></i></span></p>
+				<a href="#">
+					<p class="inner-bar">昵称<span class="tip-right text-gray">{{nickname}}<i class="right-dir-icon dir-icon"></i></span></p>
 				</a>
 			</li>
 			<li class="feature-item">
-				<a href="#">
-					<p class="inner-bar">性别<span class="tip-right text-gray">AAA<i class="right-dir-icon dir-icon"></i></span></p>
-        </a>
+				<label class="inner-bar select-bar">性别<span class="tip-right text-gray">{{gender}}<i class="right-dir-icon dir-icon"></i></span>
+					<select v-model="gender">
+						<option selected>无</option>
+						<option>男</option>
+						<option>女</option>
+					</select>
+				</label>
       </li>
       <li class="feature-item">
-      	<a href="#">
-	      	<p class="inner-bar">学历<span class="tip-right text-gray">AAA<i class="right-dir-icon dir-icon"></i></span></p>
-      	</a>
+	      	<label class="inner-bar select-bar">学历<span class="tip-right text-gray">{{education}}<i class="right-dir-icon dir-icon"></i></span>
+		      	<select v-model="education">
+							<option selected>中学</option>
+							<option>大学</option>
+							<option>博士</option>
+						</select>
+	      	</label>
       </li>
       <li class="feature-item">
       	<a href="#">
@@ -31,9 +39,12 @@
       	</a>
       </li>
       <li class="feature-item">
-      	<a href="#">
-      		<p class="inner-bar">婚姻状况<span class="tip-right text-gray">AAA<i class="right-dir-icon dir-icon"></i></span></p>
-      	</a>
+      	<label class="inner-bar select-bar">婚姻状况<span class="tip-right text-gray">{{maritalSatus}}<i class="right-dir-icon dir-icon"></i></span>
+      		<select v-model="maritalSatus">
+						<option selected>未婚</option>
+						<option>已婚</option>
+					</select>
+      	</label>
 	    </li>
       <li class="feature-item">
       	<a v-link="{path: '/own/address'}">
@@ -68,12 +79,17 @@
 	import store from "../../store/"
 	export default {
 		data(){
-			return { }
+			return {
+				nickname: "匿名",
+				gender: "",
+				education: "",
+				maritalSatus: "",
+			}
 		},
 		route:{
 			data(transition){
 				// this.$root.rootTitle = "我的个人中心";
-				store.setHtmlTitle("设置");
+				store.setHtmlTitle("我的设置");
 				transition.next(this.$data);
 			}
 		}

@@ -8,7 +8,7 @@
 			<div class="masthead-caption">
 				<h3>name</h3>
 				<p>钱包余额 ￥100.00</p>
-				<p class="masthead-setting"><a href="#/own/">账户设置<span>></span></a></p>
+				<p class="masthead-setting"><a href="#/own/">账户设置<i class="inherit-color right-dir-icon dir-icon"></i></a></p>
 			</div>
 		</div>
 		<!-- no login -->

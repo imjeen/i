@@ -11,7 +11,7 @@ export default function(Vue, router){
 			name: "own",
 			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
-				"/": { component: require("./own/infoView.vue") },
+				"/": { component: require("./own/setting.vue") },
 				"/ecard": {
 					name: "ecard",
 					component: require("./own/ecardView.vue")
