@@ -22,7 +22,7 @@
 		<ul class="feature-list interaction-list">
 			<li class="feature-item">
 				<a href="#">
-					<p class="inner-bar">我的订单<span id="orderInfo"></span><span class="tip-right text-gray">查看全部订单<i class="right-dir-icon dir-icon"></i></span></p>
+					<p class="inner-bar">我的订单<span></span><span class="tip-right text-gray">查看全部订单<i class="right-dir-icon dir-icon"></i></span></p>
 				</a>
 			</li>
 		</ul>
@@ -30,7 +30,12 @@
 			<li>
 				<a href="#">
 					<div class="service-cell">
-						<span class="icon-area"><i class="service-icon"><img src="/static/images/icons/pay-icon.png" width="100%" alt=""></i><em class="icon-tip" id="orderWaitPayCount"></em></span>
+						<span class="icon-area">
+							<i class="service-icon svg-icon">
+								<svg class="icon icon-wait-to-pay"><use xlink:href="/static/images/icon-sprites.svg#icon-wait-to-pay"></use></svg>
+							</i>
+							<em class="icon-tip"></em>
+						</span>
 						<h4>待支付</h4>
 					</div>
 				</a>
@@ -38,7 +43,12 @@
 			<li>
 				<a href="#">
 					<div class="service-cell">
-						<span class="icon-area"><i class="service-icon"><img src="/static/images/icons/ship-icon.png" width="100%" alt=""></i><em class="icon-tip" id="orderWaitDeliveryCount"></em></span>
+						<span class="icon-area">
+							<i class="service-icon svg-icon">
+								<svg class="icon icon-wait-to-receive"><use xlink:href="/static/images/icon-sprites.svg#icon-wait-to-receive"></use></svg>
+							</i>
+							<em class="icon-tip"></em>
+						</span>
 						<h4>待发货</h4>
 					</div>
 				</a>
@@ -46,7 +56,12 @@
 			<li>
 				<a href="#">
 					<div class="service-cell">
-						<span class="icon-area"><i class="service-icon"><img src="/static/images/icons/receipt-icon.png" width="100%" alt=""></i><em class="icon-tip" id="orderWaitReceiveCount"></em></span>
+						<span class="icon-area">
+							<i class="service-icon svg-icon">
+								<svg class="icon icon-wait-to-deliver"><use xlink:href="/static/images/icon-sprites.svg#icon-wait-to-deliver"></use></svg>
+							</i>
+							<em class="icon-tip"></em>
+						</span>
 						<h4>待收货</h4>
 					</div>
 				</a>
@@ -54,7 +69,12 @@
 			<li>
 				<a href="#">
 					<div class="service-cell">
-						<span class="icon-area"><i class="service-icon"><img src="/static/images/icons/evaluate-icon.png" width="100%" alt=""></i><em class="icon-tip" id="orderWaitEvaluateCount"></em></span>
+						<span class="icon-area">
+							<i class="service-icon svg-icon">
+								<svg class="icon icon-wait-to-evaluate"><use xlink:href="/static/images/icon-sprites.svg#icon-wait-to-evaluate"></use></svg>
+							</i>
+							<em class="icon-tip"></em>
+						</span>
 						<h4>待评价</h4>
 					</div>
 				</a>
@@ -62,7 +82,12 @@
 			<li>
 				<a href="#">
 					<div class="service-cell">
-						<span class="icon-area"><i class="service-icon refund-icon"><img src="/static/images/icons/refund-icon.png" width="100%" alt=""></i><em class="icon-tip" id="orderReturnCount"></em></span>
+						<span class="icon-area">
+							<i class="service-icon svg-icon">
+								<svg class="icon icon-wait-to-refund"><use xlink:href="/static/images/icon-sprites.svg#icon-wait-to-refund"></use></svg>
+							</i>
+							<em class="icon-tip">
+						</em></span>
 						<h4>退款/售后</h4>
 					</div>
 				</a>
@@ -91,7 +116,7 @@
 							<svg class="icon icon-cart"><use xlink:href="/static/images/icon-sprites.svg#icon-cart"></use></svg>
 						</i>
 						<h4 class="advance-text">购物车</h4>
-						<p class="advance-tip"><span id="cart_num">(0)</span>件</p>
+						<p class="advance-tip"><span>(0)</span>件</p>
 					</div>
 				</a>
 			</li>
@@ -102,7 +127,7 @@
 							<svg class="icon icon-coupon"><use xlink:href="/static/images/icon-sprites.svg#icon-coupon"></use></svg>
 						</i>
 						<h4 class="advance-text">优惠券/红包</h4>
-						<p class="advance-tip" id="couponInfo">&nbsp;</p>
+						<p class="advance-tip">&nbsp;</p>
 					</div>
 				</a>
 			</li>
@@ -113,7 +138,7 @@
 							<svg class="icon icon-voucher"><use xlink:href="/static/images/icon-sprites.svg#icon-voucher"></use></svg>
 						</i>
 						<h4 class="advance-text">代金券</h4>
-						<p class="advance-tip" id="voucherInfo">&nbsp;</p>
+						<p class="advance-tip">&nbsp;</p>
 					</div>
 				</a>
 			</li>
@@ -135,7 +160,7 @@
 							<svg class="icon icon-activity"><use xlink:href="/static/images/icon-sprites.svg#icon-activity"></use></svg>
 						</i>
 						<h4 class="advance-text">已报名活动</h4>
-						<p class="advance-tip" id="activeInfo">&nbsp;</p>
+						<p class="advance-tip">&nbsp;</p>
 					</div>
 				</a>
 			</li>
@@ -146,7 +171,7 @@
 							<svg class="icon icon-reservation"><use xlink:href="/static/images/icon-sprites.svg#icon-reservation"></use></svg>
 						</i>
 						<h4 class="advance-text">我的预约</h4>
-						<p class="advance-tip" id="yuyueInfo">&nbsp;</p>
+						<p class="advance-tip">&nbsp;</p>
 					</div>
 				</a>
 			</li>

@@ -134,8 +134,7 @@
 .service-section{
 	.service-list{
 		border-top: 1px solid #eee;
-		/*padding-left: 0.12rem;
-		padding-right: 0.12rem;*/
+		padding-top: 0.05rem;
 		li{
 			float: left;
 			width: 20%;
@@ -151,6 +150,7 @@
 		display: inline-block;
 		width: 0.30rem;
 		height: 0.30rem;
+		color: #999;
 	}
 	.icon-area{
 		display: inline-block;
@@ -160,7 +160,7 @@
 			top: 0;
 			right: 0;
 			font-style: normal;
-			font-size: 0.11rem;
+			font-size: 0.12rem;
 			line-height: 0.20rem;
 			display: inline-block;
 			width: 0.20rem;
@@ -205,7 +205,8 @@
 		padding-top: 0.10rem;
 		padding-bottom: 0.05rem;
 		.advance-icon{
-			font-size: 0.24rem;
+			width: 0.30rem;
+			height: 0.30rem;
 			display: inline-block;
 		}
 		.advance-text{
