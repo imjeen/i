@@ -16,20 +16,16 @@
 				</a>
 			</li>
 			<li class="feature-item">
-				<label class="inner-bar select-bar">性别<span class="tip-right text-gray">{{gender}}<i class="right-dir-icon dir-icon"></i></span>
-					<select v-model="gender">
-						<option selected>无</option>
-						<option>男</option>
-						<option>女</option>
+				<label class="inner-bar select-bar">性别<span class="tip-right text-gray">{{gender.selected.text}}<i class="right-dir-icon dir-icon"></i></span>
+					<select v-model="gender.selected">
+					 <option v-for="option in gender.options" v-bind:value="option" v-bind:selected="option === gender.selected ? true : false">{{option.text}}</option>
 					</select>
 				</label>
       </li>
       <li class="feature-item">
-	      	<label class="inner-bar select-bar">学历<span class="tip-right text-gray">{{education}}<i class="right-dir-icon dir-icon"></i></span>
-		      	<select v-model="education">
-							<option selected>中学</option>
-							<option>大学</option>
-							<option>博士</option>
+	      	<label class="inner-bar select-bar">学历<span class="tip-right text-gray">{{education.selected.text}}<i class="right-dir-icon dir-icon"></i></span>
+		      	<select v-model="education.selected">
+		      		<option v-for="option in education.options" v-bind:value="option" v-bind:selected="option === education.selected ? true : false">{{option.text}}</option>
 						</select>
 	      	</label>
       </li>
@@ -39,10 +35,9 @@
       	</a>
       </li>
       <li class="feature-item">
-      	<label class="inner-bar select-bar">婚姻状况<span class="tip-right text-gray">{{maritalSatus}}<i class="right-dir-icon dir-icon"></i></span>
-      		<select v-model="maritalSatus">
-						<option selected>未婚</option>
-						<option>已婚</option>
+      	<label class="inner-bar select-bar">婚姻状况<span class="tip-right text-gray">{{maritalStatus.selected.text}}<i class="right-dir-icon dir-icon"></i></span>
+      		<select v-model="maritalStatus.selected">
+      			<option v-for="option in maritalStatus.options" v-bind:value="option" v-bind:selected="option === maritalStatus.selected ? true : false">{{option.text}}</option>
 					</select>
       	</label>
 	    </li>
@@ -81,9 +76,31 @@
 		data(){
 			return {
 				nickname: "匿名",
-				gender: "",
-				education: "",
-				maritalSatus: "",
+				gender: {
+					selected: {text:"男", value:"1"},
+					options: [
+						{text:"无", value:"0"},
+						{text:"男", value:"1"},
+						{text:"女", value:"2"},
+					]
+				},
+				education: {
+					selected: {text:"大学", value:"1"},
+					options: [
+						{text:"中学", value:"0"},
+						{text:"大学", value:"1"},
+						{text:"研究生", value:"2"},
+						{text:"博士生", value:"3"},
+					]
+				},
+				maritalStatus: {
+					selected: {text:"未婚", value:"2"},
+					options: [
+						{text:"无", value:"0"},
+						{text:"已婚", value:"1"},
+						{text:"未婚", value:"2"},
+					]
+				},
 			}
 		},
 		route:{
