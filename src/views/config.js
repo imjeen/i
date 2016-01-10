@@ -16,6 +16,10 @@ export default function(Vue, router){
 					name: "ecard",
 					component: require("./own/ecardView.vue")
 				},
+				"/customize": {
+					name: "customize",
+					component: require("./own/customize/index.vue")
+				}
 			}
 		},
 

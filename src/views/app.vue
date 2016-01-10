@@ -95,7 +95,6 @@
 		</ul>
 	</section>
 
-
 	<section class="advance-section normal-layer no-padding-layer">
 		<ul class="advance-list cf">
 			<li>
@@ -198,7 +197,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a v-link="{ path: 'own/customize'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
 							<svg class="icon icon-customize"><use xlink:href="/static/images/icon-sprites.svg#icon-customize"></use></svg>
