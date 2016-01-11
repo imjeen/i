@@ -20,3 +20,201 @@
 	}
 	
 }
+
+
+//=============================================
+// --------------------------------
+// phone
+
+/* verify step */
+.verify-mobile-wrap{
+
+	$step-number: 3 !default;
+	$banner-background-color: #eee !default;
+	$step-color: #ccc !default;
+	$step-color-active: #dd0000 !default;
+
+	padding: 0.15rem 0.12rem;
+
+	.verify-mobile-step{
+		overflow: hidden;
+		counter-reset: rule-counter 0;
+		li{
+			width: (1 / $step-number) * 100%;
+			float: left;
+			position: relative;
+			overflow: hidden;
+			text-align: center;
+			strong{
+				display: inline-block;
+				position: relative;
+				font-weight: normal;
+				text-align: center;
+				background-color: $banner-background-color;
+				color: #666;
+				font-size: 0.14rem;
+			}
+			&:before{
+				content: "";
+				display: inline-block;
+				width: 100%;
+				border-top: 1px dashed #000;
+				position: absolute;
+				top: 25%;
+				left: 0;
+				right: 0;
+				z-index: 1;
+			}
+
+		}
+		.step-icon{
+			position: absolute;
+			z-index: 2;
+			display: block;
+			left: 50%;
+			margin-left: -0.10rem;
+  		height: 100%;
+  		background-color: $banner-background-color;
+			&:after{
+				content: counter(rule-counter);
+	    	counter-increment: rule-counter;
+	    	display: inline-block;
+	    	width: 0.20rem;
+	    	height: 0.20rem;
+	    	border-radius: 50%;
+	    	background-color: $step-color;
+	    	color: #fff;
+    	}
+		}
+
+		.step-num{
+			display: block;
+			position: relative;
+			height: 0.20rem;
+		}
+		
+		// first
+		li:first-of-type{
+			text-align: left;
+			.step-icon{
+				left: 0;
+				right: auto;
+	  		width: 50%;
+	  		height: 100%;
+	  		margin-left: auto;
+	  		&:after{
+					position: absolute;
+					right: 0;
+		    	transform: translateX(50%);
+				}
+			}
+		}
+		
+		// last
+		li:last-of-type{
+			text-align: right; 
+			.step-icon{
+				left: auto;
+				right: 0;
+	  		width: 50%;
+	  		height: 100%;
+	  		margin-left: auto;
+	  		&:after{
+					position: absolute;
+					left: 0;
+		    	transform: translateX(-50%);
+				}
+			}
+		}
+
+		// status
+		li.step-active{
+			strong{
+				color: $step-color-active;
+			}
+			&:before{ border-top-color: $step-color-active; }
+			.step-icon:after{
+				background-color: $step-color-active;
+				color: #fff;
+			}
+		}
+
+	}
+}
+
+// --------------------------------
+// address
+
+/* list item address */
+.address-item-section{
+	padding-left: 0.12rem;
+	padding-right: 0.12rem;
+	.address-item-title{
+		padding-top: 0.06rem;
+		padding-bottom: 0.02rem;
+		font-weight: normal;
+		font-size: 0.14rem;
+	}
+	.address-item-detail{
+		color: #666;
+		font-size: 0.12rem;
+		margin-bottom: 0.10rem;
+	}
+	.address-item-action{
+		font-size: 0.12rem;
+		padding: 0.10rem 0;
+		padding-right: 0.12rem;
+		margin-right: -0.12rem;
+		border-top: 1px solid #eee;
+		.action-right{ float: right;}
+	}
+
+}
+
+
+// --------------------------------
+// just for getting radio icon
+// --------------------------------
+.circle-radio-item{
+
+	display: inline-block;
+
+	.circle-radio-icon:after{
+		content: "";
+		font-size: 0.12rem;
+		display: inline-block;
+		box-sizing: border-box;
+		width: 0.16rem;
+		height: 0.16rem;
+		text-align: center;
+		line-height: 0.16rem;
+		border-radius: 50%;
+		border: 1px solid #a1a1a1;
+		margin-right: 0.05rem;
+		vertical-align: middle;
+	}
+
+	input[type=radio]{ 
+		visibility: hidden;
+		display: none;
+
+		.circle-radio-label{ display: inline-block; }
+
+		& ~ .circle-radio-label:after{
+			display: inline-block;
+			content: attr(arial-label);
+		}
+
+		&:checked ~ .circle-radio-label:after{
+			content: attr(arial-checked-label);
+		}
+		&:checked ~ .circle-radio-label .circle-radio-icon:after{
+			content: attr(data-icon);
+			border-color: #dd0000;
+			background-color: #dd0000;
+			color: #fff;
+		}
+	}
+	
+}
+

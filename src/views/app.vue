@@ -27,7 +27,7 @@
 			</li>
 		</ul>
 		<ul class="service-list cf">
-			<li>
+			<li class="service-item">
 				<a href="#">
 					<div class="service-cell">
 						<span class="icon-area">
@@ -40,7 +40,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="service-item">
 				<a href="#">
 					<div class="service-cell">
 						<span class="icon-area">
@@ -53,7 +53,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="service-item">
 				<a href="#">
 					<div class="service-cell">
 						<span class="icon-area">
@@ -66,7 +66,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="service-item">
 				<a href="#">
 					<div class="service-cell">
 						<span class="icon-area">
@@ -79,7 +79,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="service-item">
 				<a href="#">
 					<div class="service-cell">
 						<span class="icon-area">
@@ -97,7 +97,7 @@
 
 	<section class="advance-section normal-layer no-padding-layer">
 		<ul class="advance-list cf">
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ffa201;">
@@ -108,7 +108,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
@@ -119,7 +119,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
@@ -130,7 +130,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
@@ -141,7 +141,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
@@ -152,7 +152,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
@@ -163,7 +163,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ffa201;">
@@ -174,7 +174,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
@@ -185,7 +185,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
@@ -196,7 +196,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a v-link="{ path: 'own/customize'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
@@ -207,7 +207,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
@@ -218,7 +218,7 @@
 					</div>
 				</a>
 			</li>
-			<li>
+			<li class="advance-item">
 				<a href="#">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">

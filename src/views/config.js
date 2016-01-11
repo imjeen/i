@@ -18,7 +18,18 @@ export default function(Vue, router){
 				},
 				"/customize": {
 					name: "customize",
-					component: require("./own/customize/index.vue")
+					component: Vue.extend({template: "<router-view></router-view>"}),
+					subRoutes: {
+						"/": { component: require("./own/customize/index.vue") },
+						"/edit/house": {
+							name: "house",
+							component: require("./own/customize/edit_house.vue")
+						},
+						"/edit/decoration":{
+							name: "decoration",
+							component: require("./own/customize/edit_decoration.vue")
+						}
+					}
 				}
 			}
 		},

@@ -5,30 +5,26 @@
 	height: 0.24rem;
 	width: 0.24rem;
 	margin: auto;
+
+	&.svg-icon--middle{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
 }
 
+
+
 .svg-icon svg, 
-.svg-icon img {
+.svg-icon img,
+.svg-icon--middle svg,
+.svg-icon--middle img {
     display: block;
     width: inherit;
     height: inherit;
     fill: currentColor;
 }
 
-//------------------------------------
-// sprite icon
-// .sprite-icon{
-// 	display: inline-block;
-// 	&:after{
-// 		content: "";
-// 		width: 0.12rem;
-// 	  height: 0.12rem;
-// 	  display: inline-block;
-// 	  text-indent: -9999px;
-// 	  overflow: hidden;
-// 		vertical-align: middle;
-// 	}
-// }
 
 //------------------------------------
 // direction icon

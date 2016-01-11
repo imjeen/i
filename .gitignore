@@ -1,6 +1,7 @@
 
 .DS_Store
 .map
+/_draft
 
 /bower_components
 /build
