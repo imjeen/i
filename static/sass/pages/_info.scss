@@ -2,14 +2,14 @@
 
 .info-section{
 	.info-list{
-		.inner-bar{ padding: 0.10rem 0.12rem; }
+		.inner-bar{ padding: 10px/$ppr 12px/$ppr; }
 		.avatar-item{
-			line-height: 0.80rem;
+			line-height: 80px/$ppr;
 			.avatar-figure{
 				float: right;
 				font-size: 0;
-				height: 0.80rem;
-				width: 0.80rem;
+				height: 80px/$ppr;
+				width: 80px/$ppr;
 				background-image: url("/static/images/avatar.png");
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -34,7 +34,7 @@
 	$step-color: #ccc !default;
 	$step-color-active: #dd0000 !default;
 
-	padding: 0.15rem 0.12rem;
+	padding: 15px/$ppr 12px/$ppr;
 
 	.verify-mobile-step{
 		overflow: hidden;
@@ -52,7 +52,7 @@
 				text-align: center;
 				background-color: $banner-background-color;
 				color: #666;
-				font-size: 0.14rem;
+				font-size: 14px/$ppr;
 			}
 			&:before{
 				content: "";
@@ -72,15 +72,15 @@
 			z-index: 2;
 			display: block;
 			left: 50%;
-			margin-left: -0.10rem;
+			margin-left: -10px/$ppr;
   		height: 100%;
   		background-color: $banner-background-color;
 			&:after{
 				content: counter(rule-counter);
 	    	counter-increment: rule-counter;
 	    	display: inline-block;
-	    	width: 0.20rem;
-	    	height: 0.20rem;
+	    	width: 20px/$ppr;
+	    	height: 20px/$ppr;
 	    	border-radius: 50%;
 	    	background-color: $step-color;
 	    	color: #fff;
@@ -90,7 +90,7 @@
 		.step-num{
 			display: block;
 			position: relative;
-			height: 0.20rem;
+			height: 20px/$ppr;
 		}
 		
 		// first
@@ -147,24 +147,24 @@
 
 /* list item address */
 .address-item-section{
-	padding-left: 0.12rem;
-	padding-right: 0.12rem;
+	padding-left: 12px/$ppr;
+	padding-right: 12px/$ppr;
 	.address-item-title{
-		padding-top: 0.06rem;
-		padding-bottom: 0.02rem;
+		padding-top: 6px/$ppr;
+		padding-bottom: 2px/$ppr;
 		font-weight: normal;
-		font-size: 0.14rem;
+		font-size: 14px/$ppr;
 	}
 	.address-item-detail{
 		color: #666;
-		font-size: 0.12rem;
-		margin-bottom: 0.10rem;
+		font-size: 12px/$ppr;
+		margin-bottom: 10px/$ppr;
 	}
 	.address-item-action{
-		font-size: 0.12rem;
-		padding: 0.10rem 0;
-		padding-right: 0.12rem;
-		margin-right: -0.12rem;
+		font-size: 12px/$ppr;
+		padding: 10px/$ppr 0;
+		padding-right: 12px/$ppr;
+		margin-right: -12px/$ppr;
 		border-top: 1px solid #eee;
 		.action-right{ float: right;}
 	}
@@ -181,16 +181,16 @@
 
 	.circle-radio-icon:after{
 		content: "";
-		font-size: 0.12rem;
+		font-size: 12px/$ppr;
 		display: inline-block;
 		box-sizing: border-box;
-		width: 0.16rem;
-		height: 0.16rem;
+		width: 16px/$ppr;
+		height: 16px/$ppr;
 		text-align: center;
-		line-height: 0.16rem;
+		line-height: 16px/$ppr;
 		border-radius: 50%;
 		border: 1px solid #a1a1a1;
-		margin-right: 0.05rem;
+		margin-right: 5px/$ppr;
 		vertical-align: middle;
 	}
 

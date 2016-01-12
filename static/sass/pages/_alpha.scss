@@ -1,9 +1,14 @@
 @charset "UTF-8";
 
+.jumbotron-main{
+	margin: auto;
+	max-width: 800px/$ppr;
+}
+
 .normal-layer{
 	background-color: #fff;
-	margin-bottom: 0.12rem;
-	padding: 0 0.12rem;
+	margin-bottom: 12px/$ppr;
+	padding: 0 12px/$ppr;
 	border-top: 1px solid #DEDEDE;
 	border-bottom: 1px solid #DEDEDE;
 
@@ -31,7 +36,7 @@
 	}
 
 	.inner-bar{
-		padding: 0.10rem 0.12rem;
+		padding: 10px/$ppr 12px/$ppr;
 		display: block;
 		&.select-bar{
 			position: relative;

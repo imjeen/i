@@ -6,12 +6,12 @@
 .i-touchme{
 	max-width: 80%;
 	text-align: center;
-	margin: 0.10rem auto;
+	margin: 10px/$ppr auto;
 	background-color: #fff;
-	border-radius: 0.03rem;
+	border-radius: 3px/$ppr;
 	.i-touchme__link{
 		display: block;
-		padding: 0.06rem 0.12rem;
+		padding: 6px/$ppr 12px/$ppr;
 		color: #666;
 		text-decoration: none;
 	}
@@ -21,7 +21,7 @@
 	background-color: #fff;
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
-	padding: 0.05rem 0;
+	padding: 5px/$ppr 0;
 	.i-reg__link{ 
 		color: #666;
 		text-decoration: none;

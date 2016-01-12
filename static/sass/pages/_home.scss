@@ -7,9 +7,9 @@
 // masthead
 .masthead-section{
 	color: #fff;
-	padding-left: 0.12rem;
-	padding-right: 0.12rem;
-  min-height: 1.32rem;
+	padding-left: 12px/$ppr;
+	padding-right: 12px/$ppr;
+  min-height: 132px/$ppr;
   
   background: -moz-linear-gradient(90deg, #FF2B1C 0, #FF426E 100%);/* FF3.6+ */
 	background: -webkit-gradient(linear, 90deg, color-stop(0, FF2B1C), color-stop(100%, FF426E));/* Chrome,Safari4+ */
@@ -23,43 +23,43 @@
 	.masthead-nologin{
 		text-align: center;
 		.masthead-title{
-			padding-top: 0.12rem;
+			padding-top: 12px/$ppr;
 		}
 		.masthead-button{
 			display: inline-block;
-			width: 0.8rem;
-			height: 0.3rem;
-			margin: 0.2rem auto;
-			line-height: 0.3rem;
+			width: 80px/$ppr;
+			height: 30px/$ppr;
+			margin: 20px/$ppr auto;
+			line-height: 30px/$ppr;
 			color: #ff4545;
-			font-size: 0.14rem;
-			border-radius: 0.04rem;
-			border: 0.01rem solid #fff;
+			font-size: 14px/$ppr;
+			border-radius: 4px/$ppr;
+			border: 1px solid #fff;
 			background: #ffe5e5;
 		}
 	}
 	.masthead-login{
 		position: relative;
-		padding-top: 0.15rem;
+		padding-top: 15px/$ppr;
 		.masthead-figure{
 			margin: 0;
 			float: left;
-			height: 1.00rem;
-			width: 1.00rem;
-			max-width: 1.00rem;
+			height: 100px/$ppr;
+			width: 100px/$ppr;
+			max-width: 100px/$ppr;
 			border-radius: 50%;
 			overflow: hidden;
 			background-image: url("/static/images/avatar.png");
 			background-repeat: no-repeat;
 			background-size: contain;
-			margin-right: 0.10rem;
+			margin-right: 10px/$ppr;
 		}
 		.masthead-caption{
-			margin-top: 0.10rem;
+			margin-top: 10px/$ppr;
 		}
 		.masthead-setting{
 			text-align: right;
-			margin-top: 0.24rem;
+			margin-top: 24px/$ppr;
 			color: #ffe0dc;
 		}
 	}
@@ -70,22 +70,22 @@
 .service-section{
 	.service-list{
 		border-top: 1px solid #eee;
-		padding-top: 0.05rem;
+		padding-top: 5px/$ppr;
 		.service-item{
 			float: left;
 			width: 20%;
 		}
 	}
 	.service-cell{
-		padding: 0.08rem 0;
+		padding: 8px/$ppr 0;
 		color: #666;
-		font-size: 0.13rem;
+		font-size: 13px/$ppr;
 		text-align: center;
 	}
 	.service-icon{
 		display: inline-block;
-		width: 0.30rem;
-		height: 0.30rem;
+		width: 30px/$ppr;
+		height: 30px/$ppr;
 		color: #999;
 	}
 	.icon-area{
@@ -96,17 +96,17 @@
 			top: 0;
 			right: 0;
 			font-style: normal;
-			font-size: 0.12rem;
-			line-height: 0.20rem;
+			font-size: 12px/$ppr;
+			line-height: 20px/$ppr;
 			display: inline-block;
-			width: 0.20rem;
-			height: 0.20rem;
+			width: 20px/$ppr;
+			height: 20px/$ppr;
 			border-radius: 50%;
 			background-color: rgba(255,255,255,0.6);
 			color: #ff3333;
-			border: 0.01rem solid #ff3333;
-			margin-top: -0.06rem;
-    	margin-right: -0.06rem;
+			border: 1px solid #ff3333;
+			margin-top: -6px/$ppr;
+    	margin-right: -6px/$ppr;
 		}
 	}
 
@@ -138,17 +138,17 @@
 	.advance-cell{
 		display: block;
 		text-align: center;
-		padding-top: 0.10rem;
-		padding-bottom: 0.05rem;
+		padding-top: 10px/$ppr;
+		padding-bottom: 5px/$ppr;
 		.advance-icon{
-			width: 0.30rem;
-			height: 0.30rem;
+			width: 30px/$ppr;
+			height: 30px/$ppr;
 			display: inline-block;
 		}
 		.advance-text{
 			display: block;
 			color: #333;
-			font-size: 0.12rem;
+			font-size: 12px/$ppr;
 			overflow: hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;
@@ -156,7 +156,7 @@
 		.advance-tip{
 			display: block;
 			color: #999;
-			font-size: 0.10rem;
+			font-size: 10px/$ppr;
 			// line-height: 1;
 		}
 	}

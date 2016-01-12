@@ -7,16 +7,16 @@ button.plain{
 }
 
 .btn-wrap{
-	margin: 0.12rem 0;
-	padding: 0 0.12rem;
+	margin: 12px/$ppr 0;
+	padding: 0 12px/$ppr;
 }
 
 .btn[type="button"],
 .btn[role="button"]{
 	display: inline-block;
-  padding: 0.06rem 0.16rem;
+  padding: 6px/$ppr 15px/$ppr;
   margin-bottom: 0;
-  font-size: 0.16rem;
+  font-size: 15px/$ppr;
   font-weight: normal;
   line-height: 1.4;
   text-align: center;
@@ -31,7 +31,7 @@ button.plain{
   // user-select: none;
   background-image: none;
   border: 1px solid rgba(0, 0, 0, 0);
-  border-radius: 0.04rem;
+  border-radius: 4px/$ppr;
   box-sizing: border-box;
   &.btn-block{
   	display: block;

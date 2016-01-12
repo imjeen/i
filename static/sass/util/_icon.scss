@@ -2,8 +2,8 @@
 
 .svg-icon{
 	display: block;
-	height: 0.24rem;
-	width: 0.24rem;
+	height: 24px/$ppr;
+	width: 24px/$ppr;
 	margin: auto;
 
 	&.svg-icon--middle{
@@ -29,7 +29,7 @@
 //------------------------------------
 // direction icon
 
-@mixin icon-direction($dir, $size: 0.02rem, $color: #fff){
+@mixin icon-direction($dir, $size: 2px/$ppr, $color: #fff){
 	@if $dir == top{
 		border-left: $size solid $color;
 		border-top: $size solid $color;
@@ -50,27 +50,27 @@
 	display: inline-block;
 	&:after{
 		content: "";
-		width: 0.10rem;
-	  height: 0.10rem;
+		width: 10px/$ppr;
+	  height: 10px/$ppr;
 	  display: inline-block;
 	  transform: rotate(45deg);
-	  margin-top: -0.02rem;
+	  margin-top: -2px/$ppr;
 	  text-indent: -9999px;
 	  overflow: hidden;
 		vertical-align: middle;
 	}
 
 	&.top-dir-icon:after{
-		@include icon-direction("top",0.02rem, #d8d8d8);
+		@include icon-direction("top",2px/$ppr, #d8d8d8);
 	}
 	&.right-dir-icon:after{
-		@include icon-direction("right",0.02rem, #d8d8d8);
+		@include icon-direction("right",2px/$ppr, #d8d8d8);
 	}
 	&.bottom-dir-icon:after{
-		@include icon-direction("bottom",0.02rem, #d8d8d8);
+		@include icon-direction("bottom",2px/$ppr, #d8d8d8);
 	}
 	&.left-dir-icon:after{
-		@include icon-direction("left",0.02rem, #d8d8d8);
+		@include icon-direction("left",2px/$ppr, #d8d8d8);
 	}
 
 	&.inherit-color:after{

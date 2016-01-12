@@ -3,11 +3,12 @@
 html{
 	min-height: 100%;
 	font-family: "Microsoft YaHei", "Helvetical";
+	font-size: $ppr * 1rem;
 }
 
 body{
 	background-color: #efefef;
-	font-size: .14rem;
+	font-size: 14px/$ppr;
 	min-height: 100%;
 }
 
@@ -44,7 +45,7 @@ ul,ol,li{
 a{ text-decoration: none;}
 
 // variable
-$base-font-size-radio: ((10 / 16) * 1000%) / 360;
+/* $base-font-size-radio: ((10 / 16) * 1000%) / 360;
 
 html{ font-size: $base-font-size-radio * 360; }
 
@@ -65,11 +66,11 @@ html{ font-size: $base-font-size-radio * 360; }
 }
 @media screen and (min-width:960px){
 	html{ font-size: $base-font-size-radio * 1080; }
-}
+} */
 
 .i-container{ 
 	margin: auto;
-	max-width: 1080px;
+	max-width: 640px / $ppr;
 }
 
 .height-inherit{

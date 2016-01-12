@@ -2,23 +2,23 @@
 .header{
 	background-color: rgba(246,246,246,1);
 	position: relative;
-	line-height: .50rem;
+	line-height: 50px/$ppr;
 
 	.header__title{
 		margin: 0;
-		height: .50rem;
-    line-height: .50rem;
+		height: 50px/$ppr;
+    line-height: 50px/$ppr;
 		&.header__title--center{
 			text-align: center;
-			padding-left: .40rem;
-			padding-right: .40rem;
+			padding-left: 40px/$ppr;
+			padding-right: 40px/$ppr;
 		}
 	}
 
 	.header__link{
 		display: inline-block;
-		width: .40rem;
-		height: .50rem;
+		width: 40px/$ppr;
+		height: 50px/$ppr;
 		&.header__link--left{
 			position: absolute;
 			left: 0;
