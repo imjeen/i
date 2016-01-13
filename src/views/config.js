@@ -16,6 +16,18 @@ export default function(Vue, router){
 					name: "ecard",
 					component: require("./own/ecardView.vue")
 				},
+
+				"/address": {
+					name: "address",
+					component: Vue.extend({template: "<router-view></router-view>"}),
+					subRoutes: {
+						"/": { component:require("./own/address/index.vue") },
+						"/edit": { component:require("./own/address/edit_address.vue") },
+						"/new": { component:require("./own/address/edit_address.vue") }
+					}
+				},
+
+
 				"/customize": {
 					name: "customize",
 					component: Vue.extend({template: "<router-view></router-view>"}),

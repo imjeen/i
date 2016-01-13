@@ -7,7 +7,7 @@
 
 	<dl class="normal-layer no-padding-layer feature-list left-right-padding">
 		<dt class="feature-item-title">
-			<p class="inner-bar">房屋基本信息<span class="tip-right"><a v-link="{path: '/own/customize/edit/house'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a></span></p>
+			<p class="inner-bar">房屋基本信息<span class="tip-right"><a class="text-black" v-link="{path: '/own/customize/edit/house'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a></span></p>
 		</dt>
 		<dd class="feature-item">
 			<p class="inner-bar">面积<span class="tip-right">128平米</span></p>
@@ -27,7 +27,7 @@
 
 	<dl class="normal-layer no-padding-layer feature-list left-right-padding">
 		<dt class="feature-item-title">
-			<p class="inner-bar">装修需求信息<span class="tip-right"><a v-link="{path: '/own/customize/edit/decoration'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a></span></p>
+			<p class="inner-bar">装修需求信息<span class="tip-right"><a class="text-black" v-link="{path: '/own/customize/edit/decoration'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a></span></p>
 		</dt>
 		<dd class="feature-item">
 			<p class="inner-bar">装修类型<span class="tip-right text-gray">未填写</span></p>
@@ -53,3 +53,4 @@
 	</dl>
 
 </template>
+

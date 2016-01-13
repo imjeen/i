@@ -16,6 +16,8 @@
 
 	&.no-border-layer{ border: none; }
 
+	&.no-background-layer{ background-color: inherit; }
+
 	&:last-of-type{
 		margin-bottom: 0;
 	}
@@ -29,9 +31,10 @@
 
 	.tip-right{ float: right; }
 	.text-gray{ color: #999; }
+	.text-black{ color: #000; }
 
 	.feature-item-title{
-		color: #999;
+		color: #666;
 		border-bottom: 1px solid #eee;
 	}
 
