@@ -3,14 +3,21 @@
 
 	<section class="normal-layer no-padding-layer no-background-layer no-border-layer">
 		
-		<ul class="address-list" v-if="addresses.length > 0">
-			<li class="address-item" v-for="address in addresses">
-				<h3 class="address-title">{{address.userName}}&nbsp;&nbsp;&nbsp;&nbsp;{{address.phone}}</h3>
-				<p class="address-text">{{address.location}}</p>
+		<ul class="address-list" v-if="address.items.length > 0">
+			<li class="address-item" v-for="item in address.items" data-index="{{$index}}">
+				<h3 class="address-title">{{item.userName}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.phone}}</h3>
+				<p class="address-text">{{item.location}}</p>
 				<p class="address-action i-grid">
 					<span class="i-cell--6-col">
-						<label><input type="radio" name="adress" >
-						<i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-radio_{{address.isDefault ? 'checked':'unchecked'}}"></use></svg></i>&nbsp;默认地址</label></span>
+						<label>
+
+						<!-- 	<input name="adress" type="radio" 
+								v-bind:checked="false ? true: false"
+								v-bind:value="item"
+								v-model="item"
+							> -->
+
+						<i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-radio_{{ false ? 'checked':'unchecked'}}"></use></svg></i>&nbsp;默认地址</label></span>
 					<span class="i-cell--6-col text-right">
 						<a class="text-black" v-link="{path: '/own/address/edit'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a>
 						&nbsp;&nbsp;
@@ -20,7 +27,7 @@
 			</li>
 		</ul>
 		
-		<p v-else>no address...</p>
+		<p v-else>no item...</p>
 
 	</section>
 
@@ -34,22 +41,34 @@
 	export default {
 		data(){
 			return {
-				addresses: [
-					{
-						id: 1,
-						userName: "韩梅梅",
-						phone: "137****9623",
-						location: "北京五棵松",
-						isDefault: true
+				address: {
+					selected: {
+							id: 2,
+							userName: "李雷",
+							phone: "187****9623",
+							location: "上海"
 					},
-					{
-						id: 2,
-						userName: "李雷",
-						phone: "187****9623",
-						location: "上海",
-						isDefault: false
-					},
-				],
+					items: [
+						{
+							id: 1,
+							userName: "周某某",
+							phone: "137****9623",
+							location: "New York"
+						},
+						{
+							id: 1,
+							userName: "韩梅梅",
+							phone: "137****9623",
+							location: "北京"
+						},
+						{
+							id: 2,
+							userName: "李雷",
+							phone: "187****9623",
+							location: "上海"
+						},
+					],
+				},
 			}
 		},
 		computed: {
