@@ -52,7 +52,7 @@
 	<section class="verify-section normal-layer no-padding-layer">
 		<ul class="verify-list feature-list border-gap-list interaction-list">
 			<li class="feature-item">
-				<a v-link="{path: '/own/edit/password/step1'}">
+				<a v-link="{path: '/own/password/'}">
 					<p class="inner-bar">登录密码<span class="tip-right text-gray">修改<i class="right-dir-icon dir-icon"></i></span></p>
 				</a>
 			</li>

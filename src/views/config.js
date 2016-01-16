@@ -11,10 +11,17 @@ export default function(Vue, router){
 			name: "own",
 			component: Vue.extend({template: "<router-view></router-view>"}),
 			subRoutes: {
+
 				"/": { component: require("./own/setting.vue") },
+
 				"/ecard": {
 					name: "ecard",
 					component: require("./own/ecardView.vue")
+				},
+
+				"/password": {
+					name: "password",
+					component: require("./own/password.vue")
 				},
 
 				"/address": {

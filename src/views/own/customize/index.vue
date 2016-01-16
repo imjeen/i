@@ -5,7 +5,7 @@
 		<p class="notice-warn"><i class="svg-icon svg-icon--middle"><svg class="icon icon-warning"><use xlink:href="/static/images/icon-sprites.svg#icon-warning"></use></svg></i>&nbsp;编辑齐家保护您的需求隐私，并根据需求信息适当推送合适的装修服务给您。</p>
 	</aside>
 
-	<dl class="normal-layer no-padding-layer feature-list left-right-padding">
+	<dl class="normal-layer no-padding-layer feature-list">
 		<dt class="feature-item-title">
 			<p class="inner-bar">房屋基本信息<span class="tip-right"><a class="text-black" v-link="{path: '/own/customize/edit/house'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a></span></p>
 		</dt>
@@ -25,7 +25,7 @@
 			<p class="inner-bar">所在区域<span class="tip-right">上海上海市嘉定区</span></p></dd>
 		</dl>
 
-	<dl class="normal-layer no-padding-layer feature-list left-right-padding">
+	<dl class="normal-layer no-padding-layer feature-list">
 		<dt class="feature-item-title">
 			<p class="inner-bar">装修需求信息<span class="tip-right"><a class="text-black" v-link="{path: '/own/customize/edit/decoration'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a></span></p>
 		</dt>

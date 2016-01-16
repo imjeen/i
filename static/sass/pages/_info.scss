@@ -30,7 +30,7 @@
 .verify-mobile-wrap{
 
 	$step-number: 3 !default;
-	$banner-background-color: #eee !default;
+	$banner-background-color: #fff !default;
 	$step-color: #ccc !default;
 	$step-color-active: #dd0000 !default;
 
@@ -39,7 +39,7 @@
 	.verify-mobile-step{
 		overflow: hidden;
 		counter-reset: rule-counter 0;
-		li{
+		.step-item{
 			width: (1 / $step-number) * 100%;
 			float: left;
 			position: relative;
