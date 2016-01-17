@@ -1,0 +1,46 @@
+
+.form-group{
+	
+	padding: 10px/$ppr 0;
+	
+	input{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 6px/$ppr 8px/$ppr;
+		background-color: inherit;
+	}
+
+	.form-field{
+		position: relative;
+		margin-bottom: 12px/$ppr;
+	}
+
+	.border-adorn{
+		display: block;
+		height: 5px/$ppr;
+		border: 1px/$ppr solid #797979;
+		border-top: none;
+		/*margin-left: -1px/$ppr;
+		margin-right: -1px/$ppr;*/
+		margin-top: -3px/$ppr;	
+	}
+
+	input:focus ~ .border-adorn{ border-color: #d00; }
+
+	.right-adorn{
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	.clear-icon{
+		font-style: normal;
+		font-size: 18px/$ppr;
+		color: #999;
+		display: table-cell;
+		padding: 4px/$ppr 9px/$ppr;
+		text-align: center;
+		cursor: pointer;
+	}
+
+}

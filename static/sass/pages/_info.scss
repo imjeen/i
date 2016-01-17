@@ -30,9 +30,10 @@
 .verify-mobile-wrap{
 
 	$step-number: 3 !default;
-	$banner-background-color: #fff !default;
+	$banner-background-color: #efefef !default;
 	$step-color: #ccc !default;
 	$step-color-active: #dd0000 !default;
+	$step-color-verified: #008000 !default;
 
 	padding: 15px/$ppr 12px/$ppr;
 
@@ -127,7 +128,7 @@
 			}
 		}
 
-		// status
+		// active
 		li.step-active{
 			strong{
 				color: $step-color-active;
@@ -135,6 +136,18 @@
 			&:before{ border-top-color: $step-color-active; }
 			.step-icon:after{
 				background-color: $step-color-active;
+				color: #fff;
+			}
+		}
+
+		// verified
+		li.step-verified{
+			strong{
+				color: $step-color-verified;
+			}
+			&:before{ border-top-color: $step-color-verified; }
+			.step-icon:after{
+				background-color: $step-color-verified;
 				color: #fff;
 			}
 		}

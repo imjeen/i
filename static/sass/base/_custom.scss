@@ -24,6 +24,19 @@ ul,ol,li{
 	margin: 0;
 }
 
+input,textarea{
+  font-family: inherit;
+  font-size: 100%;
+	box-sizing: border-box;
+	margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none 0;
+  vertical-align: baseline;
+  font-weight: 500;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 
 *,
 *:before,*:after{

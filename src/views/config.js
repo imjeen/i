@@ -24,6 +24,11 @@ export default function(Vue, router){
 					component: require("./own/password.vue")
 				},
 
+				"/verify": {
+					name: "verify",
+					component: require("./own/phone_verify.vue")
+				},
+
 				"/address": {
 					name: "address",
 					component: Vue.extend({template: "<router-view></router-view>"}),
@@ -33,7 +38,6 @@ export default function(Vue, router){
 						"/new": { component:require("./own/address/edit_address.vue") }
 					}
 				},
-
 
 				"/customize": {
 					name: "customize",
@@ -49,7 +53,8 @@ export default function(Vue, router){
 							component: require("./own/customize/edit_decoration.vue")
 						}
 					}
-				}
+				},
+
 			}
 		},
 

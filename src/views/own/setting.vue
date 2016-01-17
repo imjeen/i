@@ -57,7 +57,7 @@
 				</a>
 			</li>
 			<li class="feature-item">
-				<a href="#">
+				<a  v-link="{path: '/own/verify/'}">
           <p class="inner-bar">手机验证<span class="tip-right text-gray">185****6865<i class="right-dir-icon dir-icon"></i></span><small class="tip-extra cf">绑定后可直接用手机号登录，也用于找回密码</small></p>
         </a>
       </li>
