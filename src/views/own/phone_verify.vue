@@ -1,4 +1,36 @@
 
+<style lang="sass">
+
+	// pixel per rem
+	$ppr: 640px / 16 / 1rem;
+	$bounceName: "bouncein" !default;
+
+	.jumbotron-verify{
+		position: relative;
+		min-height: 120px/$ppr;
+	}
+
+ .#{$bounceName}-transition{
+		transition: transform .5s ease-in 0s;
+		transform: translateX(0);
+		min-height: 120px/$ppr;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+ }
+
+ .#{$bounceName}-enter{
+		transform: translateX(100%);
+ }
+
+ .#{$bounceName}-leave{
+ 		transform: translateX(-100%);
+ }
+	
+</style>
+
 <template>
 
 	<article class="normal-layer no-border-layer no-background-layer">
@@ -17,36 +49,39 @@
 			</ul>
 		</header>
 
-		<section v-if="step === 1">
-			<form class="form-group">
-				<p>当前使用的手机号码： {{oldPhone}}</p>
-				<br>
-				<div class="form-field">
-					<span class="right-adorn" v-show=" newPhone !=='' " v-on:click="clearInput('newPhone')"><i class="clear-icon">&times;</i></span>
-					<input type="tel" placeholder="新号码" maxlength="11" v-model="newPhone">
-					<hr class="border-adorn" /> 
-				</div>
-			</form>
-		</section>
+		<section class="jumbotron-verify">
 
-		<section  v-if="step === 2">
-			<form class="form-group">
-				<div class="form-field">
-					<span class="right-adorn" v-on:click="getSecurityCode">获取验证码</span>
-					<input type="tel" placeholder="验证码" maxlength="13" v-model="securityCode">
-					<hr class="border-adorn" />
-				</div>
-			</form>
-		</section>
+			<div v-if="step === 1" transition="bouncein">
+				<form class="form-group">
+					<p>当前使用的手机号码： {{oldPhone}}</p>
+					<br>
+					<div class="form-field">
+						<span class="right-adorn" v-show=" newPhone !=='' " v-on:click="clearInput('newPhone')"><i class="clear-icon">&times;</i></span>
+						<input type="tel" placeholder="新号码" maxlength="11" v-model="newPhone">
+						<hr class="border-adorn" /> 
+					</div>
+				</form>
+			</div>
 
-		<section  v-if="step === 3">
-			<p>恭喜您！手机已修改成功~</p>
-		</section>
+			<div v-if="step === 2" transition="bouncein">
+				<form class="form-group">
+					<div class="form-field">
+						<span class="right-adorn" v-on:click="getSecurityCode">获取验证码</span>
+						<input type="tel" placeholder="验证码" maxlength="13" v-model="securityCode">
+						<hr class="border-adorn" />
+					</div>
+				</form>
+			</div>
 
-		<section v-if="step !== 1 && step !== 2 && step !== 3 ">
-			<p>手机修改失败～</p>
+			<div v-if="step === 3" transition="bouncein">
+				<p>恭喜您！手机已修改成功~</p>
+			</div>
+
+			<div v-if="step !== 1 && step !== 2 && step !== 3 ">
+				<p>手机修改失败～</p>
+			</div>
+
 		</section>
-		
 
 	</article>
 
