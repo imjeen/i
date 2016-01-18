@@ -8,7 +8,7 @@
 			<div class="masthead-caption">
 				<h3>name</h3>
 				<p>钱包余额 ￥100.00</p>
-				<p class="masthead-setting"><a href="#/own/">账户设置<i class="inherit-color right-dir-icon dir-icon"></i></a></p>
+				<p class="masthead-setting"><a v-link="{ path: 'own/'}">账户设置<i class="inherit-color right-dir-icon dir-icon"></i></a></p>
 			</div>
 		</div>
 		<!-- no login -->
@@ -21,14 +21,14 @@
 	<section class="service-section normal-layer no-padding-layer">
 		<ul class="feature-list interaction-list">
 			<li class="feature-item">
-				<a href="#">
+				<a v-link="{ path: 'own/order/'}">
 					<p class="inner-bar">我的订单<span></span><span class="tip-right text-gray">查看全部订单<i class="right-dir-icon dir-icon"></i></span></p>
 				</a>
 			</li>
 		</ul>
 		<ul class="service-list cf">
 			<li class="service-item">
-				<a href="#">
+				<a v-link="{ path: 'flow/wait/pay/'}">
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
@@ -41,7 +41,7 @@
 				</a>
 			</li>
 			<li class="service-item">
-				<a href="#">
+				<a v-link="{ path: 'flow/wait/delivery/'}">
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
@@ -54,7 +54,7 @@
 				</a>
 			</li>
 			<li class="service-item">
-				<a href="#">
+				<a v-link="{ path: 'flow/wait/receive/'}">
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
@@ -67,7 +67,7 @@
 				</a>
 			</li>
 			<li class="service-item">
-				<a href="#">
+				<a v-link="{ path: 'flow/evaluate/'}">
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
@@ -80,7 +80,7 @@
 				</a>
 			</li>
 			<li class="service-item">
-				<a href="#">
+				<a v-link="{ path: 'flow/refund/'}">
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
@@ -98,7 +98,7 @@
 	<section class="advance-section normal-layer no-padding-layer">
 		<ul class="advance-list cf">
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/ecard/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ffa201;">
 							<svg class="icon icon-ecard"><use xlink:href="/static/images/icon-sprites.svg#icon-ecard"></use></svg>
@@ -109,7 +109,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/cart/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
 							<svg class="icon icon-cart"><use xlink:href="/static/images/icon-sprites.svg#icon-cart"></use></svg>
@@ -120,12 +120,12 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/coupon/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
 							<svg class="icon icon-coupon"><use xlink:href="/static/images/icon-sprites.svg#icon-coupon"></use></svg>
 						</i>
-						<h4 class="advance-text">优惠券/红包</h4>
+						<h4 class="advance-text">优惠券</h4>
 						<p class="advance-tip">&nbsp;</p>
 					</div>
 				</a>
@@ -153,7 +153,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/activity/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
 							<svg class="icon icon-activity"><use xlink:href="/static/images/icon-sprites.svg#icon-activity"></use></svg>
@@ -164,7 +164,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/reservation/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ffa201;">
 							<svg class="icon icon-reservation"><use xlink:href="/static/images/icon-sprites.svg#icon-reservation"></use></svg>
@@ -175,7 +175,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/record/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
 							<svg class="icon icon-record"><use xlink:href="/static/images/icon-sprites.svg#icon-record"></use></svg>
@@ -197,7 +197,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a v-link="{ path: 'own/customize'}">
+				<a v-link="{ path: 'av/customize/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
 							<svg class="icon icon-customize"><use xlink:href="/static/images/icon-sprites.svg#icon-customize"></use></svg>
