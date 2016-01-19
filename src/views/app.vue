@@ -21,7 +21,7 @@
 	<section class="service-section normal-layer no-padding-layer">
 		<ul class="feature-list interaction-list">
 			<li class="feature-item">
-				<a v-link="{ path: 'own/order/'}">
+				<a v-link="{ path: 'flow/order/'}">
 					<p class="inner-bar">我的订单<span></span><span class="tip-right text-gray">查看全部订单<i class="right-dir-icon dir-icon"></i></span></p>
 				</a>
 			</li>
@@ -131,7 +131,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/voucher/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
 							<svg class="icon icon-voucher"><use xlink:href="/static/images/icon-sprites.svg#icon-voucher"></use></svg>
@@ -142,7 +142,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/wallet/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
 							<svg class="icon icon-wallet"><use xlink:href="/static/images/icon-sprites.svg#icon-wallet"></use></svg>
@@ -186,7 +186,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/qa/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
 							<svg class="icon icon-QA"><use xlink:href="/static/images/icon-sprites.svg#icon-QA"></use></svg>
@@ -208,7 +208,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/award/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
 							<svg class="icon icon-sweepstake"><use xlink:href="/static/images/icon-sprites.svg#icon-sweepstake"></use></svg>
@@ -219,7 +219,7 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a href="#">
+				<a v-link="{ path: 'av/plus/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
 							<svg class="icon icon-more"><use xlink:href="/static/images/icon-sprites.svg#icon-more"></use></svg>

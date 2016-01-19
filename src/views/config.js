@@ -86,6 +86,11 @@ export default function(Vue, router){
 					component: require("./advance/activity.vue")
 				},
 
+				"/award": {
+					name: "award",
+					component: require("./advance/award.vue")
+				},
+
 				"/cart": {
 					name: "cart",
 					component: require("./advance/cart.vue")
@@ -117,6 +122,16 @@ export default function(Vue, router){
 					component: require("./advance/ecard.vue")
 				},
 
+				"/plus": {
+					name: "plus",
+					component: require("./advance/plus.vue")
+				},
+
+				"/qa": {
+					name: "QA",
+					component: require("./advance/qa.vue")
+				},
+
 				"/record": {
 					name: "record",
 					component: require("./advance/record.vue")
@@ -125,6 +140,16 @@ export default function(Vue, router){
 				"/reservation": {
 					name: "reservation",
 					component: require("./advance/reservation.vue")
+				},
+
+				"/voucher": {
+					name: "voucher",
+					component: require("./advance/voucher.vue")
+				},
+
+				"/wallet": {
+					name: "wallet",
+					component: require("./advance/wallet.vue")
 				},
 
 			}

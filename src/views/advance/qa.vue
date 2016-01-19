@@ -1,21 +1,14 @@
 
 <template>
-	<section>
-		
-	</section>
+	
 </template>
 
 <script>
 	import store from "../../store"
 	export default {
-		data(){
-			return {
-				
-			}
-		},
-		route: {
+		route:{
 			data(){
-				store.setHtmlTitle("编辑地址");
+				store.setHtmlTitle("问答");
 			}
 		}
 	}

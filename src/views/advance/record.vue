@@ -36,7 +36,7 @@
 </template>
 
 <script>
-
+	import store from "../../store"
 	export default {
 		data(){
 			return {
@@ -78,6 +78,12 @@
 			// });
 
 		},
+
+		route: {
+			data(){
+				store.setHtmlTitle("我的足迹")
+			},
+		}
 		
 	}
 </script>

@@ -1,23 +1,37 @@
 
 <template>
-	<div v-if="reservation.length === 0">nothing to reservate</div>
-	<div v-else="">
-		<h2>reservation</h2>
-		<section></section>
-	</div>
+	<section class="normal-layer">
+		<ul class="feature-list">
+			<li class="feature-item">
+				<a href="#">
+					<h3 class="inner-bar">店铺预约<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
+				</a>
+			</li>
+			<li class="feature-item">
+				<a href="#">
+					<h3 class="inner-bar">装修预约<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
+				</a>
+			</li>
+			<li class="feature-item">
+				<a href="#">
+					<h3 class="inner-bar">顾问预约<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
+				</a>
+			</li>
+			<li class="feature-item">
+				<a href="#">
+					<h3 class="inner-bar">活动预约<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
+				</a>
+			</li>
+		</ul>
+	</section>
 </template>
 
 <script>
+	import store from "../../store"
 	export default {
-		data(){
-			return {
-				reservation: []
-			}
-		},
 		route:{
-			data(transition){
-				this.$root.rootTitle = "我的预约";
-				transition.next(this.$data);
+			data(){
+				store.setHtmlTitle("我的预约");
 			}
 		}
 	}

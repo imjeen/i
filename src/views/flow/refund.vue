@@ -7,7 +7,9 @@
 		</section>
 	</div>
 </template>
+
 <script>
+	import store from "../../store"
 	export default {
 		data(){
 			return {
@@ -16,7 +18,7 @@
 		},
 		route:{
 			data(transition){
-				this.$root.rootTitle = "待付款/售后";
+				store.setHtmlTitle("待付款/售后");
 				transition.next(this.$data);
 			}
 		}

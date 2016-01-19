@@ -9,6 +9,7 @@
 </template>
 
 <script>
+	import store from "../../store"
 	export default {
 		data(){
 			return {
@@ -17,7 +18,7 @@
 		},
 		route:{
 			data(transition){
-				this.$root.rootTitle = "我的电子会员卡";
+				store.setHtmlTitle("电子会员卡");
 				transition.next(this.$data);
 			}
 		}

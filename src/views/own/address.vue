@@ -35,6 +35,7 @@
 </template>
 
 <script>
+	import store from "../../store"
 	export default {
 		data(){
 			return {
@@ -77,6 +78,10 @@
 				this.address.items.$remove(this.address.items[index]); 
 			},
 		},
-		route: {}
+		route: {
+			data(){
+				store.setHtmlTitle("收获地址")
+			}
+		}
 	}
 </script>

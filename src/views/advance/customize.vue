@@ -54,3 +54,13 @@
 
 </template>
 
+<script>
+	import store from "../../store"
+	export default {
+		route:{
+			data(){
+				store.setHtmlTitle("私人订制");
+			}
+		}
+	}
+</script>

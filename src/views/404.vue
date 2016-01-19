@@ -5,6 +5,7 @@
 </template>
 
 <script>
+	import store from "../store"
 	export default {
 		data(){
 			return {
@@ -13,7 +14,7 @@
 		},
 		route: {
 			data(transition){
-				this.$root.rootTitle = "找不到";
+				store.setHtmlTitle("404找不到");
 				transition.next(this.$data);
 			}
 		}

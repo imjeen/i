@@ -25,10 +25,11 @@
 </template>
 
 <script>
+	import store from "../../store"
 	export default {
 		route: {
 			data(transition){
-				this.$root.rootTitle = "订单详情";
+				store.setHtmlTitle("订单详情");
 				transition.next(this.$data);
 			}
 		}
