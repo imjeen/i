@@ -1,7 +1,7 @@
 
 <template>
-	<section class="normal-layer">
-		<ul class="feature-list">
+	<section class="normal-layer no-padding-layer">
+		<ul class="feature-list border-gap-list interaction-list">
 			<li class="feature-item">
 				<a href="#">
 					<h3 class="inner-bar">店铺预约<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
