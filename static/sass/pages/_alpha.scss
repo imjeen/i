@@ -3,6 +3,7 @@
 .jumbotron-main{
 	margin: auto;
 	max-width: 540px/$ppr;
+	min-height: calc(100vh - #{40px/$ppr} - #{50px/$ppr});
 }
 
 .normal-layer{
