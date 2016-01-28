@@ -8,7 +8,7 @@
 				<div class="i-grid i-grid--no-spacing">
 					<div class="i-cell i-cell--4-col"><img v-bind:src="goods.imagePath" alt="" width="100%"></div>
 					<div class="i-cell i-cell--8-col">
-						<h2 class="ellipsis--twoline"><a v-bind:href="goods.link">{{goods.name}}</a></h2>
+						<h2 class="ellipsis--2-line"><a v-bind:href="goods.link">{{goods.name}}</a></h2>
 						<p>{{goods.price | currency '￥'}}</p>
 					</div>
 				</div>
@@ -18,7 +18,7 @@
 				<div class="i-grid i-grid--no-spacing">
 					<div class="i-cell i-cell--4-col"><img src="/static/images/200x200.png" alt="" width="100%"></div>
 					<div class="i-cell i-cell--8-col">
-						<h2 class="ellipsis--twoline"><a href="#">【奥普浴霸】多功能风暖集成吊顶QDP5020A（新）| 全国包邮（偏远除外）</a></h2>
+						<h2 class="ellipsis--2-line"><a href="#">【奥普浴霸】多功能风暖集成吊顶QDP5020A（新）| 全国包邮（偏远除外）</a></h2>
 						<p>$00.00</p>
 					</div>
 				</div>

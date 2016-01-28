@@ -8,5 +8,5 @@
   -webkit-box-orient: vertical;
 }
 
-.ellipsis--oneline{ @include ellipsis(1); }
-.ellipsis--twoline{ @include ellipsis(2); }
+.ellipsis--1-line{ @include ellipsis(1); }
+.ellipsis--2-line{ @include ellipsis(2); }

@@ -8,6 +8,10 @@
 	margin: 0 auto;
 	align-items: stretch;
 
+	&.i-grid--between{
+		justify-content: space-between;
+	}
+
 	&.i-grid--no-spacing{
 		padding: 0;
 	}
