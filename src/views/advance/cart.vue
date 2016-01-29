@@ -9,7 +9,10 @@
 		.bundle-group{  }
 		.group-list{
 			.group-item{ margin-bottom: 5px/$ppr; }
-			figure{ padding-right: 10px/$ppr; }
+			figure{ 
+				font-size: 0;
+				padding-right: 10px/$ppr; 
+			}
 			.group-item__caption{
 				margin-bottom: 10px/$ppr;
 			}
@@ -47,13 +50,13 @@
 						/><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-check_box_{{is_selectedItem(item,group) ? 'checked' : 'unchecked'}}"></use></svg></i></label>
 						<figure class="i-cell i-cell--3-col"><img v-bind:src="item.imagePath" alt="" width="100%"></figure>
 						<div class="i-cell i-cell--8-col i-cell--middle">
-							<p class="group-item__caption ellipsis--2-line">{{item.caption}}</p>
+							<h3 class="group-item__caption ellipsis--2-line">{{item.caption}}</h3>
 							
 							<div class="i-grid i-grid--between">
 								<p class="i-cell i-cell--3-col i-cell--middle">￥{{item.price}}</p>
 								<p class="i-cell i-cell--6-col i-cell--middle">
 									<button v-on:click="item.quatity > 1 ? --item.quatity : 1">-</button>
-									<input type="text" v-model="item.quatity">
+									<input type="text" v-model="item.quatity" readonly>
 									<button v-on:click="item.quatity < 12 ? ++item.quatity : 12">+</button>
 								</p>
 								<p class="i-cell i-cell--2-col i-cell--middle">
@@ -81,7 +84,7 @@
 			<h4>总额：￥0.00</h4>
 			<h5>优惠：￥0.00</h5>
 		</hgroup>
-		<p class="i-cell i-cell--4-col i-cell--middle"><button class="plain btn btn-danger" type="button">结算</button></p>
+		<p class="i-cell i-cell--4-col i-cell--middle"><button class="btn btn-block btn-danger" type="button">结算</button></p>
 	</aside>
 
 	<section v-if="cartGroups.length === 0">购物车，空也～</section>

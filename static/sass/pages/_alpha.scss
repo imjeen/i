@@ -17,7 +17,7 @@
 
 	&.no-border-layer{ border: none; }
 
-	&.no-background-layer{ background-color: inherit; }
+	&.inherit-background-layer{ background-color: inherit; }
 
 	&:last-of-type{
 		margin-bottom: 0;
@@ -40,7 +40,7 @@
 	}
 
 	.inner-bar{
-		padding: 10px/$ppr 12px/$ppr;
+		padding: 12px/$ppr 12px/$ppr;
 		display: block;
 		&.select-bar{
 			position: relative;

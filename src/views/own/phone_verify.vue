@@ -33,7 +33,7 @@
 
 <template>
 
-	<article class="normal-layer no-border-layer no-background-layer">
+	<article class="normal-layer no-border-layer inherit-background-layer">
 
 		<header class="verify-mobile-wrap">
 			<ul class="verify-mobile-step">

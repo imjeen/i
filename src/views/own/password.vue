@@ -1,7 +1,7 @@
 
 <template>
 
-	<section class="normal-layer no-border-layer no-background-layer">
+	<section class="normal-layer no-border-layer inherit-background-layer">
 
 		<form class="form-group">
 			<div class="form-field">

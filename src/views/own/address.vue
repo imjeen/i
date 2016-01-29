@@ -1,16 +1,16 @@
 
 <template>
 
-	<section class="normal-layer no-padding-layer no-background-layer no-border-layer" v-if="address.items.length > 0">
+	<section class="normal-layer no-padding-layer inherit-background-layer no-border-layer" v-if="address.items.length > 0">
 	
 		<ul class="address-list">
-			<li class="address-item" v-for="item in address.items" data-index="{{$index}}">
+			<li class="address-item" v-for="item in address.items" data-index="{{$index}}" v-bind:class="{'default': address.selected === item}">
 				<h3 class="address-title">{{item.userName}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.phone}}</h3>
 				<p class="address-text">{{item.location}}</p>
 				<p class="address-action i-grid">
 					<span class="i-cell--6-col">
 						<label><input name="adress" type="radio" v-bind:value="item" v-model="address.selected" style="display:none;" />
-						<i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-radio_{{ address.selected === item ? 'checked':'unchecked'}}"></use></svg></i>&nbsp;默认地址</label>
+						<i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-radio_{{ address.selected === item ? 'checked':'unchecked'}}"></use></svg></i>&nbsp;{{ address.selected === item ? '默认地址':'设置默认'}}</label>
 					</span>
 
 					<span class="i-cell--6-col text-right">
@@ -24,7 +24,7 @@
 
 	</section>
 
-	<section v-else class="normal-layer no-background-layer no-border-layer" >
+	<section v-else class="normal-layer inherit-background-layer no-border-layer" >
 		<p>no item...</p>
 	</section>
 

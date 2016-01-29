@@ -103,7 +103,7 @@
 						<i class="advance-icon svg-icon" style="color:#ffa201;">
 							<svg class="icon icon-ecard"><use xlink:href="/static/images/icon-sprites.svg#icon-ecard"></use></svg>
 						</i>
-						<h4 class="advance-text">电子会员卡</h4>
+						<h4 class="advance-text">会员卡</h4>
 						<p class="advance-tip">&nbsp;</p>
 					</div>
 				</a>
@@ -120,9 +120,20 @@
 				</a>
 			</li>
 			<li class="advance-item">
-				<a v-link="{ path: 'av/coupon/'}">
+				<a v-link="{ path: 'av/redpacket/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
+							<svg class="icon icon-red-packet"><use xlink:href="/static/images/icon-sprites.svg#icon-red-packet"></use></svg>
+						</i>
+						<h4 class="advance-text">新年红包</h4>
+						<p class="advance-tip">&nbsp;</p>
+					</div>
+				</a>
+			</li>
+			<li class="advance-item">
+				<a v-link="{ path: 'av/coupon/'}">
+					<div class="advance-cell">
+						<i class="advance-icon svg-icon" style="color:#33c8b0;">
 							<svg class="icon icon-coupon"><use xlink:href="/static/images/icon-sprites.svg#icon-coupon"></use></svg>
 						</i>
 						<h4 class="advance-text">优惠券</h4>
@@ -147,7 +158,7 @@
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
 							<svg class="icon icon-wallet"><use xlink:href="/static/images/icon-sprites.svg#icon-wallet"></use></svg>
 						</i>
-						<h4 class="advance-text">齐家钱包</h4>
+						<h4 class="advance-text">我的钱包</h4>
 						<p class="advance-tip">&nbsp;</p>
 					</div>
 				</a>
@@ -158,7 +169,7 @@
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
 							<svg class="icon icon-activity"><use xlink:href="/static/images/icon-sprites.svg#icon-activity"></use></svg>
 						</i>
-						<h4 class="advance-text">已报名活动</h4>
+						<h4 class="advance-text">报名活动</h4>
 						<p class="advance-tip">&nbsp;</p>
 					</div>
 				</a>
@@ -202,7 +213,7 @@
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
 							<svg class="icon icon-customize"><use xlink:href="/static/images/icon-sprites.svg#icon-customize"></use></svg>
 						</i>
-						<h4 class="advance-text">装修需求定制</h4>
+						<h4 class="advance-text">私人定制</h4>
 						<p class="advance-tip">&nbsp;</p>
 					</div>
 				</a>

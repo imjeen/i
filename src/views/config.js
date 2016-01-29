@@ -137,6 +137,11 @@ export default function(Vue, router){
 					component: require("./advance/record.vue")
 				},
 
+				"/redpacket": {
+					name: "redpacket",
+					component: require("./advance/redpacket.vue")
+				},
+
 				"/reservation": {
 					name: "reservation",
 					component: require("./advance/reservation.vue")
