@@ -139,7 +139,15 @@ export default function(Vue, router){
 
 				"/redpacket": {
 					name: "redpacket",
-					component: require("./advance/redpacket.vue")
+					component: Vue.extend({template: "<router-view></router-view>"}),
+					subRoutes: {
+						"/": { component: require("./advance/redpacket.vue") },
+						"/rule": {
+							name: "rule",
+							component: require("./advance/redpacket_rule.vue")
+						}
+					}
+					
 				},
 
 				"/reservation": {
