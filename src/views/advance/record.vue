@@ -37,17 +37,29 @@
 		</p>
 	</section>
 
-	<section v-else>
-		empty
-	</section>
+	<empty v-else v-bind:empty="empty"></empty>
 
 </template>
 
 <script>
 	import store from "../../store"
+	import empty from "../../components/empty.vue"
 	export default {
+		components: {
+			empty
+		},
 		data(){
 			return {
+				empty: {
+					figure: {
+						img: "",
+						caption: "您还没有足迹的哦～"
+					},
+					button:{
+						link: "#",
+						text: ""
+					}
+				},
 				recordList: [
 					{
 						id: 0,

@@ -9,9 +9,11 @@
 		.highlight{
 			color: #f30;
 			vertical-align: text-bottom;
-			strong{
-				font-size: 36px/$ppr;
-				font-weight: bold;
+			font-size: 36px/$ppr;
+			font-weight: bold;
+			display: block;
+			&:first-letter{
+				font-size: 16px/$ppr;
 			}
 		}
 		.rule-link{
@@ -52,33 +54,59 @@
 				background-color: #d00;
 				color: #fff;
 				font-size: 40px/$ppr;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				& > small{
+					font-family: Arial;
+					font-size: 30px/$ppr;
+				}
 			}
 		}
 	}
 </style>
 
 <template>
-	<aside class="redpacket-masthead">
-		<p><a v-link="{path: '/av/redpacket/rule'}" class="rule-link">活动规则</a>当前可使用红包金额 <br><span class="highlight">￥<strong>120</strong></span></p>
-		<p class="rule-limit">此红包抵扣使用</p>
-	</aside>
+	
+	<section v-if="redpackets.length > 0">
 
-	<ul class="redpacket-list">
-		<li class="redpacket-item" v-for="redpacket in redpackets">
-			<strong class="highlight">￥{{redpacket.charge}}</strong>
-			<h3>{{redpacket.title}}</h3>
-			<p>领取时间：&nbsp;{{redpacket.receiveDate}}</p>
-			<p>有限时间：&nbsp;{{redpacket.deadDate}}</p>
-		</li>
-	</ul>
+		<aside class="redpacket-masthead">
+			<p><a v-link="{path: '/av/redpacket/rule'}" class="rule-link">活动规则</a>当前可使用红包金额 <br><span class="highlight">￥120</span></p>
+			<p class="rule-limit">此红包抵扣使用</p>
+		</aside>
+
+		<ul class="redpacket-list">
+			<li class="redpacket-item" v-for="redpacket in redpackets">
+				<strong class="highlight"><small>￥</small>{{redpacket.charge}}</strong>
+				<h3>{{redpacket.title}}</h3>
+				<p>领取时间：&nbsp;{{redpacket.receiveDate}}</p>
+				<p>有限时间：&nbsp;{{redpacket.deadDate}}</p>
+			</li>
+		</ul>
+
+	</section>
+
+	<empty v-else v-bind:empty="empty"></empty>
 
 </template>
 
 <script>
 	import store from "../../store"
+	import empty from "../../components/empty.vue"
 	export default {
 		data(){
 			return {
+				empty: {
+					figure:{
+						img: "/static/images/200x200.png",
+						caption: "还没有红包哦"
+					},
+					button: {
+						link: "#",
+						text: "抢红包"
+					}
+				},
 				redpackets: [
 					{
 						title: "おやすみのキスを",
@@ -94,6 +122,9 @@
 					}
 				],
 			}
+		},
+		components: {
+			empty,
 		},
 		route:{
 			data(){
