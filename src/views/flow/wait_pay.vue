@@ -1,41 +1,38 @@
 
 <template>
-	<h2>详情页：{{$route.params.item}}</h2>
-	<div v-if="waitPayOrder.length === 0">
-		nothing to wait pay
-	</div>
-	<div v-else>
-		<section>
-			<dl>
-				<dt>
-					<figure>
-						<img alt="">
-						<figcaption></figcaption>
-					</figure>
-				</dt>
-				<dd>
-					<p>title <span>300￥</span></p>
-					<p>x3</p>
-					<p><button>去支付</button></p>
-				</dd>
-			</dl>
-		</section>
-	</div>
+
+	<section class="normal-layer" v-if="items.length > 0">
+		
+	</section>
+
+	<empty v-else v-bind:empty="empty"></empty>
 
 </template>
 
 
 <script>
 	import store from "../../store"
+	import empty from "../../components/empty.vue"
 	export default {
+		components: { empty },
 		data(){
 			return {
-				waitPayOrder: []
+				empty: {
+					figure: {
+						img: "",
+						caption: "您没有待支付的商品哦～"
+					},
+					button:{
+						link: "#",
+						text: ""
+					}
+				},
+				items: []
 			}
 		},
 		route: {
 			data(transition){
-				store.setHtmlTitle("等待支付");
+				store.setHtmlTitle("待支付");
 				transition.next(this.$data);
 			}
 		}

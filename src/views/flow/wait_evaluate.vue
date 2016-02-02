@@ -19,7 +19,7 @@
 				empty: {
 					figure: {
 						img: "",
-						caption: "您没有待发货的商品哦～"
+						caption: "您没有待评价的商品哦～"
 					},
 					button:{
 						link: "#",
@@ -29,9 +29,9 @@
 				items: []
 			}
 		},
-		route: {
+		route:{
 			data(transition){
-				store.setHtmlTitle("待发货");
+				store.setHtmlTitle("待评价");
 				transition.next(this.$data);
 			}
 		}

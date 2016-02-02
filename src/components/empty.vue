@@ -28,7 +28,7 @@
 
 <template>
 
-	<section class="empty-layer normal-layer inherit-background-layer">
+	<section class="empty-layer normal-layer inherit-background-layer no-border-layer">
 		<figure>
 			<img v-bind:src="!empty.figure.img ? '/static/images/200x200.png' : empty.figure.img" alt="" width="100%">
 			<figcaption v-if="empty.figure.caption">{{empty.figure.caption}}</figcaption>

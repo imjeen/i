@@ -1,24 +1,37 @@
 
 <template>
-	<div v-if="refundOrder.length === 0"> nothing to refund</div>
-	<div v-else>
-		<section>
-			<h2>order refund</h2>
-		</section>
-	</div>
+	
+	<section class="normal-layer" v-if="items.length > 0">
+		
+	</section>
+
+	<empty v-else v-bind:empty="empty"></empty>
+
 </template>
 
 <script>
 	import store from "../../store"
+	import empty from "../../components/empty.vue"
 	export default {
+		components: { empty },
 		data(){
 			return {
-				refundOrder: []
+				empty: {
+					figure: {
+						img: "",
+						caption: "您没有待付款的商品哦～"
+					},
+					button:{
+						link: "#",
+						text: ""
+					}
+				},
+				items: []
 			}
 		},
 		route:{
 			data(transition){
-				store.setHtmlTitle("待付款/售后");
+				store.setHtmlTitle("售后/退款");
 				transition.next(this.$data);
 			}
 		}

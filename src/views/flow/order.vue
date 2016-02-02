@@ -4,29 +4,33 @@
 
 <template>
 
-	<nav>
-		<ul class="i-grid">
-			<li class="i-cell i-cell--2-col"><a href="#">全部</a></li>
-			<li class="i-cell i-cell--2-col"><a href="#">待支付</a></li>
-			<li class="i-cell i-cell--2-col"><a href="#">待发货</a></li>
-			<li class="i-cell i-cell--2-col"><a href="#">待收货</a></li>
-			<li class="i-cell i-cell--2-col"><a href="#">待评价</a></li>
-			<li class="i-cell i-cell--2-col"><a href="#">退款/售后</a></li>
-		</ul>
-	</nav>
-
-	<section class="normal-layer">
+	<section class="normal-layer" v-if="items.length > 0">
 		
 	</section>
+
+	<empty v-else v-bind:empty="empty"></empty>
 
 </template>
 
 <script>
 	import store from "../../store"
+	import item from "../../components/flow-item.vue"
+	import empty from "../../components/empty.vue"
 	export default {
-		// data
+		components: { item, empty },
 		data(){
 			return {
+				empty: {
+					figure: {
+						img: "",
+						caption: "还没有订单哦～"
+					},
+					button:{
+						link: "#",
+						text: ""
+					}
+				},
+				items: []
 			}
 		},
 		methods: {

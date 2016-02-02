@@ -67,7 +67,7 @@
 				</a>
 			</li>
 			<li class="service-item">
-				<a v-link="{ path: 'flow/evaluate/'}">
+				<a v-link="{ path: 'flow/wait/evaluate/'}">
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">

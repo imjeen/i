@@ -27,9 +27,9 @@
 
 <template>
 
-	<section class="normal-layer">
+	<section class="normal-layer" v-if="cartGroups.length > 0">
 
-		<dl class="entity-bundle" v-if="cartGroups.length > 0" v-for="group in cartGroups" v-if="group.items.length > 0">
+		<dl class="entity-bundle" v-for="group in cartGroups" v-if="group.items.length > 0">
 			<dt class="bundle-header">
 				<label class="i-grid">
 					<input type="checkbox" style="display:none;"
@@ -87,15 +87,27 @@
 		<p class="i-cell i-cell--4-col i-cell--middle"><button class="btn btn-block btn-danger" type="button">结算</button></p>
 	</aside>
 
-	<section v-if="cartGroups.length === 0">购物车，空也～</section>
+	<empty v-if="cartGroups.length === 0" v-bind:empty="empty"></empty>
 
 </template>
 
 <script>
 	import store from "../../store"
+	import empty from "../../components/empty.vue"
 	export default {
+		components: { empty },
 		data(){
 			return {
+				empty: {
+					figure: {
+						img: "",
+						caption: "购物车是空的哦"
+					},
+					button: {
+						link: "#",
+						text: ""
+					}
+				},
 				cartGroups: [
 						{
 							title: "自营店",

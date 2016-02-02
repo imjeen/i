@@ -40,13 +40,9 @@ export default function(Vue, router){
 		// flow
 		"/flow": {
 			name: "flow",
-			component: Vue.extend({template: "<router-view></router-view>"}),
+			// component: Vue.extend({template: "<router-view></router-view>"}),
+			component: require("./flow/index.vue"),
 			subRoutes: {
-
-				"/evaluate": {
-					name: "evaluate",
-					component: require("./flow/evaluate.vue")
-				},
 
 				"/order": {
 					name: "order",
@@ -62,7 +58,27 @@ export default function(Vue, router){
 					component: require("./flow/refund.vue")
 				},
 
-				"/wait": {
+				"/wait/delivery": {
+					name: "delivery",
+					component: require("./flow/wait_delivery.vue")
+				},
+
+				"/wait/evaluate": {
+					name: "evaluate",
+					component: require("./flow/wait_evaluate.vue")
+				},
+
+				"/wait/pay": {
+					name: "pay",
+					component: require("./flow/wait_pay.vue")
+				},
+
+				"/wait/receive": {
+					name: "receive",
+					component: require("./flow/wait_receive.vue")
+				},
+
+				/*"/wait": {
 					name: "wait",
 					component: Vue.extend({template: "<router-view></router-view>"}),
 					subRoutes: {
@@ -70,7 +86,7 @@ export default function(Vue, router){
 						"/pay": { component: require("./flow/wait_pay.vue") },
 						"/receive": { component: require("./flow/wait_receive.vue") },
 					}
-				},
+				},*/
 
 			}
 		},
