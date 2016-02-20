@@ -1,9 +1,31 @@
 @charset "UTF-8";
 
+.header{
+	background-color: rgba(246,246,246,1);
+	position: relative;
+	line-height: 45px/$ppr;
+	height: 45px/$ppr;
+
+	h1{ font-size: 24px/$ppr; }
+
+}
+
+.footer{
+	height: 50px/$ppr;
+	background: #efefef;
+	padding-top: 10px/$ppr;
+	.footer__copyright{
+		color: #aaa9a9;
+		text-align: center;
+		padding: 10px/$ppr;
+	}
+}
+
+
 .jumbotron-main{
 	margin: auto;
 	max-width: 540px/$ppr;
-	min-height: calc(100vh - #{40px/$ppr} - #{50px/$ppr});
+	min-height: calc(100vh - #{45px/$ppr} - #{50px/$ppr});
 }
 
 .normal-layer{

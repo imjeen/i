@@ -1,18 +1,31 @@
 
 <template>
-	<div v-if="activity.length === 0">nothing to activity</div>
-	<div v-else>
-		<section>
-			<h2>activity</h2>
-		</section>
-	</div>
+	
+	<section v-if="activity.length > 0">
+		
+	</section>
+
+	<empty v-else v-bind:empty="empty"></empty>
+
 </template>
 
 <script>
 	import store from "../../store"
+	import empty from "../../components/empty.vue"
 	export default {
+		components: { empty },
 		data(){
 			return {
+				empty: {
+					figure: {
+						img: "",
+						caption: "您没有活动哦～"
+					},
+					button:{
+						link: "#",
+						text: ""
+					}
+				},
 				activity: []
 			}
 		},

@@ -2,8 +2,10 @@
 .header{
 	background-color: rgba(246,246,246,1);
 	position: relative;
-	line-height: 40px/$ppr;
-	height: 40px/$ppr;
+	line-height: 45px/$ppr;
+	height: 45px/$ppr;
+
+	h1{ font-size: 24px/$ppr; }
 
 	.header__title{
 		margin: 0;

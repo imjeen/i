@@ -1,14 +1,14 @@
 
 <template>
-
+	
 	<navigation v-bind:navs="navs"></navigation>
 
-	<section v-if="voucher.length > 0">
+	<section v-if="record.length > 0">
 		
 	</section>
 
 	<empty v-else v-bind:empty="empty"></empty>
-	
+
 </template>
 
 <script>
@@ -20,27 +20,27 @@
 		data(){
 			return {
 				navs: [
-					{ link: "",text: "未使用" },
-					{ link: "#",text: "已使用" },
-					{ link: "#",text: "已过期" },
-					{ link: "#",text: "已冻结" },
+					{ link: "",text: "交易记录" },
+					{ link: "#",text: "充值记录" },
+					{ link: "#",text: "提现记录" },
 				],
 				empty: {
 					figure: {
 						img: "",
-						caption: "您没有优惠券哦～"
+						caption: "您没有记录哦～"
 					},
 					button:{
 						link: "#",
 						text: ""
 					}
 				},
-				voucher: []
+				record: []
 			}
 		},
 		route:{
-			data(){
-				store.setHtmlTitle("代金券");
+			data(transition){
+				store.setHtmlTitle("收支明细");
+				transition.next(this.$data);
 			}
 		}
 	}

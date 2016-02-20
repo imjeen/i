@@ -135,7 +135,15 @@ export default function(Vue, router){
 
 				"/ecard": {
 					name: "ecard",
-					component: require("./advance/ecard.vue")
+					component: Vue.extend({template: "<router-view></router-view>"}),
+					subRoutes: {
+						"/": {
+							component: require("./advance/ecard.vue")
+						},
+						"/open": {
+							component: require("./advance/ecard_open.vue")
+						}
+					}
 				},
 
 				"/plus": {
@@ -178,7 +186,15 @@ export default function(Vue, router){
 
 				"/wallet": {
 					name: "wallet",
-					component: require("./advance/wallet.vue")
+					component: Vue.extend({template: "<router-view></router-view>"}),
+					subRoutes: {
+						"/": {
+							component: require("./advance/wallet.vue")
+						},
+						"/record": {
+							component: require("./advance/wallet_record.vue")
+						}
+					}
 				},
 
 			}
