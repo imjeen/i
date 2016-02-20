@@ -38,7 +38,7 @@
 	<section class="normal-layer">
 		<ul class="feature-list">
 			<li class="feature-item">
-				<a href="#"><h3 class="inner-bar">会员权益</h3></a>
+				<a href="#"><h3 class="inner-bar">会员权益<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3></a>
 			</li>
 		</ul>
 	</section>

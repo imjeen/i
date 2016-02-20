@@ -9,8 +9,8 @@ import VueResource from "vue-resource"
 import configRouter from "./views/config"
 import store from "./store/"
 
-// just for debug
-Vue.config.debug = true;
+// true => just for debug
+Vue.config.debug = false;
 
 // install plugin
 Vue.use(VueRouter);

@@ -4,13 +4,12 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry:{
-    	userMain: "./src/main.js",
-        vendor: ['vue','vue-router','vue-resource']
+        main: ['vue','vue-router','vue-resource', './src/main.js']
     },
 
     output: {
-        publicPath: "/build/",
-        path: __dirname + "/build/",
+        publicPath: process.env.NODE_ENV === 'production' ? "/release/" : "/build/",
+        path: __dirname + (process.env.NODE_ENV === 'production' ? "/release/" : "/build/"),
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
     },
@@ -76,8 +75,8 @@ if(process.env.NODE_ENV === 'production'){
 
     // for style
     module.exports.module.loaders && module.exports.module.loaders.push(
-        { test: /\.css$/, loader: ExtractTextPlugin.extract("style","css") },
-        { test: /\.scss$/, loader: ExtractTextPlugin.extract("style","css","sass")  }
+        { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
+        { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader","css-loader!sass-loader")  }
     );
 
 }else{
