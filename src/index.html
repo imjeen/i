@@ -45,7 +45,7 @@
 
 	<!-- result style -->
 	{% for(var i=0; i < o.htmlWebpackPlugin.files.css.length; ++i){ %}
-	<link rel="stylesheet" href="{%=o.htmlWebpackPlugin.files.css[i] %}">
+	<link rel="stylesheet" href="{%=o.htmlWebpackPlugin.files.css[i] %}?version={%=(new Date()).getTime()%}">
 	{% } %}
 
 </head>

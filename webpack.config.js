@@ -8,7 +8,7 @@ module.exports = {
     },
 
     output: {
-        publicPath: process.env.NODE_ENV === 'production' ? "/release/" : "/build/",
+        publicPath: process.env.NODE_ENV === 'production' ? "./release/" : "./build/",
         path: __dirname + (process.env.NODE_ENV === 'production' ? "/release/" : "/build/"),
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
