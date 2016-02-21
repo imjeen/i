@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+<head>
+	<meta charset="UTF-8">
+	<title v-if="!!htmlHead.title === false">我的家</title>
+	<title v-else>{{htmlHead.title}} - 我的家</title>
+	<script>
+		;(function(window,document,undefined){
+
+			var htmlElement = document.documentElement;
+			var metaElement = document.querySelector('meta[name="viewport"]');
+
+			var dpr = Math.min(window.devicePixelRatio,3);
+			var scale = 1 / dpr;
+
+			// document.documentElement.dataset.dpr
+
+			var renderToRem = function(){
+				var width = htmlElement.getBoundingClientRect().width;
+				width / dpr > 540 && (width = 540 * dpr);
+				var rem = width / 10;
+				// var rem = dpr * Math.min(width, 1118) / 16;
+				htmlElement.style.fontSize = rem + 'px';
+			};
+
+			renderToRem();
+
+			if(metaElement === null){
+				metaElement = document.createElement('meta');
+				metaElement.name = 'viewport';
+				metaElement.content = 'initial-scale=' + scale + ', minimum-scale=' + scale + ', maximum-scale=' + scale;
+				htmlElement.firstElementChild.appendChild(metaElement);
+			}
+
+			// event
+			window.addEventListener('resize',function(e){ 
+				setTimeout(renderToRem, 300); 
+			},false);
+			window.addEventListener('pageshow',function(e){
+				e.persisted && setTimeout(renderToRem, 300);
+			},false);
+
+		})(window,document,undefined);
+	</script>
+
+	<!-- result style -->
+	
+	<link rel="stylesheet" href="./release/main.css?version=1456028252500">
+	
+
+</head>
+<body>
+
+	<header class="header i-grid">
+		<button class="i-cell i-cell--1-col plain" @click="goBack()">
+			<i class="svg-icon">
+				<svg viewBox="0 0 24 24"><path d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path></svg>
+			</i>
+		</button>
+		<h1 class="i-cell i-cell--10-col text-center" v-if="!!htmlHead.title === false">我的家</h1>
+		<h1 class="i-cell i-cell--10-col text-center" v-text="htmlHead.title"></h1>
+		<button class="i-cell i-cell--1-col plain">
+			<i class="svg-icon">
+				<svg viewBox="0 0 24 24"><path d="M3,18h18v-2H3V18z M3,13h18v-2H3V13z M3,6v2h18V6H3z"></path></svg>
+			</i>
+		</button>
+	</header>
+
+	<main class="jumbotron-main">
+	<router-view>Loading...</router-view>
+	</main>
+
+	<footer class="footer">
+		<p class="footer__copyright">Copyright &copy; {{ year ? year : '2015'}} 智能家居 ehouse 版权所有</p>
+	</footer>
+
+	<!-- result script -->
+	
+	<script src="./release/common.js?version=1456028252500"></script>
+	
+	<script src="./release/main.js?version=1456028252500"></script>
+	
+
+</body>
+</html>
