@@ -36,7 +36,7 @@
 						v-on:change="event_changeByGroup(group,$event)"
 						v-bind:checked="is_selectedGroup(group)"
 					/>
-					<span class="i-cell i-cell--1-col"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-check_box_{{is_selectedGroup(group) ? 'checked' : 'unchecked'}}"></use></svg></i></span>
+					<span class="i-cell i-cell--1-col"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="./static/images/icon-sprites.svg#icon-check_box_{{is_selectedGroup(group) ? 'checked' : 'unchecked'}}"></use></svg></i></span>
 					<h3>{{group.title}}</h3>
 				</label>
 			</dt>
@@ -47,7 +47,7 @@
 						<input type="checkbox" style="display:none;" 
 							v-bind:value="item.id"
 							v-model="group.selected"
-						/><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-check_box_{{is_selectedItem(item,group) ? 'checked' : 'unchecked'}}"></use></svg></i></label>
+						/><i class="svg-icon svg-icon--middle"><svg><use xlink:href="./static/images/icon-sprites.svg#icon-check_box_{{is_selectedItem(item,group) ? 'checked' : 'unchecked'}}"></use></svg></i></label>
 						<figure class="i-cell i-cell--3-col"><img v-bind:src="item.imagePath" alt="" width="100%"></figure>
 						<div class="i-cell i-cell--8-col i-cell--middle">
 							<h3 class="group-item__caption ellipsis--2-line">{{item.caption}}</h3>
@@ -77,7 +77,7 @@
 			 v-on:change="event_changeByAll"
 			 v-bind:checked="is_selectedAll()"
 			/>
-			<i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-check_box_{{is_selectedAll() ? 'checked' : 'unchecked'}}"></use></svg></i>
+			<i class="svg-icon svg-icon--middle"><svg><use xlink:href="./static/images/icon-sprites.svg#icon-check_box_{{is_selectedAll() ? 'checked' : 'unchecked'}}"></use></svg></i>
 		</label>
 		<hgroup class="i-cell i-cell--7-col">
 			<h3>合计： ￥<strong>{{total}}</strong></h3>
@@ -115,14 +115,14 @@
 							items: [
 								{
 									id: 1,
-									imagePath: "/static/images/200x200.png",
+									imagePath: "./static/images/200x200.png",
 									caption: "の真理目眩がするほどに舞う無数, 走る首都高 渡るレインボー ",
 									price: 50,
 									quatity: 1
 								},
 								{
 									id: 2,
-									imagePath: "/static/images/200x200.png",
+									imagePath: "./static/images/200x200.png",
 									caption: "薄桃色のより先に",
 									price: 240,
 									quatity: 2
@@ -135,14 +135,14 @@
 							items: [
 								{
 									id: 1,
-									imagePath: "/static/images/200x200.png",
+									imagePath: "./static/images/200x200.png",
 									caption: "音にならないさよなら",
 									price: 60,
 									quatity: 5
 								},
 								{
 									id: 2,
-									imagePath: "/static/images/200x200.png",
+									imagePath: "./static/images/200x200.png",
 									caption: "為何對你念念不忘？",
 									price: 90,
 									quatity: 3

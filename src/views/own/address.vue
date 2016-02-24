@@ -10,13 +10,13 @@
 				<p class="address-action i-grid">
 					<span class="i-cell--6-col">
 						<label><input name="adress" type="radio" v-bind:value="item" v-model="address.selected" style="display:none;" />
-						<i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-radio_{{ address.selected === item ? 'checked':'unchecked'}}"></use></svg></i>&nbsp;{{ address.selected === item ? '默认地址':'设置默认'}}</label>
+						<i class="svg-icon svg-icon--middle"><svg><use xlink:href="./static/images/icon-sprites.svg#icon-radio_{{ address.selected === item ? 'checked':'unchecked'}}"></use></svg></i>&nbsp;{{ address.selected === item ? '默认地址':'设置默认'}}</label>
 					</span>
 
 					<span class="i-cell--6-col text-right">
-						<a class="text-black" v-link="{path: '/own/address/edit'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a>
+						<a class="text-black" v-link="{path: '/own/address/edit'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="./static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a>
 						&nbsp;&nbsp;
-						<a v-on:click.prevent="deleteItem($index)" class="text-black" href="javascript:void(0);"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="/static/images/icon-sprites.svg#icon-delete"></use></svg></i>&nbsp;删除</a>
+						<a v-on:click.prevent="deleteItem($index)" class="text-black" href="javascript:void(0);"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="./static/images/icon-sprites.svg#icon-delete"></use></svg></i>&nbsp;删除</a>
 					</span>
 				</p>
 			</li>

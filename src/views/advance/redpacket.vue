@@ -99,7 +99,7 @@
 			return {
 				empty: {
 					figure:{
-						img: "/static/images/200x200.png",
+						img: "./static/images/200x200.png",
 						caption: "还没有红包哦"
 					},
 					button: {

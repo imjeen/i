@@ -2,6 +2,7 @@
 
 // just for style
 require("../static/sass/main.scss");
+// require("../static/test.css");
 
 import Vue from "vue"
 import VueRouter from "vue-router"
