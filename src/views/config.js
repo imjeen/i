@@ -181,7 +181,16 @@ export default function(Vue, router){
 
 				"/voucher": {
 					name: "voucher",
-					component: require("./advance/voucher.vue")
+					component: Vue.extend({template: "<router-view></router-view>"}),
+					subRoutes: {
+						"/": {
+							component: require("./advance/voucher.vue")
+						},
+						"/detail/:barcode": {
+							name: "detail",
+							component: require("./advance/voucher_detail.vue")
+						}
+					}
 				},
 
 				"/wallet": {

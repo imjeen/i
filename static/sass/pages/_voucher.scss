@@ -1,0 +1,138 @@
+
+// ----------------------------
+// voucher detail
+
+.voucher-masthead{
+    margin-top: 06px/$ppr;
+    margin-left: 12px/$ppr;
+    margin-right: 12px/$ppr;
+    margin-bottom: 15px/$ppr;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    &.voucher-masthead--failed{
+      .ticket-failed{
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: rgba(211,211,211,0.5);
+          &:after{
+              content: attr(arial-failed);
+              display: inline-block;
+              position: absolute;
+              top: -05px/$ppr;
+              right: 0;
+              height: 60px/$ppr;
+              width: 60px/$ppr;
+              font-size: 14px/$ppr;
+              line-height: 60px/$ppr;
+              text-align: center;
+              color: #999;
+              background-color: #fafafa;
+              border: 1px solid #ddd;
+              border-radius: 50%;
+              transform: rotate(-30deg);
+              box-shadow: 0px 0px 0px 03px/$ppr rgba(140, 140, 140, 0.5);
+          }
+      }
+      .voucher-ticket{
+          background-color: #999;
+          background-image: radial-gradient(circle at top, #efe 50%, #999 50%);
+      }
+    }
+    .voucher-ticket{
+        padding: 20px/$ppr 10px/$ppr;
+        color: #fff;
+        background-color: #F3D430;
+        background-image: radial-gradient(circle at top, #efe 50%, #F3D430 50%);
+        background-size: 12px/$ppr 06px/$ppr;
+    		background-repeat: repeat-x;
+
+    .ticket-price{
+        float: left;
+        margin-right: 15px/$ppr;
+        font-size: 21px/$ppr;
+        big{
+            font-size: 60px/$ppr;
+            line-height: 0.8;
+            vertical-align: text-top;
+            font-family: Arial;
+            font-weight: bold;
+        }
+    }
+
+    h3{
+        font-size: 14px/$ppr;
+        margin-bottom: 05px/$ppr;
+    }
+    p{ font-size:  12px/$ppr; }
+
+    }
+    .voucher-barcode{
+        background-color: #fff;
+        padding-top: 12px/$ppr;
+        padding-bottom: 06px/$ppr;
+        text-align: center;
+        .barcode{
+            margin: 0 auto;
+        }
+    }
+    &:before,&:after{
+        content: "";
+        position: absolute;
+        top: 10%;
+        bottom: 15px/$ppr;
+        z-index: -1;
+        width: 50%;
+        box-shadow: 0 15px/$ppr 10px/$ppr rgba(0,0,0,0.5);
+
+    }
+    &:before{
+        left: 04px/$ppr;
+        transform: rotate(-3deg);
+    }
+    &:after{
+        right: 04px/$ppr;
+        transform: rotate(3deg);
+    }
+}
+
+.voucher-content{
+    font-size: 12px/$ppr;
+    & > h4{
+        color: #999;
+        margin-bottom: 05px/$ppr;
+        margin-top: 15px/$ppr;
+        &:first-child{ margin-top: 0; }
+    }
+    .text-red{ color: #dd0000; }
+    .text-gray{ color: #999; }
+}
+
+// voucher modal
+.voucher-modal{
+
+    .font-size-12{ font-size: 12px/$ppr; }
+
+    .modal-box-tip{
+        background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: auto;
+    min-width: 0;
+    margin-top: 50px/$ppr;
+    color: #fff;
+    }
+
+    .modal-box-success{
+        .i-icon{
+            vertical-align: middle;
+        font-size: 36px/$ppr;
+        color: #6C0;
+        }
+        .highlight{ color: #dd0000; }
+    }
+
+}
+
