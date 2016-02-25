@@ -141,7 +141,11 @@ export default function(Vue, router){
 							component: require("./advance/ecard.vue")
 						},
 						"/open": {
-							component: require("./advance/ecard_open.vue")
+							component: require("./advance/ecard_vip.vue")
+						},
+						"/intro/:type": {
+							name: "intro",
+							component: require("./advance/ecard_intro.vue")
 						}
 					}
 				},

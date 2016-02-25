@@ -1,0 +1,60 @@
+
+<style lang="sass">
+	/* $ppr: 720px / 16 / 1rem;
+	.ecard-section{
+		margin-top: 10px/$ppr;
+		input{
+			background-color: #fff;
+		}
+	} */
+</style>
+
+<template>
+
+	<section class="normal-layer no-padding-layer no-border-layer">
+
+ 		<ul class="ecard-feature-list feature-list interaction-list">
+      <li class="feature-item">
+        <a v-link="{ name: 'intro', params: { type: 'vip'} }">
+            <h3 class="inner-bar"><i class="svg-icon svg-icon--middle"><svg class="icon icon-wait-to-pay"><use xlink:href="./static/images/icon-sprites.svg#icon-vip-ecard"></use></svg></i>&nbsp;会员权益<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
+        </a>
+      </li>
+    </ul>
+
+	</section>
+
+	<section class="normal-layer no-padding-layer no-border-layer inherit-background-layer">
+	  <form class="ecard-vip-form">
+
+	    <p class="field-title">会员卡订单、钱包等关联，请填写真实姓名</p>
+
+	    <label class="ecard-input-field i-border-image">
+	    	<i class="svg-icon svg-icon--middle"><svg class="icon icon-wait-to-pay"><use xlink:href="./static/images/icon-sprites.svg#icon-simple-avatar"></use></svg></i>
+	        <input type="text" name="username" placeholder="请输入姓名">
+	    </label>
+
+	    <p class="btn-wrap">
+	        <a role="button" href="javascript:void(0);" class="btn btn-block btn-danger">开通会员卡</a>
+	    </p>
+
+	  </form>
+	</section>
+
+</template>
+
+<script>
+	import store from "../../store"
+	export default {
+		data(){
+			return {
+
+			}
+		},
+		route: {
+			data(transition){
+				store.setHtmlTitle("开通会员卡");
+				transition.next(this.$data);
+			}
+		}
+	}
+</script>

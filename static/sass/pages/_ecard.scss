@@ -1,0 +1,120 @@
+
+
+@charset "UTF-8";
+
+.ecard-feature-list{
+    .inner-bar{ padding: 08px/$ppr 12px/$ppr;}
+}
+
+// open vip
+.ecard-vip-form{
+    .field-title{
+      font-size: 12px/$ppr;
+      padding: 0 12px/$ppr;
+      margin-top: 12px/$ppr;
+      margin-bottom: 12px/$ppr;
+    }
+    .ecard-input-field{
+        display: block;
+        position: relative;
+        margin-bottom: 12px/$ppr;
+        padding: 12px/$ppr 12px/$ppr 12px/$ppr 42px/$ppr;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        background-color: #fff;
+        input{ width: 100%; }
+        .svg-icon{
+          color: #D00;
+          font-size: 18px/$ppr;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-left: 12px/$ppr;
+          transform: translateY(-50%);
+        }
+    }
+}
+
+// list rule for ecard
+.ecard-rule-list{
+    .item-title{
+        font-size: 12px/$ppr;
+        border-bottom: 1px solid #e2e2e2;
+        background-color: #efefef;
+        padding: 07px/$ppr 10px/$ppr;
+        line-height: 22px/$ppr;
+    }
+    .item-desc{
+      background-color: #fff;
+      padding: 06px/$ppr 10px/$ppr;
+	    font-size: 12px/$ppr;
+	    color: #666;
+    }
+    .highlinght{ color: #F66; }
+}
+
+// -------------------------------
+// vip ecard
+
+.ecard-masthead{
+    /*padding: 0 0 10px/$ppr 0;*/
+    .ecard-tip{
+        background-color: #ffdfe0;
+		    font-size:11px/$ppr;
+		    color: #666;
+		    border-bottom: 1px solid #efd0d0;
+		    padding: 06px/$ppr 12px/$ppr;
+        .svg-icon{
+            float: left;
+        		margin-right: 10px/$ppr;
+            color: #F55;
+        }
+    }
+    .ecard-figure{
+	    margin-bottom: 15px/$ppr;
+	    padding: 12px/$ppr 0;
+	    text-align: center;
+			background-color: #fff;
+      position: relative;
+      /*z-index: 1;*/
+
+	    &:before,&:after{
+        content: "";
+        position: absolute;
+        top: 10%;
+        bottom: 15px/$ppr;
+        z-index: -1;
+        width: 50%;
+        box-shadow: 0 15px/$ppr 10px/$ppr rgba(0,0,0,0.5);
+	    }
+	    &:before{
+        left: 04px/$ppr;
+        transform: rotate(-3deg);
+	    }
+	    &:after{
+        right: 04px/$ppr;
+        transform: rotate(3deg);
+	    }
+
+    }
+    .ecard-barcode{
+      text-align: center;
+    }
+}
+
+.ecard-equity-list{
+    padding: 12px/$ppr 0;
+    & > li{
+      float: left;
+      width: 1 / 3 * 100%;
+      text-align: center;
+      font-size:11px/$ppr;
+      & > .svg-icon{
+      	width: 40px/$ppr;
+      	height: 40px/$ppr;
+        color: #FF2B2B;
+      }
+      & > p{ padding-top: 05px/$ppr; }
+    }
+}
+
