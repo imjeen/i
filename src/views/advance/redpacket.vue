@@ -25,69 +25,36 @@
 			color: #666;
 		}
 	}
-	.redpacket-list{
 
-		$right-padding: 30% !default;
-
-		padding: 0 12px/$ppr;
-		margin-bottom: 10px/$ppr;
-		.redpacket-item{
-			background-color: #fff;
-			padding: 8px/$ppr 6px/$ppr;
-			position: relative;
-			padding-right: $right-padding;
-			margin-bottom: 8px/$ppr;
-			& > h3{
-				font-size: 14px/$ppr;		
-				padding: 5px/$ppr 0;
-			}
-			& > p{ 
-				font-size: 12px/$ppr;
-				color: #666;
-			}
-			.highlight{
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				width: $right-padding;
-				background-color: #d00;
-				color: #fff;
-				font-size: 40px/$ppr;
-				text-align: center;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				& > small{
-					font-family: Arial;
-					font-size: 30px/$ppr;
-				}
-			}
-		}
-	}
 </style>
 
 <template>
-	
-	<section v-if="redpackets.length > 0">
 
-		<aside class="redpacket-masthead">
-			<p><a v-link="{path: '/av/redpacket/rule'}" class="rule-link">活动规则</a>当前可使用红包金额 <br><span class="highlight">￥120</span></p>
-			<p class="rule-limit">此红包抵扣使用</p>
-		</aside>
+	<aside class="redpacket-masthead"  v-if="redpackets.length > 0">
+		<p><a v-link="{path: '/av/redpacket/rule'}" class="rule-link">活动规则</a>当前可使用红包金额 <br><span class="highlight">￥120</span></p>
+		<p class="rule-limit">此红包抵扣使用</p>
+	</aside>
 
-		<ul class="redpacket-list">
-			<li class="redpacket-item" v-for="redpacket in redpackets">
-				<strong class="highlight"><small>￥</small>{{redpacket.charge}}</strong>
-				<h3>{{redpacket.title}}</h3>
-				<p>领取时间：&nbsp;{{redpacket.receiveDate}}</p>
-				<p>有限时间：&nbsp;{{redpacket.deadDate}}</p>
+	<section class="normal-layer inherit-background-layer no-border-layer" v-if="redpackets.length > 0">
+
+		<ol class="ticket-list">
+
+			<li class="ticket-item" v-for="item in redpackets">
+					<div class="i-grid i-grid--no-spacing">
+						<figure class="ticket-figure ticket-figure--red i-cell i-cell--4-col i-cell--stretch"><strong>￥{{item.charge}}</p></strong></figure>
+						<div class="ticket-caption i-cell i-cell--8-col i-cell--middle">
+							<h2 class="item-caption ellipsis--2-line">{{item.title}}</h2>
+							<p>领取时间：&nbsp;{{item.receiveDate}}</p>
+							<p>有限时间：&nbsp;{{item.deadDate}}</p>
+						</div>
+					</div>
 			</li>
-		</ul>
+
+		</ol>
 
 	</section>
 
-	<empty v-else v-bind:empty="empty"></empty>
+	<empty v-if="redpackets.length === 0" v-bind:empty="empty"></empty>
 
 </template>
 

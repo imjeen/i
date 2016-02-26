@@ -18,7 +18,7 @@
 	  <aside class="ecard-tip">
 	      <i class="svg-icon svg-icon--middle"><svg class="icon icon-wait-to-pay"><use xlink:href="./static/images/icon-sprites.svg#icon-warn-circle"></use></svg></i>
 	      <h3>您的会员卡为锁定状态，不可使用</h3>
-	      <p>详情请咨询齐家客服：000-000-0000</p>
+	      <p>详情请咨询智家客服：000-000-0000</p>
 	  </aside>
 	</section>
 

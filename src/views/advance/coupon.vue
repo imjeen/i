@@ -3,8 +3,23 @@
 	
 	<navigation v-bind:navs="navs"></navigation>
 
-	<section v-if="coupons.length > 0">
-		
+	<section class="normal-layer no-border-layer inherit-background-layer" v-if="coupons.length > 0">
+		<ol class="ticket-list">
+
+			<li class="ticket-item" v-for="item in coupons">
+				<a a-v-link="{ name: 'detail', params: { barcode: item.barcode } }">
+					<div class="i-grid i-grid--no-spacing">
+						<figure class="ticket-figure ticket-figure--red i-cell i-cell--4-col i-cell--stretch"><strong>￥{{item.price}}</p></strong></figure>
+						<div class="ticket-caption i-cell i-cell--8-col i-cell--middle">
+							<h2 class="item-caption ellipsis--2-line">{{item.title}}</h2>
+							<p>{{item.description}}</p>
+						</div>
+					</div>
+				</a>
+			</li>
+
+		</ol>
+
 	</section>
 
 	<empty v-else v-bind:empty="empty"></empty>
@@ -35,7 +50,10 @@
 						text: ""
 					}
 				},
-				coupons: []
+				coupons: [
+					{ barcode: "12345", price: 50, title: "title #1", "description": "description #1" },
+					{ barcode: "abcde", price: 100, title: "title #2", "description": "description #2" },
+				],
 			}
 		},
 		route:{

@@ -42,6 +42,46 @@
      
   </section>
 
+<!-- 
+	<div class="voucher-modal normal-modal" style="display: none;">
+	    <div class="modal-mask"></div>
+	    <div class="modal-box">
+	        <h3 class="modal-title">绑定手机号</h3>
+
+	        <form class="form-group no-border">
+	            <div class="form-field">
+	                <input type="tel" name="phone" placeholder="手机号">
+
+	                <p class="border-adorn"></p>
+	                <span class="right-adorn font-size-12 j_getCode">获取验证码</span>
+	            </div>
+	            <div class="form-field">
+	                <input type="text" name="code" placeholder="验证码">
+
+	                <p class="border-adorn"></p>
+	            </div>
+	        </form>
+	        <p class="modal-action">
+	            <a href="javascript:void(0)" class="action-link j_close">取消</a>
+	            <a href="javascript:void(0)" class="action-link j_sure">提交</a>
+	        </p>
+	    </div>
+
+	    <div class="modal-box modal-box-tip" style="display: none;"></div>
+	    <div class="modal-box modal-box-success" style="display: none;">
+
+	        <h3 class="modal-title"><i class="i-icon">&#xe67d;</i>&nbsp;恭喜你，绑定成功！</h3>
+
+	        <p>绑定手机号 <span class="highlight phone-number"></span>，用该手机账户下单即可使用代金券</p>
+
+	        <p class="modal-action">
+	            <a href="javascript:void(0)" class="action-link j_close" data-status="success">我知道了</a>
+	        </p>
+	    </div>
+
+	</div>
+
+ -->
 </template>
 
 <script>

@@ -110,3 +110,52 @@
 
 }
 
+// --------------------------------
+// ticket list
+// --------------------------------
+
+$ticket-color-maps: (
+	yellow: #F3D430,
+	red: 		#EC274C,
+	gray: 	#A7A5A5,
+);
+
+.ticket-list{
+	.ticket-item{
+		background-color: #fff;
+		margin: 10px/$ppr 0;
+   	box-shadow: 5px/$ppr 2px/$ppr 4px/$ppr -1px/$ppr rgba(0, 0, 0, 0.2);		
+	}
+	.ticket-figure{
+		
+    background-size: 06px/$ppr 12px/$ppr ;
+		background-repeat: repeat-y;
+		position: relative;
+		min-height: 80px/$ppr;
+
+		@each $ticket-keyword, $ticket-color in $ticket-color-maps{
+
+			&.ticket-figure--#{$ticket-keyword}{
+				color: #fff;
+				background-color: $ticket-color;
+    		background-image: radial-gradient(circle at left, #efefef 50%, $ticket-color 50%);
+			}
+
+		}
+
+		strong{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			font-size: 30px/$ppr;
+		}
+	}
+	.ticket-caption{
+		padding: 10px/$ppr;
+		text-align: center;
+	}
+	h2{ margin-bottom: 5px/$ppr }
+}
