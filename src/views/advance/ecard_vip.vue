@@ -16,7 +16,7 @@
  		<ul class="ecard-feature-list feature-list interaction-list">
       <li class="feature-item">
         <a v-link="{ name: 'intro', params: { type: 'vip'} }">
-            <h3 class="inner-bar"><i class="svg-icon svg-icon--middle"><svg class="icon icon-wait-to-pay"><use xlink:href="./static/images/icon-sprites.svg#icon-vip-ecard"></use></svg></i>&nbsp;会员权益<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
+            <h3 class="inner-bar"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{vip_svg}}"></use></svg></i>&nbsp;会员权益<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
         </a>
       </li>
     </ul>
@@ -29,7 +29,7 @@
 	    <p class="field-title">会员卡订单、钱包等关联，请填写真实姓名</p>
 
 	    <label class="ecard-input-field i-border-image">
-	    	<i class="svg-icon svg-icon--middle"><svg class="icon icon-wait-to-pay"><use xlink:href="./static/images/icon-sprites.svg#icon-simple-avatar"></use></svg></i>
+	    	<i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{avatar_svg}}"></use></svg></i>
 	        <input type="text" name="username" placeholder="请输入姓名">
 	    </label>
 
@@ -44,10 +44,15 @@
 
 <script>
 	import store from "../../store"
+
+	import vip_svg from "../../../static/images/icons/vip.svg"
+	import avatar_svg from "../../../static/images/icons/avatar.svg"
+
 	export default {
 		data(){
 			return {
-
+				vip_svg: vip_svg,
+				avatar_svg: avatar_svg,
 			}
 		},
 		route: {

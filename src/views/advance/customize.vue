@@ -2,12 +2,12 @@
 <template>
 
 	<aside>
-		<p class="notice-warn"><i class="svg-icon svg-icon--middle"><svg class="icon icon-warning"><use xlink:href="./static/images/icon-sprites.svg#icon-warning"></use></svg></i>&nbsp;编辑齐家保护您的需求隐私，并根据需求信息适当推送合适的装修服务给您。</p>
+		<p class="notice-warn"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{warn_svg}}"></use></svg></i>&nbsp;编辑齐家保护您的需求隐私，并根据需求信息适当推送合适的装修服务给您。</p>
 	</aside>
 
 	<dl class="normal-layer no-padding-layer feature-list">
 		<dt class="feature-item-title">
-			<p class="inner-bar">房屋基本信息<span class="tip-right"><a class="text-black" v-link="{path: '/av/customize/edit/house'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="./static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a></span></p>
+			<p class="inner-bar">房屋基本信息<span class="tip-right"><a class="text-black" v-link="{path: '/av/customize/edit/house'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{edit_svg}}"></use></svg></i>&nbsp;编辑</a></span></p>
 		</dt>
 		<dd class="feature-item">
 			<p class="inner-bar">面积<span class="tip-right">128平米</span></p>
@@ -27,7 +27,7 @@
 
 	<dl class="normal-layer no-padding-layer feature-list">
 		<dt class="feature-item-title">
-			<p class="inner-bar">装修需求信息<span class="tip-right"><a class="text-black" v-link="{path: '/av/customize/edit/decoration'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="./static/images/icon-sprites.svg#icon-edit"></use></svg></i>&nbsp;编辑</a></span></p>
+			<p class="inner-bar">装修需求信息<span class="tip-right"><a class="text-black" v-link="{path: '/av/customize/edit/decoration'}"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{edit_svg}}"></use></svg></i>&nbsp;编辑</a></span></p>
 		</dt>
 		<dd class="feature-item">
 			<p class="inner-bar">装修类型<span class="tip-right text-gray">未填写</span></p>
@@ -56,7 +56,17 @@
 
 <script>
 	import store from "../../store"
+
+	import warn_svg from "../../../static/images/icons/form-warn.svg"
+	import edit_svg from "../../../static/images/icons/form-edit.svg"
+
 	export default {
+		data(){
+			return {
+				warn_svg: warn_svg,
+				edit_svg: edit_svg,
+			}
+		},
 		route:{
 			data(){
 				store.setHtmlTitle("私人订制");

@@ -32,7 +32,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg class="icon icon-wait-to-pay"><use xlink:href="./static/images/icon-sprites.svg#icon-wait-to-pay"></use></svg>
+								<svg><use xlink:href="{{pay_svg}}"></use></svg>
 							</i>
 							<em class="icon-tip"></em>
 						</span>
@@ -45,7 +45,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg class="icon icon-wait-to-receive"><use xlink:href="./static/images/icon-sprites.svg#icon-wait-to-receive"></use></svg>
+								<svg><use xlink:href="{{receive_svg}}"></use></svg>
 							</i>
 							<em class="icon-tip"></em>
 						</span>
@@ -58,7 +58,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg class="icon icon-wait-to-deliver"><use xlink:href="./static/images/icon-sprites.svg#icon-wait-to-deliver"></use></svg>
+								<svg><use xlink:href="{{delivery_svg}}"></use></svg>
 							</i>
 							<em class="icon-tip"></em>
 						</span>
@@ -71,7 +71,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg class="icon icon-wait-to-evaluate"><use xlink:href="./static/images/icon-sprites.svg#icon-wait-to-evaluate"></use></svg>
+								<svg><use xlink:href="{{evaluate_svg}}"></use></svg>
 							</i>
 							<em class="icon-tip"></em>
 						</span>
@@ -84,7 +84,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg class="icon icon-wait-to-refund"><use xlink:href="./static/images/icon-sprites.svg#icon-wait-to-refund"></use></svg>
+								<svg><use xlink:href="{{refund_svg}}"></use></svg>
 							</i>
 							<em class="icon-tip">
 						</em></span>
@@ -101,7 +101,7 @@
 				<a v-link="{ path: 'av/ecard/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ffa201;">
-							<svg class="icon icon-ecard"><use xlink:href="./static/images/icon-sprites.svg#icon-ecard"></use></svg>
+							<svg><use xlink:href="{{ecard_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">会员卡</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -112,7 +112,7 @@
 				<a v-link="{ path: 'av/cart/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
-							<svg class="icon icon-cart"><use xlink:href="./static/images/icon-sprites.svg#icon-cart"></use></svg>
+							<svg><use xlink:href="{{cart_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">购物车</h4>
 						<p class="advance-tip"><span>(0)</span>件</p>
@@ -123,7 +123,7 @@
 				<a v-link="{ path: 'av/redpacket/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
-							<svg class="icon icon-red-packet"><use xlink:href="./static/images/icon-sprites.svg#icon-red-packet"></use></svg>
+							<svg><use xlink:href="{{redpacket_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">新年红包</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -134,7 +134,7 @@
 				<a v-link="{ path: 'av/coupon/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
-							<svg class="icon icon-coupon"><use xlink:href="./static/images/icon-sprites.svg#icon-coupon"></use></svg>
+							<svg><use xlink:href="{{coupon_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">优惠券</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -145,7 +145,7 @@
 				<a v-link="{ path: 'av/voucher/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
-							<svg class="icon icon-voucher"><use xlink:href="./static/images/icon-sprites.svg#icon-voucher"></use></svg>
+							<svg><use xlink:href="{{voucher_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">代金券</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -156,7 +156,7 @@
 				<a v-link="{ path: 'av/wallet/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
-							<svg class="icon icon-wallet"><use xlink:href="./static/images/icon-sprites.svg#icon-wallet"></use></svg>
+							<svg><use xlink:href="{{wallet_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">我的钱包</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -167,7 +167,7 @@
 				<a v-link="{ path: 'av/activity/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
-							<svg class="icon icon-activity"><use xlink:href="./static/images/icon-sprites.svg#icon-activity"></use></svg>
+							<svg><use xlink:href="{{activity_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">报名活动</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -178,7 +178,7 @@
 				<a v-link="{ path: 'av/reservation/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ffa201;">
-							<svg class="icon icon-reservation"><use xlink:href="./static/images/icon-sprites.svg#icon-reservation"></use></svg>
+							<svg><use xlink:href="{{reservation_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">我的预约</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -189,7 +189,7 @@
 				<a v-link="{ path: 'av/record/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
-							<svg class="icon icon-record"><use xlink:href="./static/images/icon-sprites.svg#icon-record"></use></svg>
+							<svg><use xlink:href="{{record_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">我的足迹</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -200,7 +200,7 @@
 				<a v-link="{ path: 'av/qa/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
-							<svg class="icon icon-QA"><use xlink:href="./static/images/icon-sprites.svg#icon-QA"></use></svg>
+							<svg><use xlink:href="{{qa_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">我的问答</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -211,7 +211,7 @@
 				<a v-link="{ path: 'av/customize/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
-							<svg class="icon icon-customize"><use xlink:href="./static/images/icon-sprites.svg#icon-customize"></use></svg>
+							<svg><use xlink:href="{{customize_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">私人定制</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -222,7 +222,7 @@
 				<a v-link="{ path: 'av/award/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
-							<svg class="icon icon-sweepstake"><use xlink:href="./static/images/icon-sprites.svg#icon-sweepstake"></use></svg>
+							<svg><use xlink:href="{{award_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">我的抽奖</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -233,7 +233,7 @@
 				<a v-link="{ path: 'av/plus/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
-							<svg class="icon icon-more"><use xlink:href="./static/images/icon-sprites.svg#icon-more"></use></svg>
+							<svg><use xlink:href="{{more_svg}}"></use></svg>
 						</i>
 						<h4 class="advance-text">更多</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -247,9 +247,51 @@
 
 <script>
 	import store from "../store"
+
+	import delivery_svg from "../../static/images/icons/flow/delivery.svg"
+	import pay_svg from "../../static/images/icons/flow/pay.svg"
+	import receive_svg from "../../static/images/icons/flow/receive.svg"
+	import evaluate_svg from "../../static/images/icons/flow/evaluate.svg"
+	import refund_svg from "../../static/images/icons/flow/refund.svg"
+
+	import ecard_svg from "../../static/images/icons/advance/ecard.svg"
+	import cart_svg from "../../static/images/icons/advance/cart.svg"
+	import redpacket_svg from "../../static/images/icons/advance/redpacket.svg"
+	import coupon_svg from "../../static/images/icons/advance/coupon.svg"
+	import voucher_svg from "../../static/images/icons/advance/voucher.svg"
+	import wallet_svg from "../../static/images/icons/advance/wallet.svg"
+	import activity_svg from "../../static/images/icons/advance/activity.svg"
+	import reservation_svg from "../../static/images/icons/advance/reservation.svg"
+	import record_svg from "../../static/images/icons/advance/record.svg"
+	import qa_svg from "../../static/images/icons/advance/qa.svg"
+	import customize_svg from "../../static/images/icons/advance/customize.svg"
+	import award_svg from "../../static/images/icons/advance/award.svg"
+	import more_svg from "../../static/images/icons/advance/more.svg"
+
 	export default {
 		data(){
 			return {
+
+				pay_svg: pay_svg,
+				delivery_svg: delivery_svg,
+				receive_svg: receive_svg,
+				evaluate_svg: evaluate_svg,
+				refund_svg: refund_svg,
+
+				ecard_svg: ecard_svg,
+				cart_svg: cart_svg,
+				redpacket_svg: redpacket_svg,
+				coupon_svg: coupon_svg,
+				voucher_svg: voucher_svg,
+				wallet_svg: wallet_svg,
+				activity_svg: activity_svg,
+				reservation_svg: reservation_svg,
+				record_svg: record_svg,
+				qa_svg: qa_svg,
+				customize_svg: customize_svg,
+				award_svg: award_svg,
+				more_svg: more_svg,
+
 				isLogin: true,
 				user: {}
 			}

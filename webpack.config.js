@@ -9,7 +9,7 @@ module.exports = {
 
     output: {
         publicPath: process.env.NODE_ENV === 'production' ? "./release/" : "./build/",
-        path: __dirname + (process.env.NODE_ENV === 'production' ? "/release/" : "/build/"),
+        path: __dirname + (process.env.NODE_ENV === 'production' ? "/release/" : "/build"),
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
     },
@@ -20,17 +20,18 @@ module.exports = {
             {
                 test: /\.png$/,
                 loaders: [
-                    'file?hash=sha512&digest=hex&name=images/[hash].[ext]',
+                    'file?hash=sha512&digest=hex&name=images/[name].[ext]?[hash]',
                     'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
                 ]
             },
-           /* {
-                test: /\.png$/,
-                loaders: [
-                    "url-loader",
-                    "file-loader?name=images/[hash:8].[name].[ext]"
-                ]
-            },*/
+            {
+              test: /\.svg$/,
+              loader: 'svg-sprite?' + JSON.stringify({
+                name: '[name]_[hash]',
+                prefixize: true,
+                // spriteModule: './static/images/'
+              })
+            },
             /* #font */
             // { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
             // { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
@@ -74,33 +75,36 @@ module.exports = {
 
 if(process.env.NODE_ENV === 'production'){
 
-    module.exports.plugins && module.exports.plugins.push(
-        new webpack.DefinePlugin({
-          'process.env': {
-            NODE_ENV: '"production"'
-          }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-          compress: {
-            warnings: false
-          }
-        }),
-        new webpack.optimize.OccurenceOrderPlugin()
-    );
+    module.exports.plugins 
+        && module.exports.plugins.push(
+            new webpack.DefinePlugin({
+              'process.env': {
+                NODE_ENV: '"production"'
+              }
+            }),
+            new webpack.optimize.UglifyJsPlugin({
+              compress: {
+                warnings: false
+              }
+            }),
+            new webpack.optimize.OccurenceOrderPlugin()
+        );
 
     // for style
-    module.exports.module.loaders && module.exports.module.loaders.push(
-        { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
-        { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader","css-loader!sass-loader")  }
-    );
+     module.exports.module.loaders 
+        && module.exports.module.loaders.push(
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
+            { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader","css-loader!sass-loader")  }
+        );
 
 }else{
 
     module.exports.devtool = 'source-map';
     
-    module.exports.module.loaders && module.exports.module.loaders.push(
-        { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader?sourceMap") },
-        { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader","css-loader?sourceMap!sass-loader?sourceMap")  }
-    );
+    module.exports.module.loaders 
+        && module.exports.module.loaders.push(
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader?sourceMap") },
+            { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader","css-loader?sourceMap!sass-loader?sourceMap")  }
+        );
 
 }

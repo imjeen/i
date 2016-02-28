@@ -30,7 +30,7 @@
 
 	<section class="empty-layer normal-layer inherit-background-layer no-border-layer">
 		<figure>
-			<img v-bind:src="!empty.figure.img ? '/static/images/200x200.png' : empty.figure.img" alt="" width="100%">
+			<img v-bind:src="!empty.figure.img ? png200 : empty.figure.img " alt="" width="100%">
 			<figcaption v-if="empty.figure.caption">{{empty.figure.caption}}</figcaption>
 		</figure>
 		<p class="btn-wrap" v-if="empty.button.link && empty.button.text">
@@ -41,15 +41,16 @@
 </template>
 
 <script>
+	import png200 from '../../static/images/200x200.png'
 	export default {
 		name: "empty",
 		props: {
 			empty: {
-				// type: Object,
+				type: Object,
 				default: {
 					figure: {
 						img: "",
-						caption: ""
+						caption: "什么也没有哦～"
 					},
 					button:{
 						link: "",
@@ -58,6 +59,11 @@
 				}
 			}
 		},
+		data(){
+			return {
+				png200: png200,
+			}
+		}
 
 	}
 </script>

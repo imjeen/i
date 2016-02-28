@@ -13,7 +13,7 @@
 
 ## SVG sprites
 
-通过 webpack 的加载器 [svgo-loader](https://github.com/rpominov/svgo-loader) 引用svg文件。
+通过 webpack 的加载器 [svg-sprite-loader](https://github.com/kisenka/svg-sprite-loader) 引用svg文件。
 
 ## usage
 

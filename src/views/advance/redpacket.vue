@@ -61,12 +61,13 @@
 <script>
 	import store from "../../store"
 	import empty from "../../components/empty.vue"
+
 	export default {
 		data(){
 			return {
 				empty: {
 					figure:{
-						img: "./static/images/200x200.png",
+						img: "",
 						caption: "还没有红包哦"
 					},
 					button: {

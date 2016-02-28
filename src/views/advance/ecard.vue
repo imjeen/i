@@ -16,7 +16,7 @@
 
 	<section class="ecard-masthead normal-layer inherit-background-layer no-padding-layer">
 	  <aside class="ecard-tip">
-	      <i class="svg-icon svg-icon--middle"><svg class="icon icon-wait-to-pay"><use xlink:href="./static/images/icon-sprites.svg#icon-warn-circle"></use></svg></i>
+	      <i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{warn_svg}}"></use></svg></i>
 	      <h3>您的会员卡为锁定状态，不可使用</h3>
 	      <p>详情请咨询智家客服：000-000-0000</p>
 	  </aside>
@@ -41,15 +41,15 @@
         <ul class="ecard-feature-list feature-list interaction-list">
             <li class="feature-item">
                 <a v-link="{ name: 'intro', params: { type: 'vip'} }">
-                    <h3 class="inner-bar"><i class="svg-icon svg-icon--middle"><svg class="icon icon-vip-ecard"><use xlink:href="./static/images/icon-sprites.svg#icon-vip-ecard"></use></svg></i>&nbsp;会员权益<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
+                    <h3 class="inner-bar"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{vip_svg}}"></use></svg></i>&nbsp;会员权益<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
                 </a>
             </li>
         </ul>
 
         <ul class="ecard-equity-list cf">
-            <li><i class="svg-icon svg-icon--middle"><svg class="icon icon-ship-circle"><use xlink:href="./static/images/icon-sprites.svg#icon-ship-circle"></use></svg></i><p>便捷化<br/>订单跟踪服务</p></li>
-            <li><i class="svg-icon svg-icon--middle"><svg class="icon icon-money-circle"><use xlink:href="./static/images/icon-sprites.svg#icon-money-circle"></use></svg></i><p>货款<br/>百分之百担保</p></li>
-            <li><i class="svg-icon svg-icon--middle"><svg class="icon icon-safe-circle"><use xlink:href="./static/images/icon-sprites.svg#icon-safe-circle"></use></svg></i><p>安全便捷<br/>自助服务</p></li>
+            <li><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{ship_svg}}"></use></svg></i><p>便捷化<br/>订单跟踪服务</p></li>
+            <li><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{money_svg}}"></use></svg></i><p>货款<br/>百分之百担保</p></li>
+            <li><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{safe_svg}}"></use></svg></i><p>安全便捷<br/>自助服务</p></li>
         </ul>
 
     </section>
@@ -58,7 +58,7 @@
       <ul class="ecard-feature-list feature-list interaction-list">
         <li class="feature-item">
           <a v-link="{ name: 'intro', params: { type: 'qa'} }">
-             <h3 class="inner-bar"><i class="svg-icon svg-icon--middle"><svg class="icon icon-ask-mark"><use xlink:href="./static/images/icon-sprites.svg#icon-ask-mark"></use></svg></i>&nbsp;会员常见问题<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
+             <h3 class="inner-bar"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{ask_svg}}"></use></svg></i>&nbsp;会员常见问题<span class="tip-right"><i class="right-dir-icon dir-icon"></i></span></h3>
           </a>
         </li>
       </ul>
@@ -68,10 +68,30 @@
 
 <script>
 	import store from "../../store"
+
+	import warn_svg from "../../../static/images/icons/form-warn.svg"
+
+	import ship_svg from "../../../static/images/icons/circle-ship.svg"
+	import safe_svg from "../../../static/images/icons/circle-safe.svg"
+	import money_svg from "../../../static/images/icons/circle-money.svg"
+
+	import ask_svg from "../../../static/images/icons/ask.svg"
+	import vip_svg from "../../../static/images/icons/vip.svg"
+
 	export default {
 		data(){
 			return {
-				ecard: [1]
+
+				warn_svg: warn_svg,
+
+				ship_svg: ship_svg,
+				safe_svg: safe_svg,
+				money_svg: money_svg,
+
+				vip_svg: vip_svg,
+				ask_svg: ask_svg,
+
+				ecard: []
 			}
 		},
 		route:{

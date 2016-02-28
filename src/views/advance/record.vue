@@ -44,6 +44,9 @@
 <script>
 	import store from "../../store"
 	import empty from "../../components/empty.vue"
+
+	import png200 from '../../../static/images/200x200.png'
+
 	export default {
 		components: {
 			empty
@@ -66,7 +69,7 @@
 						name: "今、想う事は１つ 君に会いたい",
 						price: 110,
 						link: "path/to/link",
-						imagePath: "./static/images/200x200.png",
+						imagePath: png200,
 						state: "",
 						timeline: 1,
 					},
@@ -75,7 +78,7 @@
 						name: "最後の言葉忘れない, 風の匂いで 空の模様で 君の笑顔も 僕の想いも思い出になってゆく",
 						price: 110,
 						link: "path/to/link",
-						imagePath: "./static/images/200x200.png",
+						imagePath: png200,
 						state: "",
 						timeline: 0,
 					},
@@ -84,7 +87,7 @@
 						name: "聞かせて欲しい　キミのこえいも思い出になってゆく",
 						price: 190,
 						link: "path/to/link",
-						imagePath: "./static/images/200x200.png",
+						imagePath: png200,
 						state: "",
 						timeline: 2,
 					},	

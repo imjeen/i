@@ -12,6 +12,7 @@
 <script>
 	import store from "../../store"
 	import empty from "../../components/empty.vue"
+
 	export default {
 		components: { empty },
 		data(){
