@@ -42,10 +42,10 @@
 
 		})(window,document,undefined);
 	</script>
-
+	<style>[v-cloak]{ display: none; }</style>
 	<!-- result style -->
 	{% for(var i=0; i < o.htmlWebpackPlugin.files.css.length; ++i){ %}
-	<link rel="stylesheet" href="{%=o.htmlWebpackPlugin.files.css[i] %}?version={%=(new Date()).getTime()%}">
+	<link rel="stylesheet" href="{%=o.htmlWebpackPlugin.files.css[i] %}?v={%=(new Date()).getTime()%}">
 	{% } %}
 
 </head>
@@ -57,7 +57,10 @@
 				<svg viewBox="0 0 24 24"><path d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path></svg>
 			</i>
 		</button>
-		<h1 class="i-cell i-cell--10-col text-center">{{ !htmlHead.title ? "我的家" : htmlHead.title }}</h1>
+		<hgroup class="i-cell i-cell--10-col text-center">
+			<h1 v-if="!htmlHead.title">个人中心</h1>
+			<h1 v-cloak v-else>{{htmlHead.title}}</h1>
+		</hgroup>
 		<button class="i-cell i-cell--1-col plain">
 			<i class="svg-icon">
 				<svg viewBox="0 0 24 24"><path d="M3,18h18v-2H3V18z M3,13h18v-2H3V13z M3,6v2h18V6H3z"></path></svg>
@@ -75,7 +78,7 @@
 
 	<!-- result script -->
 	{% for(var i=0; i < o.htmlWebpackPlugin.files.js.length; ++i){ %}
-	<script src="{%=o.htmlWebpackPlugin.files.js[i] %}?version={%=(new Date()).getTime()%}"></script>
+	<script src="{%=o.htmlWebpackPlugin.files.js[i] %}?v={%=(new Date()).getTime()%}"></script>
 	{% } %}
 
 </body>
