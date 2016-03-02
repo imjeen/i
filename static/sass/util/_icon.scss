@@ -25,6 +25,8 @@
     fill: currentColor;
 }
 
+/* fix the svg sprites for svg-sprites-loader */
+svg path{ fill: currentColor; }
 
 //------------------------------------
 // direction icon

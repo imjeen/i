@@ -115,7 +115,7 @@
 // --------------------------------
 
 $ticket-color-maps: (
-	yellow: #F3D430,
+	gold: #F3D430,
 	red: 		#EC274C,
 	gray: 	#A7A5A5,
 );
@@ -124,7 +124,7 @@ $ticket-color-maps: (
 	.ticket-item{
 		background-color: #fff;
 		margin: 10px/$ppr 0;
-   	box-shadow: 5px/$ppr 2px/$ppr 4px/$ppr -1px/$ppr rgba(0, 0, 0, 0.2);		
+   	/* box-shadow: 5px/$ppr 2px/$ppr 4px/$ppr -1px/$ppr rgba(0, 0, 0, 0.2); */		
 	}
 	.ticket-figure{
 		

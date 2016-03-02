@@ -116,10 +116,14 @@
 // --------------------------------
 // advance
 .advance-section{
+
 	$columnNumber: 4;
+	$border: 1px solid rgba(211,211,211,0.6);
+
 	overflow: hidden;
-	// border-top: 1px solid #ddd;
-	// border-bottom: 1px solid #ddd;
+	// border-top: $border;
+	// border-bottom: $border;
+
 	.advance-list{
 		margin-right: -1px;
 		margin-bottom: -1px;
@@ -127,8 +131,9 @@
 			float: left;
 			width: (1 / $columnNumber) * 100%;
 			box-sizing: border-box;
-			border-bottom: 1px solid #ddd;
-			border-right: 1px solid #ddd;
+			border-bottom: $border;
+			border-right: $border;
+			
 			&:nth-of-type(#{$columnNumber}n){
 				border-right: 0;
 			}
@@ -139,7 +144,7 @@
 		display: block;
 		text-align: center;
 		padding-top: 10px/$ppr;
-		padding-bottom: 5px/$ppr;
+		padding-bottom: 8px/$ppr;
 		.advance-icon{
 			width: 30px/$ppr;
 			height: 30px/$ppr;
@@ -149,6 +154,7 @@
 			display: block;
 			color: #333;
 			font-size: 12px/$ppr;
+			line-height: 2;
 			overflow: hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;

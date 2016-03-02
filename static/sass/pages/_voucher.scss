@@ -3,7 +3,7 @@
 // voucher detail
 
 .voucher-masthead{
-    margin-top: 06px/$ppr;
+    margin-top: 08px/$ppr;
     margin-left: 12px/$ppr;
     margin-right: 12px/$ppr;
     margin-bottom: 15px/$ppr;
@@ -39,14 +39,14 @@
       }
       .voucher-ticket{
           background-color: #999;
-          background-image: radial-gradient(circle at top, #efe 50%, #999 50%);
+          background-image: radial-gradient(circle at top, #efefef 50%, #999 50%);
       }
     }
     .voucher-ticket{
         padding: 20px/$ppr 10px/$ppr;
         color: #fff;
         background-color: #F3D430;
-        background-image: radial-gradient(circle at top, #efe 50%, #F3D430 50%);
+        background-image: radial-gradient(circle at top, #efefef 50%, #F3D430 50%);
         background-size: 12px/$ppr 06px/$ppr;
     		background-repeat: repeat-x;
 

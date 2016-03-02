@@ -15,7 +15,7 @@
 			<li class="ticket-item" v-for="voucher in vouchers">
 				<a v-link="{ name: 'detail', params: { barcode: voucher.barcode } }">
 					<div class="i-grid i-grid--no-spacing">
-						<figure class="ticket-figure ticket-figure--yellow i-cell i-cell--4-col i-cell--stretch"><strong>￥{{voucher.price}}</p></strong></figure>
+						<figure class="ticket-figure ticket-figure--gold i-cell i-cell--4-col i-cell--stretch"><strong>￥{{voucher.price}}</p></strong></figure>
 						<div class="ticket-caption i-cell i-cell--8-col i-cell--middle">
 							<h2 class="item-caption ellipsis--2-line">{{voucher.title}}</h2>
 							<p>{{voucher.description}}</p>

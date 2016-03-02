@@ -30,11 +30,11 @@
 
 	    <label class="ecard-input-field i-border-image">
 	    	<i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{avatar_svg}}"></use></svg></i>
-	        <input type="text" name="username" placeholder="请输入姓名">
+	        <input type="text" name="username" placeholder="请输入姓名" v-model="vipName">
 	    </label>
 
 	    <p class="btn-wrap">
-	        <a role="button" href="javascript:void(0);" class="btn btn-block btn-danger">开通会员卡</a>
+	        <button v-on:click.prevent="openVIP()" role="button" class="btn btn-block btn-danger">开通会员卡</button>
 	    </p>
 
 	  </form>
@@ -53,7 +53,15 @@
 			return {
 				vip_svg: vip_svg,
 				avatar_svg: avatar_svg,
+
+				vipName: "",
+
 			}
+		},
+		methods: {
+			openVIP(){
+				// if(this.$data.vipName !== ""){}
+			},
 		},
 		route: {
 			data(transition){

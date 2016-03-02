@@ -99,7 +99,7 @@
 				
 				if(this.$data.ecard.length === 0){
 					// to: ecard/open
-					transition.redirect("open");
+					transition.redirect("vip");
 				}
 				store.setHtmlTitle("电子会员卡");
 				transition.next(this.$data);
