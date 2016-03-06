@@ -4,7 +4,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry:{
-        main: ['vue','vue-router','vue-resource', './src/main.js']
+        main: ['./src/main.js'],
+        // vendor: ['vue','vue-router','vue-resource']
     },
 
     output: {
@@ -55,10 +56,15 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin("[name].css",{ allChunks: true }),
         new webpack.optimize.CommonsChunkPlugin('common.js'),
-        new HtmlWebpackPlugin({
+        /*new HtmlWebpackPlugin({
           filename: '../index.html',
-          template: './src/index.html'
-        })
+          template: './src/index.template.html',
+          inject: false,
+          minify: {
+            removeComments: true,
+            // collapseWhitespace: true,
+          },
+        })*/
     ],
 
     resolve: {
@@ -87,11 +93,22 @@ if(process.env.NODE_ENV === 'production'){
                 warnings: false
               }
             }),
-            new webpack.optimize.OccurenceOrderPlugin()
+            new webpack.optimize.OccurenceOrderPlugin(),
+            new HtmlWebpackPlugin({
+              filename: '../index.html',
+              template: './src/index.template.html',
+              inject: false,
+              minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                minifyJS: true,
+                minifyCSS: true,
+              },
+            })
         );
 
     // for style
-     module.exports.module.loaders 
+    module.exports.module.loaders 
         && module.exports.module.loaders.push(
             { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
             { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader","css-loader!sass-loader")  }
@@ -100,6 +117,21 @@ if(process.env.NODE_ENV === 'production'){
 }else{
 
     module.exports.devtool = 'source-map';
+
+    module.exports.plugins 
+        && module.exports.plugins.push(
+            new HtmlWebpackPlugin({
+              filename: '../index.html',
+              template: './src/index.template.html',
+              inject: false,
+              // minify: {
+              //   removeComments: true,
+              //   collapseWhitespace: true,
+              //   minifyJS: true,
+              //   minifyCSS: true,
+              // },
+            })
+        );
     
     module.exports.module.loaders 
         && module.exports.module.loaders.push(

@@ -44,15 +44,15 @@
 	</script>
 	<style>[v-cloak]{ display: none; }</style>
 	<!-- result style -->
-	{% for(var i=0; i < o.htmlWebpackPlugin.files.css.length; ++i){ %}
-	<link rel="stylesheet" href="{%=o.htmlWebpackPlugin.files.css[i] %}?v={%=(new Date()).getTime()%}">
-	{% } %}
+	<% for(var i=0; i < htmlWebpackPlugin.files.css.length; ++i){ %>
+	<link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[i] %>?v=<%= (new Date()).getTime() %>">
+	<% } %>
 
 </head>
 <body>
 
 	<header class="header i-grid">
-		<button class="i-cell i-cell--1-col plain" @click="goBack()">
+		<button class="i-cell i-cell--1-col plain" v-on:click="goBack()">
 			<i class="svg-icon">
 				<svg viewBox="0 0 24 24"><path d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path></svg>
 			</i>
@@ -77,9 +77,9 @@
 	</footer>
 
 	<!-- result script -->
-	{% for(var i=0; i < o.htmlWebpackPlugin.files.js.length; ++i){ %}
-	<script src="{%=o.htmlWebpackPlugin.files.js[i] %}?v={%=(new Date()).getTime()%}"></script>
-	{% } %}
+	<% for(var i=0; i < htmlWebpackPlugin.files.js.length; ++i){ %>
+	<script src="<%= htmlWebpackPlugin.files.js[i] %>?v=<%= (new Date()).getTime() %>"></script>
+	<% } %>
 
 </body>
 </html>
