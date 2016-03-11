@@ -1,9 +1,9 @@
 
 # 单页面SPA with Vue.js
 
-## overview
+## Overview
 
-基于 Vue.js框架部署的单页面web应用程序。之前的repo（以 backbone 为框架）的Vue.js 版本。
+基于 Vue.js框架部署的单页面web应用程序。
 
 同时，模块以nodejs风格编码并使用ES6语法，显得编码更加简洁易懂。
 
@@ -15,7 +15,7 @@
 
 通过 webpack 的加载器 [svg-sprite-loader](https://github.com/kisenka/svg-sprite-loader) 引用svg文件。
 
-## usage
+## Usage
 
 ```
 	$ bower install # install bower package for first
@@ -27,7 +27,9 @@
 	$ npm run watch # extra watch files
 ```
 
-## vue plugin
+*Note: 对于本项目的自动发布流程脚本，大多数情况只适用当前部署环境
+
+## Plugin
 
 - [vue-router](https://github.com/vuejs/vue-router) Vue.js 官方路由。与 Vue.js 内核深度整合，让构建单页应用易如反掌。
 - [vue-resource](https://github.com/vuejs/vue-resource) 通过 XMLHttpRequest 或 JSONP 发起请求并处理响应。

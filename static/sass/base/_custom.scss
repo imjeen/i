@@ -1,15 +1,18 @@
 @charset "UTF-8";
 
+:root{
+	font-size: $ppr * 1rem;
+}
+
 html{
 	height: 100%;
 	font-family: "Microsoft YaHei", "Helvetical";
-	font-size: $ppr * 1rem;
 }
 
 body{
 	background-color: #efefef;
 	font-size: 14px/$ppr;
-	height: 100%;
+	min-height: 100%;
 	min-height: 100vh;
 }
 

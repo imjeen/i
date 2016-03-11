@@ -56,10 +56,11 @@
 		}
 		.masthead-caption{
 			margin-top: 10px/$ppr;
+			& > h3{ margin-bottom: 5px/$ppr; }
 		}
 		.masthead-setting{
 			text-align: right;
-			margin-top: 24px/$ppr;
+			margin-top: 28px/$ppr;
 			color: #ffe0dc;
 		}
 	}
@@ -143,8 +144,8 @@
 	.advance-cell{
 		display: block;
 		text-align: center;
-		padding-top: 10px/$ppr;
-		padding-bottom: 8px/$ppr;
+		padding-top: 12px/$ppr;
+		padding-bottom: 10px/$ppr;
 		.advance-icon{
 			width: 30px/$ppr;
 			height: 30px/$ppr;
@@ -153,8 +154,8 @@
 		.advance-text{
 			display: block;
 			color: #333;
-			font-size: 12px/$ppr;
-			line-height: 2;
+			font-size: 14px/$ppr;
+			line-height: 1.8;
 			overflow: hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;
@@ -162,7 +163,7 @@
 		.advance-tip{
 			display: block;
 			color: #999;
-			font-size: 10px/$ppr;
+			font-size: 12px/$ppr;
 			line-height: 1;
 		}
 	}
