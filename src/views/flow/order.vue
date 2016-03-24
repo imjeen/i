@@ -46,10 +46,9 @@
 
 <script>
 	import store from "../../store"
-	import item from "../../components/flow-item.vue"
 	import empty from "../../components/empty.vue"
 	export default {
-		components: { item, empty },
+		components: { empty },
 		data(){
 			return {
 				empty: {

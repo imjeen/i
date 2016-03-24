@@ -103,6 +103,7 @@
 
 		// active
 		.interaction-list .feature-item:not(.no-interaction-item):active{
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 			background-color: #f0f0f0;
 		}
 

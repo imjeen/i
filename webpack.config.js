@@ -9,7 +9,7 @@ module.exports = {
     },
 
     output: {
-        publicPath: process.env.NODE_ENV === 'production' ? "http://imjeen.github.io/webapp-Vue/release/" : "/build/",
+        publicPath: process.env.NODE_ENV === 'production' ? "http://imjeen.github.io/i/release/" : "/build/",
         path: __dirname + (process.env.NODE_ENV === 'production' ? "/release/" : "/build/"),
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
@@ -56,19 +56,9 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin("[name].css",{ allChunks: true }),
         new webpack.optimize.CommonsChunkPlugin('common.js'),
-        /*new HtmlWebpackPlugin({
-          filename: '../index.html',
-          template: './src/index.template.html',
-          inject: false,
-          minify: {
-            removeComments: true,
-            // collapseWhitespace: true,
-          },
-        })*/
     ],
 
     resolve: {
-        // 省略 .js 后缀
         extensions: ['', '.js'],
         alias:{
             'vue':          __dirname + "/bower_components/vue/dist/vue.js",
@@ -123,13 +113,7 @@ if(process.env.NODE_ENV === 'production'){
             new HtmlWebpackPlugin({
               filename: '../index.html',
               template: './src/index.template.html',
-              inject: false,
-              // minify: {
-              //   removeComments: true,
-              //   collapseWhitespace: true,
-              //   minifyJS: true,
-              //   minifyCSS: true,
-              // },
+              inject: false
             })
         );
     

@@ -42,14 +42,14 @@
 	        <p>答：迷ったときはオトノナルホウヘ→福はやって来るから(Yeah Yeah!!)</p>
 	    </dd>
 	    <dt class="item-title">
-	    	<h3><i class="svg-icon svg-icon--middle"><svg>mark"><use xlink:href="{{ask_svg}}"></use></svg></i>&nbsp;きっとどこか遠くで芽生え？</h3>
+	    	<h3><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{ask_svg}}"></use></svg></i>&nbsp;きっとどこか遠くで芽生え？</h3>
 	    </dt>
 	    <dd class="item-desc">
 	        <p>答：福はやって来るから(Yeah Yeah!!)：</p>
 
-	        <h4 class="highlinght"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{desktop_svg}}"</use></svg></i>&nbsp;电脑</h4>
+	        <h4 class="highlinght"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{desktop_svg}}"></use></svg></i>&nbsp;电脑</h4>
 	        <p>福はやって来るから(Yeah Yeah!!)</p>
-	        <h4 class="highlinght"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{tablet_svg}}"</use></svg></i>&nbsp;手机</h4>
+	        <h4 class="highlinght"><i class="svg-icon svg-icon--middle"><svg><use xlink:href="{{tablet_svg}}"></use></svg></i>&nbsp;手机</h4>
 	        <p>きっとどこか遠くで芽生える</p>
 
 	    </dd>
