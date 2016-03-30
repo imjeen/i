@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 .header{
-	background-color: rgba(246,246,246,1);
+	box-shadow: 0 1px 3px rgba(0,0,0,.14);
+  background: hsla(0,0%,100%,.9);
 	position: relative;
 	line-height: 45px/$ppr;
 	height: 45px/$ppr;
