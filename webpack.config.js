@@ -9,7 +9,7 @@ module.exports = {
     },
 
     output: {
-        publicPath: process.env.NODE_ENV === 'production' ? "http://imjeen.github.io/i/release/" : "/build/",
+        publicPath: process.env.NODE_ENV === 'production' ? "/i/release/" : "/build/",
         path: __dirname + (process.env.NODE_ENV === 'production' ? "/release/" : "/build/"),
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"

@@ -1,7 +1,13 @@
-
-git checkout master
-
-NODE_ENV=production npm run build
+# sh ./deploy.sh --skip
+# 检查是否跳过构建
+if [[ "$1" != "-s" ]] && [[ "$1" != "--skip" ]]; then
+    echo "执行构建流程..."
+    git checkout master
+    NODE_ENV=production npm run build
+    echo "构建完成"
+else
+    echo "跳过构建流程（使用参数 $1）"
+fi
 
 # cache the new files
 mkdir ./.temp

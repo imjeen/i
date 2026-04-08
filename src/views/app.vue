@@ -32,7 +32,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg><use xlink:href="{{pay_svg}}"></use></svg>
+								<svg><use :xlink:href="pay_svg"></use></svg>
 							</i>
 							<em class="icon-tip"></em>
 						</span>
@@ -45,7 +45,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg><use xlink:href="{{receive_svg}}"></use></svg>
+								<svg><use :xlink:href="receive_svg"></use></svg>
 							</i>
 							<em class="icon-tip"></em>
 						</span>
@@ -58,7 +58,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg><use xlink:href="{{delivery_svg}}"></use></svg>
+								<svg><use :xlink:href="delivery_svg"></use></svg>
 							</i>
 							<em class="icon-tip"></em>
 						</span>
@@ -71,7 +71,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg><use xlink:href="{{evaluate_svg}}"></use></svg>
+								<svg><use :xlink:href="evaluate_svg"></use></svg>
 							</i>
 							<em class="icon-tip"></em>
 						</span>
@@ -84,7 +84,7 @@
 					<div class="service-cell">
 						<span class="icon-area">
 							<i class="service-icon svg-icon">
-								<svg><use xlink:href="{{refund_svg}}"></use></svg>
+								<svg><use :xlink:href="refund_svg"></use></svg>
 							</i>
 							<em class="icon-tip">
 						</em></span>
@@ -101,7 +101,7 @@
 				<a v-link="{ path: 'av/ecard/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ffa201;">
-							<svg><use xlink:href="{{ecard_svg}}"></use></svg>
+							<svg><use :xlink:href="ecard_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">会员卡</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -112,7 +112,7 @@
 				<a v-link="{ path: 'av/cart/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
-							<svg><use xlink:href="{{cart_svg}}"></use></svg>
+							<svg><use :xlink:href="cart_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">购物车</h4>
 						<p class="advance-tip"><span>(0)</span>件</p>
@@ -123,7 +123,7 @@
 				<a v-link="{ path: 'av/redpacket/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
-							<svg><use xlink:href="{{redpacket_svg}}"></use></svg>
+							<svg><use :xlink:href="redpacket_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">新年红包</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -134,7 +134,7 @@
 				<a v-link="{ path: 'av/coupon/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
-							<svg><use xlink:href="{{coupon_svg}}"></use></svg>
+							<svg><use :xlink:href="coupon_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">优惠券</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -145,7 +145,7 @@
 				<a v-link="{ path: 'av/voucher/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
-							<svg><use xlink:href="{{voucher_svg}}"></use></svg>
+							<svg><use :xlink:href="voucher_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">代金券</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -156,7 +156,7 @@
 				<a v-link="{ path: 'av/wallet/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
-							<svg><use xlink:href="{{wallet_svg}}"></use></svg>
+							<svg><use :xlink:href="wallet_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">我的钱包</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -167,7 +167,7 @@
 				<a v-link="{ path: 'av/activity/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
-							<svg><use xlink:href="{{activity_svg}}"></use></svg>
+							<svg><use :xlink:href="activity_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">报名活动</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -178,7 +178,7 @@
 				<a v-link="{ path: 'av/reservation/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ffa201;">
-							<svg><use xlink:href="{{reservation_svg}}"></use></svg>
+							<svg><use :xlink:href="reservation_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">我的预约</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -189,7 +189,7 @@
 				<a v-link="{ path: 'av/record/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
-							<svg><use xlink:href="{{record_svg}}"></use></svg>
+							<svg><use :xlink:href="record_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">我的足迹</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -200,7 +200,7 @@
 				<a v-link="{ path: 'av/qa/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#32bbe4;">
-							<svg><use xlink:href="{{qa_svg}}"></use></svg>
+							<svg><use :xlink:href="qa_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">我的问答</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -211,7 +211,7 @@
 				<a v-link="{ path: 'av/customize/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#ef802e;">
-							<svg><use xlink:href="{{customize_svg}}"></use></svg>
+							<svg><use :xlink:href="customize_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">私人定制</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -222,7 +222,7 @@
 				<a v-link="{ path: 'av/award/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#f1624f;">
-							<svg><use xlink:href="{{award_svg}}"></use></svg>
+							<svg><use :xlink:href="award_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">我的抽奖</h4>
 						<p class="advance-tip">&nbsp;</p>
@@ -233,7 +233,7 @@
 				<a v-link="{ path: 'av/plus/'}">
 					<div class="advance-cell">
 						<i class="advance-icon svg-icon" style="color:#33c8b0;">
-							<svg><use xlink:href="{{more_svg}}"></use></svg>
+							<svg><use :xlink:href="more_svg"></use></svg>
 						</i>
 						<h4 class="advance-text">更多</h4>
 						<p class="advance-tip">&nbsp;</p>

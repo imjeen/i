@@ -15,6 +15,20 @@
 
 通过 webpack 的加载器 [svg-sprite-loader](https://github.com/kisenka/svg-sprite-loader) 引用svg文件。
 
+## Docker
+
+```bash
+
+# 进入临时容器，开发调试
+docker-compose run -P --rm node-dev bash
+# 容器内
+npm run install
+npm run build
+
+# 宿主外，将编译的目录发布出去
+sh ./deploy.sh --skip
+```
+
 ## Usage
 
 ```

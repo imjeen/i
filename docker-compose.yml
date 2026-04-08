@@ -1,0 +1,25 @@
+services:
+  node-app:
+    image: node:6.17.1-jessie
+    container_name: node6-build
+    working_dir: /app
+    volumes:
+      - .:/app
+      # - /app/node_modules
+    command: sh -c "npm install && npm run build"
+    environment:
+      - NODE_ENV=production
+  # 开发服务（新增）
+  node-dev:
+    image: node:6.17.1-jessie
+    container_name: node6-dev
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "80:80"
+    command: bash # 直接进入 bash
+    stdin_open: true # 保持标准输入打开
+    tty: true # 分配伪终端
+    environment:
+      - NODE_ENV=development

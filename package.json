@@ -1,11 +1,12 @@
 {
   "name": "i",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "make the SPA with Vue.js, vue-router",
   "main": "./src/main.js",
   "scripts": {
-    "watch": "webpack --watch",
-    "server": "webpack-dev-server --inline --port 80 --hot --quiet",
+    "install": "npm install && bower install --allow-root",
+    "watch": "webpack --watch --progress",
+    "server": "webpack-dev-server --host 0.0.0.0 --port 80 --inline --hot --quiet",
     "build": "webpack --progress --hide-modules"
   },
   "author": "",
@@ -13,8 +14,10 @@
   "devDependencies": {
     "babel-core": "^6.6.5",
     "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-runtime": "^5.8.35",
+    "bower": "^1.8.14",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
@@ -25,6 +28,7 @@
     "style-loader": "^0.13.0",
     "svg-sprite-loader": "0.0.18",
     "vue-hot-reload-api": "^1.3.2",
+    "vue-html-loader": "^1.2.4",
     "vue-loader": "^8.2.2",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.12.14",
