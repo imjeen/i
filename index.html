@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title v-if="!!htmlHead.title === false">我的家</title>
+	<title v-else>{{htmlHead.title}} - 我的家</title>
+	<script>
+		;(function(window,document,undefined){
+
+			var htmlElement = document.documentElement;
+			var metaElement = document.querySelector('meta[name="viewport"]');
+
+			var dpr = Math.min(window.devicePixelRatio,3);
+			var scale = 1 / dpr;
+
+			// document.documentElement.dataset.dpr
+
+			var renderToRem = function(){
+				var width = htmlElement.getBoundingClientRect().width;
+				width / dpr > 540 && (width = 540 * dpr);
+				var rem = width / 10;
+				// var rem = dpr * Math.min(width, 1118) / 16;
+				htmlElement.style.fontSize = rem + 'px';
+			};
+
+			renderToRem();
+
+			if(metaElement === null){
+				metaElement = document.createElement('meta');
+				metaElement.name = 'viewport';
+				metaElement.content = 'initial-scale=' + scale + ', minimum-scale=' + scale + ', maximum-scale=' + scale;
+				htmlElement.firstElementChild.appendChild(metaElement);
+			}
+
+			// event
+			window.addEventListener('resize',function(e){ 
+				setTimeout(renderToRem, 300); 
+			},false);
+			window.addEventListener('pageshow',function(e){
+				e.persisted && setTimeout(renderToRem, 300);
+			},false);
+
+		})(window,document,undefined);
+	</script>
+	<style>[v-cloak]{ display: none; }</style>
+	<!-- result style -->
+	
+	<link rel="stylesheet" href="/build/main.css?v=1775632649287">
+	
+
+</head>
+<body>
+
+	<header class="header i-grid">
+		<button class="i-cell i-cell--1-col plain" v-on:click="goBack()">
+			<i class="svg-icon">
+				<svg viewBox="0 0 24 24"><path d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path></svg>
+			</i>
+		</button>
+		<hgroup class="i-cell i-cell--10-col text-center">
+			<h1 v-if="!htmlHead.title">个人中心</h1>
+			<h1 v-cloak v-else>{{htmlHead.title}}</h1>
+		</hgroup>
+		<button class="i-cell i-cell--1-col plain">
+			<i class="svg-icon">
+				<svg viewBox="0 0 24 24"><path d="M3,18h18v-2H3V18z M3,13h18v-2H3V13z M3,6v2h18V6H3z"></path></svg>
+			</i>
+		</button>
+	</header>
+
+	<main class="jumbotron-main">
+	<router-view><p style="padding: 2rem 1rem;text-align: center;">Loading...</p></router-view>
+	</main>
+
+	<footer class="footer">
+		<p class="footer__copyright">Copyright &copy; {{ year ? year : '2016'}} @imjeen 版权所有</p>
+	</footer>
+
+	<!-- result script -->
+	
+	<script src="/build/common.js?v=1775632649288"></script>
+	
+	<script src="/build/main.js?v=1775632649288"></script>
+	
+
+	<!-- google analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-75678690-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+</body>
+</html>
